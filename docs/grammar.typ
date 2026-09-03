@@ -27,6 +27,7 @@ Although speakers from different clans were often unable to understand one anoth
 
 Typologically, Festival Nomai is strongly head-initial and topic-prominent, primarily using V2 word order in independent clauses. Verbs exhibit highly agglutinative morphology, noun incorporation, and a robust system of nonfinite verb forms. Nouns are also versatile and can both modify other nouns and act as predicates. Festival Nomai has an unusual morphosyntactic alignment which bears resemblance to a split-S alignment but with two distinct types of transitive verb. The language also makes extensive use of nonconcatenative morphology and both lexical and grammatical tone.
 
+#pagebreak()
 = Phonology
 == Sound inventory
 Festival Nomai distinguishes 18 consonants, 5 monophthongs, and 6 diphthongs.
@@ -169,6 +170,7 @@ Tones are realized according to the following rules:
 + /M/ spreads rightwards into /∅/ syllables, crossing word boundaries
 + all remaining /∅/ syllables are realized as \[M\]
 
+#pagebreak()
 = Nouns
 Nomai nouns are an open class and include words that might be considered adjectives in other languages. They inflect for case, article, and number. Any series of consecutive nouns with the same case, article, and number acts as a single noun phrase, where the first noun is the head (also called a "substantive noun") and the other nouns are modifiers (also called "attributive nouns").
 
@@ -334,21 +336,22 @@ While juxtaposition and agreement indicate that two nouns refer to the same obje
   )
 ]
 
+#pagebreak()
 = Verbs
-Nomai verbs are highly agglutinative, marking polarity, modality, evidentiality, voice, aspect, and person. They also have two nonfinite forms: gerunds and participles. Verbs are organized into eight classes that loosely indicate how the verb's meaning is related to its root; all but three of these classes are closed.
+Nomai verbs are highly agglutinative, marking polarity, modality, evidentiality, voice, aspect, and person. They also have two nonfinite forms: gerunds and participles. Every verb belongs to one of eight classes, which loosely indicate how a verb's meaning is related to its root; all but three of these classes are closed.
 
 The verb template contains the following slots:
-+ orientation prefix (see @ptcp) or converb prefix (see @cvb)
++ #link(<ptcp>)[participle] orientation prefix or #link(<cvb>)[converb] prefix
 + negation prefix _pà-_
-+ modal/evidential prefix(es) (see @mod)
-+ incorporated object (see @incorp)
-+ voice prefix (see @voice)
-+ verb stem (encodes aspect, see @asp)
++ #link(<mod>)[modal/evidential] prefix(es)
++ #link(<incorp>)[incorporated object]
++ #link(<voice>)[voice] prefix
++ verb stem (encodes #link(<asp>)[aspect])
 + verb ending
-  - finite verb class ending (see @class)
-  - gerund ending (see @ger)
-  - participle ending (see @ptcp)
-+ person suffix (see @prs)
+  - finite verb #link(<class>)[class] ending
+  - #link(<ger>)[gerund] ending
+  - #link(<ptcp>)[participle] ending
++ #link(<prs>)[person] suffix
 
 == Aspect <asp>
 Nomai distinguishes three aspects:
@@ -414,6 +417,18 @@ All verbs have separate stems for each aspect, with the perfective stem being th
 ] <asp-vwl>
 
 == Valency
+The valency of a verb encapsulates how many arguments it accepts and which cases they take. Nomai verbs have six possible valencies:
+
+- *intransitive* (NTR): absolutive
+- *agentive* (AGN): ergative
+- *experiential* (EXP): dative, absolutive
+- *intentional* (NTL): ergative, absolutive
+- *locomotive* (LCM): ergative, dative
+- *ditransitive* (DITR): ergative, dative, absolutive
+
+The majority of verbs are intransitive, experiential, intentional, or ditransitive. Locomotive verbs are a relatively small class, albeit including common verbs such as _qúr_ "go" and _mīiqùx_ "come". Agentive verbs are not a true lexical class and can only be formed by #link(<incorp>)[noun incorporation].
+
+All finite verbs must be used with at least one non-dative argument; there are no other restrictions on which arguments may be omitted.
 
 == Class <class>
 
