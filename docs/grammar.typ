@@ -2,9 +2,12 @@
   paper: "a4",
   numbering: "1",
 )
-#set text(
-  font: "DejaVu Sans"
+#set heading(
+  numbering: "1.",
 )
+// #set text(
+//   font: "Ubuntu Sans Mono"
+// )
 
 #align(
   center,
@@ -178,9 +181,9 @@ Nomai distinguishes three morphological cases:
 
 In the classical period, before the first Vessels departed the Nomai homeworld, the distinction between absolutive causes and ergative causes was strictly tied to perceived animacy. For example, "The rain washed the stain off" would assign the absolutive case to "the rain", but "Iris washed the stain off with a cloth" would assign the ergative case to "Iris" and the absolutive case to "a cloth". However, by the time of Festival Nomai, speakers had blurred the lines between "intentional" and "unintentional" causes, often using the ergative case to emphasize prominent inanimate nouns.
 
-All nouns have separate stems for each case. The stems differ in their final syllables according to a somewhat predictable system of vowel/consonant gradation and melody alternation, but learners typically memorize all three stems when learning a noun.
+All nouns have separate stems for each case. The stems differ in their final syllables according to a somewhat predictable system of vowel/consonant mutation and melody alternation, but learners typically memorize all three stems when learning a noun.
 
-#figure(caption: "Vowel gradation in the last syllable of a stem.")[
+#figure(caption: "Final vowel mutation in case stems.")[
   #table(
     columns: 3,
     table.header([*ABS*], [*DAT*], [*ERG*]),
@@ -192,7 +195,7 @@ All nouns have separate stems for each case. The stems differ in their final syl
   )
 ]
 
-#figure(caption: "Coda gradation in the last syllable of a stem. <ø> indicates no coda.")[
+#figure(caption: "Final coda mutation in case stems. <ø> indicates no coda.")[
   #table(
     columns: 3,
     table.header([*ABS*], [*DAT*], [*ERG*]),
@@ -210,7 +213,7 @@ All nouns have separate stems for each case. The stems differ in their final syl
   )
 ]
 
-#figure(caption: "Common stem melody alteration patterns.")[
+#figure(caption: "Common patterns of case stem melody alternation.")[
   #table(
     columns: 2,
     table.header([*ABS*], [*DAT/ERG*]),
@@ -332,26 +335,101 @@ While juxtaposition and agreement indicate that two nouns refer to the same obje
 ]
 
 = Verbs
+Nomai verbs are highly agglutinative, marking polarity, modality, evidentiality, voice, aspect, and person. They also have two nonfinite forms: gerunds and participles. Verbs are organized into eight classes that loosely indicate how the verb's meaning is related to its root; all but three of these classes are closed.
 
-== Aspect
+The verb template contains the following slots:
++ orientation prefix (see @ptcp) or converb prefix (see @cvb)
++ negation prefix _pà-_
++ modal/evidential prefix(es) (see @mod)
++ incorporated object (see @incorp)
++ voice prefix (see @voice)
++ verb stem (encodes aspect, see @asp)
++ verb ending
+  - finite verb class ending (see @class)
+  - gerund ending (see @ger)
+  - participle ending (see @ptcp)
++ person suffix (see @prs)
+
+== Aspect <asp>
+Nomai distinguishes three aspects:
+
+- *perfective*: a complete, singular action/event
+- *imperfective*: the state of an ongoing, prospective, or habitual action/event
+- *retrospective*: the state of an action/event having been completed
+
+All verbs have separate stems for each aspect, with the perfective stem being the most basic. The imperfective and retrospective stems are formed from the perfective stem by reduplication, prefixing, and/or infixing.
+
+#figure(caption: [Formation of aspect stems.\ See @asp-cons for possible values of _D_ given onset _C_ or _F_.\ See @asp-vwl for possible values of _AA_ given mora _V_. \ _L_ = _l, r_. _X_ = any non-sibilant consonant.])[
+  #table(
+    columns: 3,
+    table.header([*PFV form*], [*NPFV form*], [*RET form*]),
+    [_CV_], [_C\<*VD*\>V_], [_C\<*AAD*\>V_],
+    [_CLV_], [_C\<*VD*\>LV_], [_C\<*AAD*\>LV_],
+    [_FV_], [_*DV*\~FV_], [_F\<*AAD*\>V_],
+    [_FLV_], [_*DV*\~FLV_], [_F\<*AAD*\>LV_],
+    [_řV_], [_*kV*\~řV_], [_*AAkr*__V_],
+    [_řV_], [_*sV*\~řV_], [_*sAA*-řV_],
+    [_sXV_], [_*sV*\~sXV_], [_*sAA*-sXV_],
+  )
+]
+
+#figure(caption: "Onset mutation in aspect stems.")[
+  #table(
+    columns: 4,
+    table.header([*pattern*], [*PFV*], [*NPFV*], [*RET*]),
+    [C], [\<m\>], [\<m\>], [\<v\>],
+    [C], [\<n\>], [\<n\>], [\<ð\>],
+    [C], [\<p\>], [\<p\>], [\<b\>],
+    [C], [\<t\>], [\<t\>], [\<d\>],
+    [C], [\<k\>], [\<k\>], [\<g\>],
+    [C], [\<b\>], [\<v\>], [\<v\>],
+    [C], [\<d\>], [\<ð\>], [\<ð\>],
+    [C], [\<g\>], [\<w\>], [\<n\>],
+    [C], [\<q\>], [\<q\>], [\<d\>],
+    [C], [\<ǧ\>], [\<z\>], [\<þ\>],
+    [C], [\<s\>], [\<r\>], [\<ds\>],
+    [C], [\<s\>], [\<x\>], [\<z\>],
+    [C], [\<v\>], [], [],
+    [C], [\<z\>], [], [],
+    [C], [∅], [\<k\>], [\<g\>],
+    [C], [∅], [\<n\>], [any],
+    [F], [\<f\>], [\<p\>], [\<b\>],
+    [F], [\<þ\>], [\<t\>], [\<d\>],
+    [F], [\<x\>], [\<s\>], [\<z\>],
+    [F], [\<ł\>], [\<d\>], [\<ð\>],
+  )
+] <asp-cons>
+
+#figure(caption: [Perfective-retrospective vowel correspondences.\ \<y\> refers to any syllabic consonant.])[
+  #table(
+    columns: 2,
+    table.header([*PFV nucleus* (V)], [*RET vowel* (AA)]),
+    [\<a\>], [\<ee\>],
+    [\<e\>], [\<aa\>],
+    [\<i\>], [\<ee\>],
+    [\<o\>], [\<aa\>],
+    [\<u\>], [\<oo\>],
+    [\<y\>], [\<aa\>],
+  )
+] <asp-vwl>
 
 == Valency
 
-== Class
+== Class <class>
 
-== Voice
+== Voice <voice>
 
-== Person
+== Person <prs>
 
-== Incorporation
+== Incorporation <incorp>
 
-== Participles
+== Gerunds <ger>
 
-== Gerunds
+== Participles <ptcp>
 
-== Converbs
+== Converbs <cvb>
 
-== Modals and evidentials
+== Modals and evidentials <mod>
 
 = Syntax
 
