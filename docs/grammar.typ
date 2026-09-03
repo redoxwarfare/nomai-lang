@@ -292,10 +292,44 @@ Bare noun stems correspond to the indefinite collective. Other article-number co
 ]
 
 == Pronouns
+Pronouns distinguish three grammatical persons and, Like nouns, mark case, article, and number. Despite lacking grammatical gender, Festival Nomai distinguishes three genders in the 2nd and 3rd person pronouns:
+
+- *neutral*: originates from informal pronouns; has professional and somewhat impersonal connotations
+- *feminine*: originates from formal pronouns; has connotations of flattery or subservience when used for non-feminine referents
+- *masculine*: originates from intimate pronouns; plural forms can be used gender-neutrally
+
+#figure(caption: "Pronouns.")[
+  #table(
+    columns: 8,
+    table.header([*person*], [*gender*], [*SG.ABS*], [*SG.DAT*], [*SG.ERG*], [*PL.ABS*], [*PL.DAT*], [*PL.ERG*]),
+    [*1.EXCL*], [], [_tér_], [_tár_], [_tír_], [_térȳl_], [_tárȳl_], [_tírȳl_], 
+    [*1.INCL*], [*N*], [], [], [], [_ótỳl_], [_átàl_], [_úxìl_], 
+    [*1.INCL*], [*F*], [], [], [], [_fāstȳl_], [_fāstāl_], [_fēsqīl_], 
+    [*1.INCL*], [*M*], [], [], [], [_xōtȳl_], [_xātāl_], [_xūtīl_], 
+    [*2*], [*N*], [_ók_], [_ák_], [_úk_], [_ókỳl_], [_ákỳl_], [_úkỳl_], 
+    [*2*], [*F*], [_áus_], [_áur_], [_áux_], [_áusȳl_], [_áurāl_], [_áuxīl_], 
+    [*2*], [*M*], [_xō_], [_xā_], [_xū_], [_xōl_], [_xāl_], [_xūl_], 
+    [*3.NDEF*], [*N*], [_mōu_], [_mōn_], [_mūn_], [_łóu_], [_łón_], [_łún_], 
+    [*3.PROX*], [*N*], [_mōucè_], [_mōnàr_], [_mūnìr_], [_łóucè_], [_łónàr_], [_łúnìr_], 
+    [*3.DEF*], [*N*], [_mōukè_], [_mōnàk_], [_mūnìk_], [_łóukè_], [_łónàk_], [_łúnìk_], 
+    [*3.PROX*], [*F*], [_fāsē_], [_fātàr_], [_fēxìr_], [_fāsȳl_], [_fārȳl_], [_fēxrȳl_], 
+    [*3.DEF*], [*F*], [_fās_], [_fār_], [_fēx_], [_fāskȳl_], [_fārkȳl_], [_fēxkȳl_], 
+    [*3.PROX*], [*M*], [_xōucè_], [_xōnàr_], [_xūnìr_], [_xōucỳl_], [_xōnàrỳl_], [_xūnìrỳl_], 
+    [*3.DEF*], [*M*], [_xōu_], [_xōn_], [_xūn_], [_xōul_], [_xōnàl_], [_xūnìl_], 
+  )
+]
 
 == Possession
+While juxtaposition and agreement indicate that two nouns refer to the same object, possession marking indicates that they are distinct, yet closely related objects. The possessum immediately precedes its possessor and is marked with the pertensive clitic, which inflects for the possessor's person, article, and number. Possessa and possessors can be noun phrases, and the possessor of one noun phrase can be the possessum of another.
 
-== Comparison
+#figure(caption: "Inflections of the pertensive clitic.")[
+  #table(
+    columns: 7,
+    table.header([], [*1.EXCL*], [*1.INCL*], [*2*], [*3.NDEF*], [*3.PROX*], [*3.DEF*]),
+    [*SG/SGV/COL*], [_-(f)ùtè_], [], [_-fò_], [_-(f)ù_], [_-(f)ùr_], [_-(f)ùkè_],
+    [*PL*], [_-(f)ùtỳl_], [_-(f)òtỳl_], [_-fòl_], [], [_-(f)ùrỳl_], [_-(f)ùkỳl_],
+  )
+]
 
 = Verbs
 
@@ -320,3 +354,9 @@ Bare noun stems correspond to the indefinite collective. Other article-number co
 == Modals and evidentials
 
 = Syntax
+
+= Miscellaneous
+
+== Comparatives and superlatives
+
+== Numerals
