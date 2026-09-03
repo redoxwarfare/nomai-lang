@@ -338,7 +338,7 @@ While juxtaposition and agreement indicate that two nouns refer to the same obje
 
 #pagebreak()
 = Verbs
-Nomai verbs are highly agglutinative, marking polarity, modality, evidentiality, voice, aspect, and person. They also have two nonfinite forms: gerunds and participles. Every verb belongs to one of eight classes, which loosely indicate how a verb's meaning is related to its root; all but three of these classes are closed.
+Nomai verbs are highly agglutinative, marking polarity, modality, evidentiality, voice, aspect, and person. They also have two nonfinite forms: gerunds and participles.
 
 The verb template contains the following slots:
 + #link(<ptcp>)[participle] orientation prefix or #link(<cvb>)[converb] prefix
@@ -426,11 +426,31 @@ The valency of a verb encapsulates how many arguments it accepts and which cases
 - *locomotive* (LCM): ergative, dative
 - *ditransitive* (DITR): ergative, dative, absolutive
 
-The majority of verbs are intransitive, experiential, intentional, or ditransitive. Locomotive verbs are a relatively small class, albeit including common verbs such as _qúr_ "go" and _mīiqùx_ "come". Agentive verbs are not a true lexical class and can only be formed by #link(<incorp>)[noun incorporation].
+The majority of verbs are intransitive, experiential, intentional, or ditransitive. Intransitive and intentional verbs generally assign the absolutive case to the patient, whereas experiential and ditransitive verbs generally assign the dative case to the patient/experiencer and the absolutive case to the instrument/theme.
+
+Locomotive verbs are a relatively small class, albeit including common verbs such as _qúr_ "go" and _mīiqùx_ "come". Agentive verbs are not a true lexical class and can only be formed by #link(<incorp>)[noun incorporation].
 
 All finite verbs must be used with at least one non-dative argument; there are no other restrictions on which arguments may be omitted.
 
 == Class <class>
+Every verb belongs to one of eight classes, which loosely indicate how a verb's meaning is related to its root. All classes except 6-8 are closed.
+
+Verbs from classes 1-5 have anticausative and causative forms, which map the same semantic roles to their absolutive and dative arguments. The causative form takes an ergative argument, whereas the anticausative form does not. For some class 1-5 verbs, one of the two forms is defective and is never used. Verbs from classes 6-8 are exclusively causative.
+
+#figure(caption: "Class endings and example verbs.")[
+  #table(
+    columns: 6,
+    table.header([*class*], [*ANTIC endings*], [*CAUS endings*], [*description*], [*ANTIC example*], [*CAUS example*]),
+    [*1*], [_-eþ, -oþ_], [_-ixi, -uxi_], [physical changes (instrumental)], [_kléþ_ "stain"], [_klíxi_ "paint"],
+    [*2*], [_-aþ_], [_-exi_], [physical changes (inchoative)], [_emāþ_ "ripen"], [_emēxī_ "cook"],
+    [*3*], [_-er, -or, -yr_], [_-ix, -ux_], [movement], [_mìnēr_ "approach"], [_mìnīx_ "bring"],
+    [*4*], [_-e, -o_], [_-i, -u_], [intangible changes (instrumental)], [_qanē_ "see"], [_qanī_ "show"],
+    [*5*], [_-a_], [_-e_], [intangible changes (inchoative)], [_nòmā_ "learn"], [_nòmē_ "teach"],
+    [*6*], [], [_-eqi_], [physical changes], [], [],
+    [*7*], [], [_-qux, -xux_], [self-movement], [], [_mīiqùx_ "come"],
+    [*8*], [], [_-xi, -qi_], [intangible changes], [], [_kélxi_ "write"],
+  )
+]
 
 == Voice <voice>
 
