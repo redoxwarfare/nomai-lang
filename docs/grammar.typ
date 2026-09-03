@@ -1,3 +1,18 @@
+#import "@preview/eggs:0.9.0": *
+#import abbreviations: abbreviation, abs, dat, erg, def, prox, sg, pl, p1, p2, p3, n, m, f, appl
+#show: eggs
+
+#let ndef = abbreviation("ndef", "indefinite article")
+#let sgv = abbreviation("sgv", "singulative number")
+#let col = abbreviation("col", "collective number")
+#let npfv = abbreviation("npfv", "imperfective aspect")
+#let ret = abbreviation("ret", "retrospective aspect")
+#let ntr = abbreviation("ntr", "intransitive verb")
+#let exp = abbreviation("exp", "experiential verb")
+#let ntl = abbreviation("ntl", "intentional verb")
+#let ditr = abbreviation("ditr", "ditransitive verb")
+#let advs = abbreviation("advs", "adversative voice")
+
 #set page(
   paper: "a4",
   numbering: "1",
@@ -453,6 +468,39 @@ Verbs from classes 1-5 have anticausative and causative forms, which map the sam
 ]
 
 == Voice <voice>
+Voices alter a verb's valency and the semantic roles mapped to its arguments. Festival Nomai has two voices: applicative and adversative.
+
+The *applicative* voice is a valency-increasing operation that converts intransitive and intentional verbs to experiential and ditransitive verbs, respectively. It promotes a cause/instrument to the absolutive case; the previous absolutive argument becomes dative. The applicative voice is marked by the prefixes _ła-_ (if the next vowel is not _i_ or _u_), _łe-_ (if the next vowel is _i_), and _ło-_ (if the next vowel is _u_).
+
+The *adversative* voice is a valency-reducing operation that converts intentional and ditransitive verbs to experiential verbs, indicating that the event happens in spite of the experiencer's efforts or wishes. It demotes the ergative agent to a dative experiencer; the previous dative argument, if it exists, is demoted to an adjunct. The adversative voice is marked by the prefixes _xo-_ (if the next vowel is not _i_ or _u_) and _xu-_ (if the next vowel is _i_ or _u_).
+
+Example @appl-ex demonstrates the applicative voice.
+
+#example(label: <appl-ex>)[
+  + - _łán_ _mò\~mòrīx_
+    - water\\#abs #npfv\~raise
+    "Water is being lifted."
+  + - _łân_ _ła-mò\~mòrīx_ _tūsk-es_
+    - water\\#dat #appl\-#npfv\~raise tool\\#abs\-#prox.#sg
+    "Water is being lifted with a device."
+]
+
+Example @advs-ex demonstrates the adversative voice and how it differs from argument-dropping.
+
+#example(label: <advs-ex>)[
+  + - _łán-kè_ _frér_
+    - water\\#abs\-#def.#sg fall
+    "The water fell.""
+  + - _łán-kè_ _fríx_
+    - water\\#abs\-#def.#sg drop
+    "The water was dropped \[on purpose\]."
+  + - _łán-kè_ _fríx-ti_
+    - water\\#abs\-#def.#sg drop-#p1.#sg.#erg
+    "I dropped the water \[on purpose\]."
+  + - _łán-kè_ _xu-fríx-ta_
+    - water\\#abs\-#def.#sg #advs\-drop-#p1.#sg.#dat
+    "I spilled the water \[accidentally\]."
+]
 
 == Person <prs>
 
