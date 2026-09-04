@@ -723,8 +723,7 @@ Participial clauses act as modifiers within NPs or as NPs in their own right, an
 Relative clauses are syntactically treated as possessors of the NPs they modify. Unlike participial clauses, they relativize non-core roles such as prepositional objects, possessa, and possessors. They use V2 word order but must fill the topic slot with the relativizer _łés_ and include a resumptive pronoun matching the article and number of their head NP. Additionally, the head NP takes the pertensive clitic _-(f)ùr_ (#pert.#p3.#prox.#sg).
 
 == Questions
-=== Open questions
-Open questions use the same V2 word order as independent clauses but replace one of the non-topic arguments or adjuncts with an interrogative pronoun or adverb.
+Open questions use the same V2 word order as independent clauses, but are marked by replacing one of the non-topic arguments or adjuncts with an interrogative pronoun or adverb and using rising intonation. The response to an open question fronts the answer rather than the topic.
 
 The interrogative pronouns are as follows:
 - _pūl_ (#q.#abs), _pòl_ (#q.#dat), _pùl_ (#q.#erg)
@@ -741,7 +740,7 @@ The interrogative adverbs are as follows:
 - _kúpūl_ "how" (manner, degree)
 - _kúpūlþó_ "how many"
 
-=== Polar questions
+Polar questions are marked by V1 word order and rising intonation. The response to a polar question repeats the main verb of the original question with or without the negation prefix _pà-_. Alternatively, the affirmative interjection _ú_ "yes", the verb _?_ "differ", or one of the negative pro-verbs _pàłèké_ "does not happen", _pàsá_ "does not do", and _pàqúr_ "does not go" may be used instead.
 
 = Miscellaneous
 
