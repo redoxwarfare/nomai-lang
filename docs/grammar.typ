@@ -595,6 +595,23 @@ A bare participle relativizes the absolutive argument. Attaching one of the orie
 In addition to retaining most verbal morphology, participles are morphosyntactically equivalent to nouns and can be used both attributively and substantively. For example, substantive perfective participles are often used as agent and patient nouns, similar to English nouns formed with the suffixes "-er" and "-ee". Unlike nouns, participles can take arguments and adjuncts and can incorporate objects. 
 
 == Converbs <cvb>
+Converbs are a special type of participle formed by attaching a converb prefix instead of an orientation prefix. Rather than acting like nouns, converbs head adverbial clauses. Converbs still decline like nouns and must agree with their absolutive argument in case, article, and number.
+
+#figure(caption: "Converb prefixes.")[
+  #table(
+    columns: 3,
+    table.header([*prefix*], [*aspect*], [*function*]),
+    table.cell(rowspan: 2)[_sîi-, sîm-_], [NPFV], [concurrent event],
+      [PFV], [preceding event],
+    [_þu(x)-_], [PFV], [subsequent event],
+    table.cell(rowspan: 2)[_na(f)-_], [PFV], [cause],
+      [NPFV], [condition],
+    [_ste(f)-_], [PFV], [purpose],
+    table.cell(rowspan: 2)[_tô(f)-_], [PFV], [result],
+      [NPFV], [hypothetical],
+    [_ku-, k-_], [any], [manner, degree],
+  )
+]
 
 == Modals and evidentials <mod>
 
