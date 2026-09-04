@@ -5,6 +5,7 @@
 #let ndef = abbreviation("ndef", "indefinite article")
 #let sgv = abbreviation("sgv", "singulative number")
 #let col = abbreviation("col", "collective number")
+#let pert = abbreviation("pert", "pertensive")
 #let npfv = abbreviation("npfv", "imperfective aspect")
 #let ret = abbreviation("ret", "retrospective aspect")
 #let ntr = abbreviation("ntr", "intransitive verb")
@@ -12,8 +13,8 @@
 #let ntl = abbreviation("ntl", "intentional verb")
 #let ditr = abbreviation("ditr", "ditransitive verb")
 #let advs = abbreviation("advs", "adversative voice")
-#let dor = abbreviation("dor", "dative-orienting prefix")
-#let eor = abbreviation("eor", "ergative-orienting prefix")
+#let dor = abbreviation("dor", "dative-orienting")
+#let eor = abbreviation("eor", "ergative-orienting")
 
 #set page(
   paper: "a4",
@@ -194,7 +195,7 @@ Nomai nouns are an open class and include words that might be considered adjecti
 == Case and alignment
 Nomai distinguishes three morphological cases:
 
-- *absolutive*: undergoers of change, unintentional causes of events, instruments, prepositional objects
+- *absolutive*: undergoers of change, unintentional causes of events, instruments, possessors, most prepositional objects
 - *dative*: receivers; experiencers of sensations, feelings, and thoughts; destinations
 - *ergative*: intentional initiators of events
 
@@ -670,15 +671,31 @@ The topic of an independent clause corresponds to the argument at the front of t
 ]
 
 == Equational clauses
-Equational clauses lack verbal predicates, instead consisting of a topic NP followed by a comment NP, both in the absolutive case. The topic and comment are usually distinguished by taking the proximal/definite article and the indefinite article, respectively.
+Equational clauses lack verbal predicates and instead consist of a topic NP followed by a complement NP, both in the absolutive case. The topic and complement are usually distinguished by taking the proximal/definite article and the indefinite article, respectively. An AdvP and/or PP may optionally follow the complement.
+
+#example(label: <eqc-ex>)[
+  - _ómàs-e_ _súk-ym_
+  - fruit\\#abs\-#prox.#sg bitter\\#abs\-#ndef.#sgv
+  "This fruit is bitter."
+]
 
 == Existential clauses
+Existential clauses lack predicates entirely and come in two types. The first type consists of a focus NP in the absolutive case and expresses a meaning similar to "There is/are..." and "It is..." clauses in English. The second type consists of a topic NP in the dative case followed by a focus NP in the absolutive case, and expresses a possessor-possessum relationship between the topic and focus.
+
+#example(label: <exc-ex>)[
+  + - _tésk-es_ _mínù_ _nēlk-ek_
+    - bird\\#abs\-#prox.#sg beside tree\\#abs\-#def.#sg
+    "There's a bird next to the tree."
+  + - _nèitēlāa-r_ _nēlk_ _fōl_
+    - forest\\#dat\-#prox.#sg tree\\#abs large\\#abs
+    "This forest has large trees."
+]
 
 == Clause coordination
 
 == Content clauses
 
-== Adverbial clauses
+== Adverbial clauses <advc>
 
 == Relative clauses
 
