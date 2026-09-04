@@ -1,5 +1,5 @@
 #import "@preview/eggs:0.9.0": *
-#import abbreviations: abbreviation, abs, dat, erg, def, prox, sg, pl, p1, p2, p3, n, m, f, appl, comp, quot, rel, q
+#import abbreviations: abbreviation, abs, dat, erg, def, prox, sg, pl, p1, p2, p3, n, m, f, appl, ptcp, comp, quot, rel, q
 #show: eggs
 
 #let ndef = abbreviation("ndef", "indefinite article")
@@ -38,8 +38,12 @@
 = Preface
 Unraveling the mysteries of _Outer Wilds_ is a delight you can only experience once. If you haven't completed the base game yet, I _*strongly*_ recommend you do so before reading any further. If you have and are interested in an incredibly lengthy headcanon about the Nomai language, this document is for you. 
 
+I assume that readers have some familiarity with various linguistic concepts, but a glossary is included for those desiring additional explanation.
+
+You may also be interested in the #link("https://kvkontin.github.io/nomai/home.html")[collaborative Nomai conlang], which predates this project and partially inspired it.
+
 = Introduction
-Nomai was a family of languages spoken by the Nomai, a nation of highly curious spacefaring mammalian herbivores. Throughout their recorded history, the Nomai species organized themselves into clans, communities of blood families committed to living alongside and supporting each other. The Nomai's ancestors were a group of nomadic clans who rejected the social hierarchy and regimented lifestyle of their sedentary kin and left the Nomai homeworld to explore the universe. Each Nomai clan traveled on a Vessel, a highly advanced spacecraft capable of warping across interstellar distances. Every 10 years, each clan would send an envoy to the Nomai homeworld to share their findings with the other clans; these gatherings were known as Festivals.
+Nomai was a family of languages spoken by the Nomai, a nation of highly curious spacefaring mammalian herbivores. Throughout their recorded history, the Nomai species organized themselves into clans, communities of families committed to living alongside and supporting each other. The Nomai's ancestors were a group of nomadic clans who rejected the social hierarchy and regimented lifestyle of their sedentary kin and left the Nomai homeworld to explore the universe. Each Nomai clan traveled on a Vessel, a highly advanced spacecraft capable of warping across interstellar distances. Every 10 years, all the clans would send envoys to the Nomai homeworld to share their findings with each other; these gatherings were known as Festivals.
 
 Although speakers from different clans were often unable to understand one another, they could still communicate through a carefully-preserved logographic writing system. Additionally, a prestige variety was used to converse at Festivals. At the time Escall's clan became stranded in the Outer Wilds system, their native variety formed the basis of the Festivals' _lingua franca_, and so the remainder of the document will refer to that variety as "Festival Nomai".
 
@@ -80,7 +84,7 @@ The diphthongs are *ua* \[ẅa\], *ia* \[ja\], *io* \[jo\], *au* \[aẅ\], *ai* 
 The tone-bearing unit is the syllable. There are three level tonemes: high \/*H*\/, mid \/*M*\/, and low \/*L*\/. Additionally, syllables may be phonemically toneless \/*∅*\/, and a single syllable may bear the sequence \/*HL*\/.
 
 == Orthography
-Like all varieties of Nomai from across the spacefaring period, Festival Nomai was written in the Nomai logography. However, the input methods for Nomai staves continued to use the Nomai alphabet, the writing system of Classical Nomai. This leads to two possible Romanization schemes: a phonetic scheme that reflects the pronunciation of the spoken language, and a phonemic scheme that reflects native spelling and underlying morphophonological processes. This document will primarily represent Nomai morphemes with the phonetic scheme in italics, but when it is more convenient to do so, it will use the phonemic scheme in angle brackets (ex: _xēi_ \<zée\> "root").
+Like all varieties of Nomai from across the spacefaring period, Festival Nomai was written in the Nomai logography. However, the input methods for Nomai staves were based on the Nomai alphabet, the writing system of Classical Nomai. This leads to two possible Romanization schemes: a phonetic scheme that reflects the pronunciation of the spoken language, and a phonemic scheme that reflects native spelling and underlying morphophonological processes. This document will primarily represent Nomai morphemes with the phonetic scheme in italics, but when it is more convenient to do so, it will use the phonemic scheme in angle brackets (ex: _xēi_ \<zée\> "root").
 
 In the phonemic scheme, consonants are either light or heavy, corresponding to unvoiced and voiced consonants in Classical Nomai, and syllabic nuclei are either unstressed or stressed, corresponding to Classical Nomai's stress-accent. Festival Nomai no longer exhibits voicing or stress contrasts at the phonetic level, but instead encodes the same phonemic information through tone contrasts.
 
@@ -199,7 +203,9 @@ Nomai distinguishes three morphological cases:
 - *dative*: receivers; experiencers of sensations, feelings, and thoughts; destinations
 - *ergative*: intentional initiators of events
 
-In the classical period, before the first Vessels departed the Nomai homeworld, the distinction between absolutive causes and ergative causes was strictly tied to perceived animacy. For example, "The rain washed the stain off" would assign the absolutive case to "the rain", but "Iris washed the stain off with a cloth" would assign the ergative case to "Iris" and the absolutive case to "a cloth". However, by the time of Festival Nomai, speakers had blurred the lines between "intentional" and "unintentional" causes, often using the ergative case to emphasize prominent inanimate nouns.
+Additionally, vocatives are marked by the prefix _a-_, which attaches to nouns in the absolutive case.
+
+In the classical period, before the first Vessels departed the Nomai homeworld, the distinction between absolutive causes and ergative causes was strictly tied to perceived animacy. For example, "The rain wiped the stain away" would assign the absolutive case to "the rain", but "Iris wiped the stain away with a cloth" would assign the ergative case to "Iris" and the absolutive case to "a cloth". However, by the time of Festival Nomai, speakers had blurred the lines between "intentional" and "unintentional" causes, often using the ergative case to emphasize prominent inanimate nouns.
 
 All nouns have separate stems for each case. The stems differ in their final syllables according to a somewhat predictable system of vowel/consonant mutation and melody alternation, but learners typically memorize all three stems when learning a noun.
 
@@ -215,7 +221,7 @@ All nouns have separate stems for each case. The stems differ in their final syl
   )
 ]
 
-#figure(caption: "Final coda mutation in case stems. <ø> indicates no coda.")[
+#figure(caption: "Final coda mutation in case stems. ø indicates no coda.")[
   #table(
     columns: 3,
     table.header([*ABS*], [*DAT*], [*ERG*]),
@@ -224,11 +230,11 @@ All nouns have separate stems for each case. The stems differ in their final syl
     [\<k\>], [\<g\>], [\<ǧ\>],
     [\<b\>], [\<v\>], [\<v\>],
     [\<d\>], [\<ð\>], [\<z\>],
-    [\<g\>], [\<∅\>], [\<z\>],
-    [\<t\>], [\<∅\>], [\<q\>],
-    [\<p, k\>], [\<∅\>], [\<∅\>],
+    [\<g\>], [∅], [\<z\>],
+    [\<t\>], [∅], [\<q\>],
+    [\<p, k\>], [∅], [∅],
     [\<s\>], [\<r\>], [\<x\>],
-    [\<∅\>], [\<m, n\>], [\<m, n\>],
+    [∅], [\<m, n\>], [\<m, n\>],
     [\<l\>], [\<l\>], [\<l\>],
   )
 ]
@@ -295,8 +301,8 @@ Bare noun stems correspond to the indefinite collective. Other article-number co
     [_*-F*_], [_-FÀm_], [_-FÀr_], [_-Frỳl_], [_-FÀC_], [_-FÀCyl_],
     [_*-N*_], [_-NÀm_], [_-NÀr_], [_-NÀrỳl_], [_-NÀC_], [_-NÀCỳl_],
     [_*-l*_], [_-lÀm_], [_-lÀr_], [_-lÀrỳl_], [_-lÀC_], [_-lÀCỳl_],
-    [_*-ClA*_], [_-lAm_], [_-lAr_], [_-lArỳl_], [_-lACè_], [_-lACỳl_],
-    [_*-ClÀ*_], [_-lÀm_], [_-lÀr_], [_-lÀrỳl_], [_-lÀCè_], [_-lÀCỳl_],
+    [_*-ClA*_], [_-ClAm_], [_-ClAr_], [_-ClArỳl_], [_-ClACè_], [_-ClACỳl_],
+    [_*-ClÀ*_], [_-ClÀm_], [_-ClÀr_], [_-ClÀrỳl_], [_-ClÀCè_], [_-ClÀCỳl_],
     [_*-q*_ \<-q\>], [_-qim_], [_-qir_], [_-qryl_], [_-qiC_], [_-qCyl_],
     [_*-q*_ \<-ǧ\>], [_-qìm_], [_-qìr_], [_-qrỳl_], [_-qìC_], [_-qCỳl_],
     [_*-r*_], [_-ràm_], [_-tàr_], [_-rỳl_], [_-rkè_], [_-rkỳl_],
@@ -598,7 +604,7 @@ A bare participle relativizes the absolutive argument. Attaching one of the orie
 In addition to retaining most verbal morphology, participles are morphosyntactically equivalent to nouns and can be used both attributively and substantively. For example, substantive perfective participles are often used as agent and patient nouns, similar to English nouns formed with the suffixes "-er" and "-ee". Unlike nouns, participles can take arguments and adjuncts and can incorporate objects. 
 
 == Converbs <cvb>
-Converbs are a special type of participle formed by attaching a converb prefix instead of an orientation prefix. Rather than acting like nouns, converbs head #link(<advc>)[adverbial clauses]. Converbs still decline like nouns and must agree with their absolutive argument in case, article, and number.
+Converbs are a special type of participle formed by attaching a converb prefix instead of an orientation prefix. Rather than acting as nouns, converbs head #link(<advc>)[adverbial clauses]. Converbs still decline like nouns and must agree with their absolutive argument in case, article, and number.
 
 #figure(caption: "Converb prefixes.")[
   #table(
@@ -671,12 +677,15 @@ The topic of an independent clause corresponds to the argument at the front of t
 ]
 
 === Equational clauses
-Equational clauses lack verbal predicates and instead consist of a topic NP followed by a complement NP, both in the absolutive case. The topic and complement are usually distinguished by taking the proximal/definite article and the indefinite article, respectively. An AdvP and/or PP may optionally follow the complement.
+Equational clauses lack verbal predicates and instead consist of a topic NP followed by a complement NP, both in the absolutive case. The topic and complement are usually distinguished by taking the proximal/definite article and the indefinite article, respectively. An AdvP and/or PP may optionally follow the complement as in @eqc-ex:b.
 
 #example(label: <eqc-ex>)[
-  - _ómàs-e_ _súk-ym_
-  - fruit\\#abs\-#prox.#sg bitter\\#abs\-#ndef.#sgv
-  "This fruit is bitter."
+  + - _ómàs-e_ _súk-ym_
+    - fruit\\#abs\-#prox.#sg bitter\\#abs\-#ndef.#sgv
+    "This fruit is bitter."
+  + - _ómàs-e_ _súk-ym_ _sîi-sfóp-se-ta_
+    - fruit\\#abs\-#prox.#sg bitter\\#abs\-#ndef.#sgv after-taste\\#ptcp.#abs\-#prox.#sg\-#p1.#sg.#dat
+    "This fruit tastes bitter to me."
 ]
 
 === Existential clauses
@@ -698,10 +707,10 @@ There are three possibilities for coordinating two independent clauses:
 - *coreferential topic arguments*: The second clause omits its topic and is joined to the first clause by a coordinating conjunction. Its main verb takes a #link(<prs>)[person suffix] that agrees with the first clause's topic in article and number.
 - *different topic arguments*: The second clause is joined to the first clause by a coordinating conjunction.
 
-There are three coordinating conjunctions:
+There are three clause-coordinating conjunctions:
 
-- *cumulative*: _kà_, joins simultaneous, non-contrasting clauses
-- *alternative*: _?_, joins mutually exclusive, non-contrasting clauses
+- *cumulative*: _kà_, joins simultaneous non-contrasting clauses
+- *alternative*: _łú_, joins mutually exclusive non-contrasting clauses
 - *contrastive*: _mínù_, joins contrasting clauses
 
 == Embedded clauses
@@ -740,10 +749,13 @@ The interrogative adverbs are as follows:
 - _kúpūl_ "how" (manner, degree)
 - _kúpūlþó_ "how many"
 
-Polar questions are marked by V1 word order and rising intonation. The response to a polar question repeats the main verb of the original question with or without the negation prefix _pà-_. Alternatively, the affirmative interjection _ú_ "yes", the verb _?_ "differ", or one of the negative pro-verbs _pàłèké_ "does not happen", _pàsá_ "does not do", and _pàqúr_ "does not go" may be used instead.
+Polar questions are marked by V1 word order and rising intonation. The response to a polar question repeats the main verb of the original question with or without the negation prefix _pà-_. Alternatively, speakers may instead use the affirmative interjection _ú_ "yes", the verb _nàpē_ "differ", or one of the negative pro-verbs _pàłèké_ "does not happen", _pàsá_ "does not do", and _pàqúr_ "does not go".
 
 = Miscellaneous
 
 == Comparatives and superlatives
 
 == Numerals
+
+#pagebreak()
+= Glossary
