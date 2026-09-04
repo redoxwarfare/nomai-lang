@@ -598,7 +598,7 @@ A bare participle relativizes the absolutive argument. Attaching one of the orie
 In addition to retaining most verbal morphology, participles are morphosyntactically equivalent to nouns and can be used both attributively and substantively. For example, substantive perfective participles are often used as agent and patient nouns, similar to English nouns formed with the suffixes "-er" and "-ee". Unlike nouns, participles can take arguments and adjuncts and can incorporate objects. 
 
 == Converbs <cvb>
-Converbs are a special type of participle formed by attaching a converb prefix instead of an orientation prefix. Rather than acting like nouns, converbs head adverbial clauses. Converbs still decline like nouns and must agree with their absolutive argument in case, article, and number.
+Converbs are a special type of participle formed by attaching a converb prefix instead of an orientation prefix. Rather than acting like nouns, converbs head #link(<advc>)[adverbial clauses]. Converbs still decline like nouns and must agree with their absolutive argument in case, article, and number.
 
 #figure(caption: "Converb prefixes.")[
   #table(
@@ -692,6 +692,17 @@ Existential clauses lack predicates entirely and come in two types. The first ty
 ]
 
 == Clause coordination
+There are three possibilities for coordinating two independent clauses:
+
+- *identical topic argument*: The second clause omits its topic and appends directly to the end of the first clause. If any non-topic arguments are also shared between the clauses, they may be omitted from the first VP.
+- *coreferential topic arguments*: The second clause omits its topic and is joined to the first clause by a coordinating conjunction. Its main verb takes a #link(<prs>)[person suffix] that agrees with the first clause's topic in article and number.
+- *different topic arguments*: The second clause is joined to the first clause by a coordinating conjunction.
+
+There are three coordinating conjunctions:
+
+- *cumulative*: _kà_, joins simultaneous, non-contrasting clauses
+- *alternative*: _?_, joins mutually exclusive, non-contrasting clauses
+- *contrastive*: _mínù_, joins contrasting clauses
 
 == Content clauses
 
