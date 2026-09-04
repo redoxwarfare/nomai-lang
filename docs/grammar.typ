@@ -531,8 +531,34 @@ Person suffixes are transparently related to pronouns and are mutually exclusive
 ]
 
 == Incorporation <incorp>
+Verbs with absolutive and/or dative arguments can incorporate them, with some exceptions. Incorporated objects must be root or compound nouns in the indefinite collective form; pronouns, noun phrases, and nonfinite verbs cannot be incorporated. Additionally, most verbs that map their dative argument to the experiencer semantic role (e.g. experiential verbs and verbs in adversative voice) cannot incorporate it.
+
+Incorporation is a valency-reducing operation: ditransitive verbs become intentional, intentional and locomotive verbs become agentive, and experiential verbs become intransitive. Incorporating an absolutive argument promotes an existing dative argument to the absolutive. Incorporation can also combine with a #link(<voice>)[voice prefix] and is applied last.
 
 == Gerunds <ger>
+Gerunds are nonfinite verbs that nominalize actions or events. They are formed by replacing a perfective verb's #link(<class>)[class ending] with the corresponding gerund ending.
+
+#figure(caption: "Gerund endings for each verb class.")[
+  #table(
+    columns: 3,
+    table.header([*class*], [*PFV endings*], [*GER ending*]),
+    [*1*], [_-eþ, -ixi_], [_-ei_], 
+    [*1*], [_-oþ, -uxi_], [_-oi_], 
+    [*2*], [_-aþ, -exi_], [_-ai_], 
+    [*3*], [_-er, -yr, -ix_], [_-erè_], 
+    [*3*], [_-or, -yr, -ux_], [_-orè_], 
+    [*4*], [_-e, -i_], [_-efè_], 
+    [*4*], [_-o, -u_], [_-ofè_], 
+    [*5*], [_-a, -e_], [_-afè_], 
+    [*6*], [_-eqi_], [_-ai_], 
+    [*7*], [_-qux_], [_-qurè_], 
+    [*7*], [_-xux_], [_-xurè_], 
+    [*8*], [_-xi_], [_-sfè_], 
+    [*8*], [_-qi_], [_-cfè_], 
+  )
+]
+
+Gerunds lack any nominal or verbal inflections, except for polarity. Like nouns, gerunds can act as arguments of verbs or objects of prepositions, but they cannot modify or be modified by other nouns. Like verbs, gerunds can take arguments and adjuncts and incorporate objects. Additionally, gerunds can express their absolutive arguments as possessors. If the verb does not take an absolutive argument, the gerund's possessor corresponds to the ergative argument.
 
 == Participles <ptcp>
 
