@@ -1,5 +1,5 @@
 #import "@preview/eggs:0.9.0": *
-#import abbreviations: abbreviation, abs, dat, erg, def, prox, sg, pl, p1, p2, p3, n, m, f, appl
+#import abbreviations: abbreviation, abs, dat, erg, def, prox, sg, pl, p1, p2, p3, n, m, f, appl, comp, quot, rel
 #show: eggs
 
 #let ndef = abbreviation("ndef", "indefinite article")
@@ -670,7 +670,7 @@ The topic of an independent clause corresponds to the argument at the front of t
     "The woman is _cooking_ food for the child."
 ]
 
-== Equational clauses
+=== Equational clauses
 Equational clauses lack verbal predicates and instead consist of a topic NP followed by a complement NP, both in the absolutive case. The topic and complement are usually distinguished by taking the proximal/definite article and the indefinite article, respectively. An AdvP and/or PP may optionally follow the complement.
 
 #example(label: <eqc-ex>)[
@@ -679,7 +679,7 @@ Equational clauses lack verbal predicates and instead consist of a topic NP foll
   "This fruit is bitter."
 ]
 
-== Existential clauses
+=== Existential clauses
 Existential clauses lack predicates entirely and come in two types. The first type consists of a focus NP in the absolutive case and expresses a meaning similar to "There is/are..." and "It is..." clauses in English. The second type consists of a topic NP in the dative case followed by a focus NP in the absolutive case, and expresses a possessor-possessum relationship between the topic and focus.
 
 #example(label: <exc-ex>)[
@@ -691,7 +691,7 @@ Existential clauses lack predicates entirely and come in two types. The first ty
     "This forest has large trees."
 ]
 
-== Clause coordination
+=== Coordinated clauses
 There are three possibilities for coordinating two independent clauses:
 
 - *identical topic argument*: The second clause omits its topic and appends directly to the end of the first clause. If any non-topic arguments are also shared between the clauses, they may be omitted from the first VP.
@@ -704,11 +704,23 @@ There are three coordinating conjunctions:
 - *alternative*: _?_, joins mutually exclusive, non-contrasting clauses
 - *contrastive*: _mínù_, joins contrasting clauses
 
-== Content clauses
+== Embedded clauses
+Embedded clauses act as arguments of an independent clause's main verb. As they are often longer than typical verbal arguments, they tend to be shifted rightwards if they are not topicalized or focused.
 
-== Adverbial clauses <advc>
+=== Adverbial clauses <advc>
+Adverbial clauses act as adjuncts. They use V1 word order and put the verb into #link(<cvb>)[converb] form.
 
-== Relative clauses
+=== Content clauses
+Content clauses act as absolutive or dative arguments. They use V2 word order but must fill the topic slot with a complementizer. The default complementizer is _łés_ (#comp.#abs), _łékỳr_ (#comp.#dat), a shortening of _łéce/łékàr_ ("this situation"). There is also a quotative complementizer _tésyl_ (#comp.#quot), a shortening of _téicỳl_ ("these words"), and an empty complementizer that may be used if it would not cause ambiguity.
+
+=== Gerundial clauses
+Gerundial clauses act as absolutive or dative arguments. They use V1 word order and put the verb into #link(<ger>)[gerund] form.
+
+=== Participial clauses
+Participial clauses act as modifiers within NPs or as NPs in their own right, and are used when relativizing core verbal arguments. They use V1 word order and put the verb into #link(<ptcp>)[participle] form.
+
+=== Relative clauses
+Relative clauses are syntactically treated as possessors of the NPs they modify. Unlike participial clauses, they relativize non-core roles such as prepositional objects, possessa, and possessors. They use V2 word order but must fill the topic slot with the relativizer _łés_ and include a resumptive pronoun matching the article and number of their head NP. Additionally, the head NP takes the pertensive clitic _-(f)ùr_ (#pert.#p3.#prox.#sg).
 
 == Questions
 
