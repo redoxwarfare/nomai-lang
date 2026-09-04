@@ -12,6 +12,8 @@
 #let ntl = abbreviation("ntl", "intentional verb")
 #let ditr = abbreviation("ditr", "ditransitive verb")
 #let advs = abbreviation("advs", "adversative voice")
+#let dor = abbreviation("dor", "dative-orienting prefix")
+#let eor = abbreviation("eor", "ergative-orienting prefix")
 
 #set page(
   paper: "a4",
@@ -561,6 +563,36 @@ Gerunds are nonfinite verbs that nominalize actions or events. They are formed b
 Gerunds lack any nominal or verbal inflections, except for polarity. Like nouns, gerunds can act as arguments of verbs or objects of prepositions, but they cannot modify or be modified by other nouns. Like verbs, gerunds can take arguments and adjuncts and incorporate objects. Additionally, gerunds can express their absolutive arguments as possessors. If the verb does not take an absolutive argument, the gerund's possessor corresponds to the ergative argument.
 
 == Participles <ptcp>
+Participles are nonfinite verbs that relativize verbal core arguments. They are formed by replacing a verb's #link(<class>)[class ending] with the corresponding participle ending.
+
+#figure(caption: "Participle endings for each verb class.")[
+  #table(
+    columns: 6,
+    table.header([*class*], [*PFV endings*], [*article-number*], [*ABS*], [*DAT*], [*ERG*]),
+    table.cell(rowspan: 3)[*1, 2*], table.cell(rowspan: 3)[_-þ, -xi_], [*NDEF.COL*], [_-t_], [_-þ_], [_-x_],  
+    [*PROX.SG*], [_-sè_], [_-þàr_], [_-xìr_],
+    [*DEF.SG*], [_-tè_], [_-þàt_], [_-xìt_],
+    table.cell(rowspan: 3)[*3, 7*], table.cell(rowspan: 3)[_-r, -x_], [*NDEF.COL*], [_-s_], [_-r_], [_-x_],  
+    [*PROX.SG*], [_-se_], [_-tàr_], [_-xir_],
+    [*DEF.SG*], [_-skè_], [_-rkè_], [_-xke_],
+    table.cell(rowspan: 3)[*4, 5*], table.cell(rowspan: 3)[-∅], [*NDEF.COL*], [_-p_], [_-f_], [_-f_],  
+    [*PROX.SG*], [_-psè_], [_-fàr_], [_-fìr_],
+    [*DEF.SG*], [_-pè_], [_-fàp_], [_-fìp_],
+    table.cell(rowspan: 3)[*6*], table.cell(rowspan: 3)[_-eqi_], [*NDEF.COL*], [_-at_], [_-aa_], [_-eq_],  
+    [*PROX.SG*], [_-ase_], [_-aar_], [_-eqir_],
+    [*DEF.SG*], [_-ate_], [_-aatè_], [_-eqte_],
+    table.cell(rowspan: 6)[*8*], table.cell(rowspan: 3)[_-xi_], [*NDEF.COL*], [_-sep_], [_-sfà_], [_-xfì_],  
+    [*PROX.SG*], [_-sepsè_], [_-sfàr_], [_-xfìr_],
+    [*DEF.SG*], [_-sepè_], [_-sfàp_], [_-xfìp_],
+    table.cell(rowspan: 3)[_-qi_], [*NDEF.COL*], [_-cep_], [_-cfà_], [_-qfì_],  
+    [*PROX.SG*], [_-cepsè_], [_-cfàr_], [_-qfìr_],
+    [*DEF.SG*], [_-cepè_], [_-cfàp_], [_-qfìp_],
+  )
+]
+
+A bare participle relativizes the absolutive argument. Attaching one of the orientation prefixes _er-_ or _ix-_ instead relativizes the dative or ergative argument, respectively. (These prefixes will be glossed as #dor and #eor.) Participles of verbs that do not take absolutive arguments must still use the orientation prefixes.
+
+In addition to retaining most verbal morphology, participles are morphosyntactically equivalent to nouns and can be used both attributively and substantively. For example, substantive perfective participles are often used as agent and patient nouns, similar to English nouns formed with the suffixes "-er" and "-ee". Unlike nouns, participles can take arguments and adjuncts and can incorporate objects. 
 
 == Converbs <cvb>
 
