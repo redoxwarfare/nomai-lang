@@ -182,14 +182,14 @@ In the phonemic scheme, consonants are either light or heavy, corresponding to u
 
 Tones are realized according to the following rules:
 + if preceded by /L/ in the same word, /M/ spreads rightward, delinking following /L/, until meeting a word boundary or /H/
-+ /H/ spreads to any immediately following /∅/ syllable unless it is the last tone in a noun phrase or prepositional phrase
++ /H/ spreads to any immediately following /∅/ syllable unless it is the last tone in an NP or PP
 + /L/ spreads rightwards into /∅/ syllables, crossing word boundaries
 + /M/ spreads rightwards into /∅/ syllables, crossing word boundaries
 + all remaining /∅/ syllables are realized as \[M\]
 
 #pagebreak()
 = Nouns
-Nomai nouns are an open class and include words that might be considered adjectives in other languages. They inflect for case, article, and number. Any series of consecutive nouns with the same case, article, and number acts as a single noun phrase, where the first noun is the head (also called a "substantive noun") and the other nouns are modifiers (also called "attributive nouns").
+Nomai nouns are an open class and include words that might be considered adjectives in other languages. They inflect for case, article, and number. Any series of consecutive nouns with the same case, article, and number acts as a single NP, where the first noun is the head (also called a "substantive noun") and the other nouns are modifiers (also called "attributive nouns").
 
 == Case and alignment
 Nomai distinguishes three morphological cases:
@@ -342,7 +342,7 @@ Pronouns distinguish three grammatical persons and, Like nouns, mark case, artic
 ]
 
 == Possession
-While juxtaposition and agreement indicate that two nouns refer to the same object, possession marking indicates that they are distinct, yet closely related objects. The possessum immediately precedes its possessor and is marked with the pertensive clitic, which inflects for the possessor's person, article, and number. Possessa and possessors can be noun phrases, and the possessor of one noun phrase can be the possessum of another.
+While juxtaposition and agreement indicate that two nouns refer to the same object, possession marking indicates that they are distinct, yet closely related objects. The possessum immediately precedes its possessor and is marked with the pertensive clitic, which inflects for the possessor's person, article, and number. Possessa and possessors can be NPs, and the possessor of one NP can be the possessum of another.
 
 #figure(caption: "Inflections of the pertensive clitic.")[
   #table(
@@ -533,7 +533,7 @@ Person suffixes are transparently related to pronouns and are mutually exclusive
 ]
 
 == Incorporation <incorp>
-Verbs with absolutive and/or dative arguments can incorporate them, with some exceptions. Incorporated objects must be root or compound nouns in the indefinite collective form; pronouns, noun phrases, and nonfinite verbs cannot be incorporated. Additionally, most verbs that map their dative argument to the experiencer semantic role (e.g. experiential verbs and verbs in adversative voice) cannot incorporate it.
+Verbs with absolutive and/or dative arguments can incorporate them, with some exceptions. Incorporated objects must be root or compound nouns in the indefinite collective form; pronouns, NPs, and nonfinite verbs cannot be incorporated. Additionally, most verbs that map their dative argument to the experiencer semantic role (e.g. experiential verbs and verbs in adversative voice) cannot incorporate it.
 
 Incorporation is a valency-reducing operation: ditransitive verbs become intentional, intentional and locomotive verbs become agentive, and experiential verbs become intransitive. Incorporating an absolutive argument promotes an existing dative argument to the absolutive. Incorporation can also combine with a #link(<voice>)[voice prefix] and is applied last.
 
@@ -638,6 +638,24 @@ Festival Nomai can express a variety of modalities and evidentialities using ver
 The order of a modal/evidential prefix determines which other modal/evidential prefixes it can combine with and the order in which they combine. Prefixes with a higher order must follow prefixes with a lower order, and prefixes with the same order cannot combine with one another. Additionally, the imperative and prohibitive prefixes cannot combine with any other prefixes.
 
 = Syntax
+
+== NP coordination
+
+== Equational clauses
+
+== Existential clauses
+
+== Independent clauses
+
+== Clause coordination
+
+== Content clauses
+
+== Adverbial clauses
+
+== Relative clauses
+
+== Questions
 
 = Miscellaneous
 
