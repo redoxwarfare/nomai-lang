@@ -470,11 +470,9 @@ Verbs from classes 1-5 have anticausative and causative forms, which map the sam
 == Voice <voice>
 Voices alter a verb's valency and the semantic roles mapped to its arguments. Festival Nomai has two voices: applicative and adversative.
 
-The *applicative* voice is a valency-increasing operation that converts intransitive and intentional verbs to experiential and ditransitive verbs, respectively. It promotes a cause/instrument to the absolutive case; the previous absolutive argument becomes dative. The applicative voice is marked by the prefixes _ła-_ (if the next vowel is not _i_ or _u_), _łe-_ (if the next vowel is _i_), and _ło-_ (if the next vowel is _u_).
+The *applicative* voice, demonstrated in @appl-ex:b, is a valency-increasing operation that converts intransitive and intentional verbs to experiential and ditransitive verbs, respectively. It promotes a cause/instrument to the absolutive case; the previous absolutive argument becomes dative. The applicative voice is marked by the prefixes _ła-_ (if the next vowel is not _i_ or _u_), _łe-_ (if the next vowel is _i_), and _ło-_ (if the next vowel is _u_).
 
-The *adversative* voice is a valency-reducing operation that converts intentional and ditransitive verbs to experiential verbs, indicating that the event happens in spite of the experiencer's efforts or wishes. It demotes the ergative agent to a dative experiencer; the previous dative argument, if it exists, is demoted to an adjunct. The adversative voice is marked by the prefixes _xo-_ (if the next vowel is not _i_ or _u_) and _xu-_ (if the next vowel is _i_ or _u_).
-
-Example @appl-ex demonstrates the applicative voice.
+The *adversative* voice, demonstrated in @advs-ex:d, is a valency-reducing operation that converts intentional and ditransitive verbs to experiential verbs, indicating that the event happens in spite of the experiencer's efforts or wishes. It demotes the ergative agent to a dative experiencer; the previous dative argument, if it exists, is demoted to an adjunct. The adversative voice is marked by the prefixes _xo-_ (if the next vowel is not _i_ or _u_) and _xu-_ (if the next vowel is _i_ or _u_).
 
 #example(label: <appl-ex>)[
   + - _łán_ _mò\~mòrīx_
@@ -484,8 +482,6 @@ Example @appl-ex demonstrates the applicative voice.
     - water\\#dat #appl\-#npfv\~raise tool\\#abs\-#prox.#sg
     "Water is being lifted with a device."
 ]
-
-Example @advs-ex demonstrates the adversative voice and how it differs from argument-dropping.
 
 #example(label: <advs-ex>)[
   + - _łán-kè_ _frér_
@@ -503,6 +499,36 @@ Example @advs-ex demonstrates the adversative voice and how it differs from argu
 ]
 
 == Person <prs>
+#figure(caption: "Person suffixes.")[
+  #table(
+    columns: 8,
+    table.header([*person*], [*gender*], [*SG.ABS*], [*SG.DAT*], [*SG.ERG*], [*PL.ABS*], [*PL.DAT*], [*PL.ERG*]),
+    [*1.EXCL*], [], [_-te_], [_-ta_], [_-ti_], [_-tel_], [_-tal_], [_-til_], 
+    [*1.INCL*], [], [], [], [], [_-(f)ot_], [_-(f)at_], [_-(f)ux_], 
+    [*2*], [*N*], [_-(f)o_], [_-(f)a_], [_-(f)u_], [_-(f)ol_], [_-(f)al_], [_-(f)ul_], 
+    [*2*], [*F*], [_-(f)aus_], [_-(f)aur_], [_-(f)aux_], [_-(f)osyl_], [_-(f)oryl_], [_-(f)oxyl_], 
+    [*2*], [*M*], [_-xò_], [_-xà_], [_-xù_], [_-xòl_], [_-xàl_], [_-xùl_], 
+    [*3*], [*N*], [_-mòu_], [_-mòn_], [_-mùn_], [_-łou_], [_-łon_], [_-łun_], 
+    [*3*], [*F*], [_-fàs_], [_-fàr_], [_-fèx_], [_-fàl_], [_-fàrỳl_], [_fèl_], 
+    [*3*], [*M*], [_-xòu_], [_-xòn_], [_-xùn_], [_-xòl_], [_-xònỳl_], [_-xùnỳl_], 
+  )
+]
+
+Person suffixes are transparently related to pronouns and are mutually exclusive with them; if a verb takes a person suffix, it cannot also take a matching pronoun argument. Verbs preferentially take 1st and 2nd person arguments as suffixes and 3rd person arguments as nouns or pronouns. 1st and 2nd person suffixes can stack with one another, following the order #erg > #dat > #abs.
+
+3rd person suffixes only appear on finite verbs in a limited number of situations: to indicate a shared topic between coordinated clauses as in @coord-clauses, to indicate a reflexive verb as in @refl, or to imply a topic that the listener can infer from context.
+
+#example(label: <coord-clauses>)[
+  - _mīf-ìk_ _sfúxi_ _ómàs-ym_ _mínù_ _qanē-mòu_ _nūfàr-kè_
+  - child\\#erg\-#def.#sg eat fruit\\#abs\-#ndef.#sgv but see-#p3.#sg.#n.#abs woman\\#dat\-#def.#sg
+  "The child ate a fruit but was seen by the woman."
+]
+
+#example(label: <refl>)[
+  - _tísq-ik_ _nìomūx-mòu_ _nāf_ _nēlk-ek_
+  - bird\\#erg\-#def.#sg throw-#p3.#sg.#n.#abs from tree\\#abs\-#def.#sg
+  "The bird launched itself off the tree.""
+]
 
 == Incorporation <incorp>
 
