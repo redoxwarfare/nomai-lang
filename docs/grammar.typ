@@ -257,7 +257,7 @@ All nouns have separate stems for each case. The stems differ in their final syl
 Festival Nomai distinguishes three articles:
 
 - *indefinite*: generic, nonspecific, or backgrounded nouns
-- *proximal*: specific nouns unknown to the listener
+- *proximal*: specific nouns unknown to the listener; focused nouns
 - *definite*: specific nouns known to the listener; proper nouns
 
 Indefinite nouns are either collective or singulative, whereas proximal and definite nouns are either singular or plural.
@@ -352,6 +352,8 @@ While juxtaposition and agreement indicate that two nouns refer to the same obje
     [*PL*], [_-(f)ùtỳl_], [_-(f)òtỳl_], [_-fòl_], [], [_-(f)ùrỳl_], [_-(f)ùkỳl_],
   )
 ]
+
+== NP coordination
 
 #pagebreak()
 = Verbs
@@ -639,14 +641,38 @@ The order of a modal/evidential prefix determines which other modal/evidential p
 
 #pagebreak()
 = Syntax
+== Independent clauses
+As both a topic-prominent and strongly head-initial language, Festival Nomai primarily employs V2 word order in independent clauses. The order of verbal arguments defaults to #erg > #dat > #abs > adjuncts, with arguments to the left typically appearing before arguments to the right. However, this order is highly flexible and readily changes to both reflect information structure and avoid syntactical ambiguity.
 
-== NP coordination
+The topic of an independent clause corresponds to the argument at the front of the sentence; the main verb and the remainder of the arguments comprise the comment. Once a topic is established, subsequent independent clauses may omit it in lieu of #link(<prs>)[person-marking] on their main verbs. Focus may be syntactically marked by placing the focused argument directly after the main verb, or by fronting the main verb if it is focused.
+
+#example(label: <is-ex>)[
+  + Default word order
+    - _núfèx-ke_ _en\~emēxī_ _níalìi_ _sté_ _mēf-àk_
+    - woman\\#erg\-#def.#sg #npfv\~cook food\\#abs for child\\#dat\-#def.#sg
+    "The woman is cooking food for the child."
+  + Topicalized absolutive argument
+    - _níalìi-cè_ _núfèx-ke_ _en\~emēxī_  _sté_ _mēf-àk_
+    - food\\#abs\-#prox.#sg #npfv\~cook woman\\#erg\-#def.#sg for child\\#dat\-#def.#sg
+    "This food is being cooked by the woman for the child."
+  + Topicalized adjunct
+    -  _sté_ _mēf-àk_ _en\~emēxī_ _núfèx-ke_ _níalìi_
+    - for child\\#dat\-#def.#sg #npfv\~cook woman\\#erg\-#def.#sg food\\#abs
+    "The child is being cooked food by the woman."
+  + Focused adjunct
+    - _núfèx-ke_ _en\~emēxī_ _sté_ _mēf-àr_ _níalìi_
+    - woman\\#erg\-#def.#sg #npfv\~cook for child\\#dat\-#prox.#sg food\\#abs
+    "The woman is cooking food for _the child_."
+  + Focused main verb
+    - _en\~emēxī_ _núfèx-ke_ _níalìi_ _sté_ _mēf-àk_
+    - #npfv\~cook woman\\#erg\-#def.#sg food\\#abs for child\\#dat\-#def.#sg
+    "The woman is _cooking_ food for the child."
+]
 
 == Equational clauses
+Equational clauses lack verbal predicates, instead consisting of a topic NP followed by a comment NP, both in the absolutive case. The topic and comment are usually distinguished by taking the proximal/definite article and the indefinite article, respectively.
 
 == Existential clauses
-
-== Independent clauses
 
 == Clause coordination
 
