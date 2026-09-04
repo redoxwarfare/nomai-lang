@@ -1,5 +1,5 @@
 #import "@preview/eggs:0.9.0": *
-#import abbreviations: abbreviation, abs, dat, erg, def, prox, sg, pl, p1, p2, p3, n, m, f, appl, comp, quot, rel
+#import abbreviations: abbreviation, abs, dat, erg, def, prox, sg, pl, p1, p2, p3, n, m, f, appl, comp, quot, rel, q
 #show: eggs
 
 #let ndef = abbreviation("ndef", "indefinite article")
@@ -723,6 +723,25 @@ Participial clauses act as modifiers within NPs or as NPs in their own right, an
 Relative clauses are syntactically treated as possessors of the NPs they modify. Unlike participial clauses, they relativize non-core roles such as prepositional objects, possessa, and possessors. They use V2 word order but must fill the topic slot with the relativizer _łés_ and include a resumptive pronoun matching the article and number of their head NP. Additionally, the head NP takes the pertensive clitic _-(f)ùr_ (#pert.#p3.#prox.#sg).
 
 == Questions
+=== Open questions
+Open questions use the same V2 word order as independent clauses but replace one of the non-topic arguments or adjuncts with an interrogative pronoun or adverb.
+
+The interrogative pronouns are as follows:
+- _pūl_ (#q.#abs), _pòl_ (#q.#dat), _pùl_ (#q.#erg)
+  - when standing alone, corresponds to "what, who"
+  - when heading an NP, corresponds to "which X", where X is the modifier
+  - when heading a PP starting with _nāf_ "from", corresponds to "which out of X", where X is the object of _nāf_
+  - when modifying an NP, corresponds to "what kind of X", where X is the modified NP
+- _pūlís_ "where", usually used with preposition
+- _pūlfō_ "when", usually used with preposition
+
+The interrogative adverbs are as follows:
+- _nāpūl_ "why" (cause)
+- _stépūl_ "why" (purpose)
+- _kúpūl_ "how" (manner, degree)
+- _kúpūlþó_ "how many"
+
+=== Polar questions
 
 = Miscellaneous
 
