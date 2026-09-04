@@ -614,6 +614,28 @@ Converbs are a special type of participle formed by attaching a converb prefix i
 ]
 
 == Modals and evidentials <mod>
+#figure(caption: "Modal/evidential prefixes.")[
+  #table(
+    columns: 5,
+    table.header([], [*prefix*], [*order*], [*example*], [*meaning*]),
+    [*imperative (IMP)*], [_a-_], [], [_Anàpīx._], ["Leave."], 
+    [*prohibitive (PROH)*], [_àpèi-, àpèm-_], [], [_Àpèinàpīx._], ["Don't leave."], 
+    [*abilitive (ABIL)*], [_þòm(à)-_], [4], [_Þòmàkēqīti._], ["I can sing."], 
+    [*permissive (PERM)*], [_tôu(x)-_], [4], [_Tôukēqīti?_], ["May I sing?"], 
+    [*necessitative (NEC)*], [_qâx-_], [3], [_Qáxnàpīxti._], ["I need to leave."], 
+    [*jussive (JUS)*], [_māf-_], [2], [_Māfnàpīxti._], ["I should leave."], 
+    [*dubitative (DUB)*], [_łúx(t)-_], [1], [_Łúxnàpīxfex._], ["Perhaps she left."], 
+    [*inferential (INFR)*], [_þúx(t)-_], [1], [_Þúxnàpīxfex._], ["She must have left."],
+    [*potential (POT)*], [_séq(í)-_], [1], [_Séqínàpīxfex._], ["I think she'll leave."],
+    [*reportative (RPT)*], [_têx-_], [0], [_Téxnàpīxfex._], ["They say she left."],
+    [*visual (VIS)*], [_qyn(ne)-_], [0], [_Qynnàpīxfex._], ["I saw her leave."],
+    [*auditory (AUD)*], [_ôu-, ôn-_], [0], [_Óunàpīxfex._], ["I heard her leave."],
+  )
+]
+
+Festival Nomai can express a variety of modalities and evidentialities using verbal prefixes. All prefixes except the imperative and prohibitive can be used with both finite and nonfinite verbs.
+
+The order of a modal/evidential prefix determines which other modal/evidential prefixes it can combine with and the order in which they combine. Prefixes with a higher order must follow prefixes with a lower order, and prefixes with the same order cannot combine with one another. Additionally, the imperative and prohibitive prefixes cannot combine with any other prefixes.
 
 = Syntax
 
