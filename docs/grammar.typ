@@ -79,7 +79,7 @@ The diphthongs are *ua* \[ẅa\], *ia* \[ja\], *io* \[jo\], *au* \[aẅ\], *ai* 
 The tone-bearing unit is the syllable. There are three level tonemes: high \/*H*\/, mid \/*M*\/, and low \/*L*\/. Additionally, syllables may be phonemically toneless \/*∅*\/, and a single syllable may bear the sequence \/*HL*\/.
 
 == Orthography
-Like all varieties of Nomai from across the spacefaring period, Festival Nomai was written in the Nomai logography. However, the input methods for Nomai staves continued to use the Nomai alphabet, the writing system of Classical Nomai. This leads to two possible Romanization schemes: a phonetic scheme that reflects the pronunciation of the spoken language, and a phonemic scheme that reflects native spelling and underlying morphophonological processes. This document will primarily represent Nomai words with the phonetic scheme in italics, but when it is more convenient to do so, it will use the phonemic scheme in angle brackets (ex: _xēi_ \<zée\> "root").
+Like all varieties of Nomai from across the spacefaring period, Festival Nomai was written in the Nomai logography. However, the input methods for Nomai staves continued to use the Nomai alphabet, the writing system of Classical Nomai. This leads to two possible Romanization schemes: a phonetic scheme that reflects the pronunciation of the spoken language, and a phonemic scheme that reflects native spelling and underlying morphophonological processes. This document will primarily represent Nomai morphemes with the phonetic scheme in italics, but when it is more convenient to do so, it will use the phonemic scheme in angle brackets (ex: _xēi_ \<zée\> "root").
 
 In the phonemic scheme, consonants are either light or heavy, corresponding to unvoiced and voiced consonants in Classical Nomai, and syllabic nuclei are either unstressed or stressed, corresponding to Classical Nomai's stress-accent. Festival Nomai no longer exhibits voicing or stress contrasts at the phonetic level, but instead encodes the same phonemic information through tone contrasts.
 
@@ -285,7 +285,7 @@ Bare noun stems correspond to the indefinite collective. Other article-number co
 ]
 
 #figure(caption: [
-  Article-number endings for dative and ergative stems.\ _C_ = absolutive stem's last non-syllabic consonant if it is _p_, _t_, or _k_; otherwise _k_.\ _F_ = _f_ \<v\>, _þ_ \<ð\>, _x_ \<z\>. _N_ = _m_ or _n_. _A_ = _a_ for dative stems, _i_ for ergative stems.])[
+  Article-number endings for dative and ergative stems.\ _C_ = absolutive stem's last non-syllabic consonant if it is _p, t, k_; otherwise _k_.\ _F_ = _f_ \<v\>, _þ_ \<ð\>, _x_ \<z\>. _N_ = _m, n_. _A_ = _a_ for dative stems, _i_ for ergative stems.])[
   #table(
     columns: 6,
     table.header([*NDEF.COL*], [*NDEF.SGV*], [*PROX.SG*], [*PROX.PL*], [*DEF.SG*], [*DEF.PL*]),
@@ -325,19 +325,19 @@ Pronouns distinguish three grammatical persons and, Like nouns, mark case, artic
     columns: 8,
     table.header([*person*], [*gender*], [*SG.ABS*], [*SG.DAT*], [*SG.ERG*], [*PL.ABS*], [*PL.DAT*], [*PL.ERG*]),
     [*1.EXCL*], [], [_tér_], [_tár_], [_tír_], [_térȳl_], [_tárȳl_], [_tírȳl_], 
-    [*1.INCL*], [*N*], [], [], [], [_ótỳl_], [_átàl_], [_úxìl_], 
-    [*1.INCL*], [*F*], [], [], [], [_fāstȳl_], [_fāstāl_], [_fēsqīl_], 
-    [*1.INCL*], [*M*], [], [], [], [_xōtȳl_], [_xātāl_], [_xūtīl_], 
-    [*2*], [*N*], [_ók_], [_ák_], [_úk_], [_ókỳl_], [_ákỳl_], [_úkỳl_], 
-    [*2*], [*F*], [_áus_], [_áur_], [_áux_], [_áusȳl_], [_áurāl_], [_áuxīl_], 
-    [*2*], [*M*], [_xō_], [_xā_], [_xū_], [_xōl_], [_xāl_], [_xūl_], 
-    [*3.NDEF*], [*N*], [_mōu_], [_mōn_], [_mūn_], [_łóu_], [_łón_], [_łún_], 
-    [*3.PROX*], [*N*], [_mōucè_], [_mōnàr_], [_mūnìr_], [_łóucè_], [_łónàr_], [_łúnìr_], 
-    [*3.DEF*], [*N*], [_mōukè_], [_mōnàk_], [_mūnìk_], [_łóukè_], [_łónàk_], [_łúnìk_], 
-    [*3.PROX*], [*F*], [_fāsē_], [_fātàr_], [_fēxìr_], [_fāsȳl_], [_fārȳl_], [_fēxrȳl_], 
-    [*3.DEF*], [*F*], [_fās_], [_fār_], [_fēx_], [_fāskȳl_], [_fārkȳl_], [_fēxkȳl_], 
-    [*3.PROX*], [*M*], [_xōucè_], [_xōnàr_], [_xūnìr_], [_xōucỳl_], [_xōnàrỳl_], [_xūnìrỳl_], 
-    [*3.DEF*], [*M*], [_xōu_], [_xōn_], [_xūn_], [_xōul_], [_xōnàl_], [_xūnìl_], 
+    table.cell(rowspan: 3)[*1.INCL*], [*N*], [], [], [], [_ótỳl_], [_átàl_], [_úxìl_], 
+      [*F*], [], [], [], [_fāstȳl_], [_fāstāl_], [_fēsqīl_], 
+      [*M*], [], [], [], [_xōtȳl_], [_xātāl_], [_xūtīl_], 
+    table.cell(rowspan: 3)[*2*], [*N*], [_ók_], [_ák_], [_úk_], [_ókỳl_], [_ákỳl_], [_úkỳl_], 
+      [*F*], [_áus_], [_áur_], [_áux_], [_áusȳl_], [_áurāl_], [_áuxīl_], 
+      [*M*], [_xō_], [_xā_], [_xū_], [_xōl_], [_xāl_], [_xūl_], 
+    [*3.NDEF*], table.cell(rowspan: 3)[*N*], [_mōu_], [_mōn_], [_mūn_], [_łóu_], [_łón_], [_łún_], 
+    [*3.PROX*], [_mōucè_], [_mōnàr_], [_mūnìr_], [_łóucè_], [_łónàr_], [_łúnìr_], 
+    [*3.DEF*], [_mōukè_], [_mōnàk_], [_mūnìk_], [_łóukè_], [_łónàk_], [_łúnìk_], 
+    [*3.PROX*], table.cell(rowspan: 2)[*F*], [_fāsē_], [_fātàr_], [_fēxìr_], [_fāsȳl_], [_fārȳl_], [_fēxrȳl_], 
+    [*3.DEF*], [_fās_], [_fār_], [_fēx_], [_fāskȳl_], [_fārkȳl_], [_fēxkȳl_], 
+    [*3.PROX*], table.cell(rowspan: 2)[*M*], [_xōucè_], [_xōnàr_], [_xūnìr_], [_xōucỳl_], [_xōnàrỳl_], [_xūnìrỳl_], 
+    [*3.DEF*], [_xōu_], [_xōn_], [_xūn_], [_xōul_], [_xōnàl_], [_xūnìl_], 
   )
 ]
 
@@ -387,8 +387,8 @@ All verbs have separate stems for each aspect, with the perfective stem being th
     [_CLV_], [_C\<*VD*\>LV_], [_C\<*AAD*\>LV_],
     [_FV_], [_*DV*\~FV_], [_F\<*AAD*\>V_],
     [_FLV_], [_*DV*\~FLV_], [_F\<*AAD*\>LV_],
-    [_řV_], [_*kV*\~řV_], [_*AAkr*__V_],
-    [_řV_], [_*sV*\~řV_], [_*sAA*-řV_],
+    table.cell(rowspan: 2)[_řV_], [_*kV*\~řV_], [_*AAkr*__V_],
+      [_*sV*\~řV_], [_*sAA*-řV_],
     [_sXV_], [_*sV*\~sXV_], [_*sAA*-sXV_],
   )
 ]
@@ -397,26 +397,26 @@ All verbs have separate stems for each aspect, with the perfective stem being th
   #table(
     columns: 4,
     table.header([*pattern*], [*PFV*], [*NPFV*], [*RET*]),
-    [C], [\<m\>], [\<m\>], [\<v\>],
-    [C], [\<n\>], [\<n\>], [\<ð\>],
-    [C], [\<p\>], [\<p\>], [\<b\>],
-    [C], [\<t\>], [\<t\>], [\<d\>],
-    [C], [\<k\>], [\<k\>], [\<g\>],
-    [C], [\<b\>], [\<v\>], [\<v\>],
-    [C], [\<d\>], [\<ð\>], [\<ð\>],
-    [C], [\<g\>], [\<w\>], [\<n\>],
-    [C], [\<q\>], [\<q\>], [\<d\>],
-    [C], [\<ǧ\>], [\<z\>], [\<þ\>],
-    [C], [\<s\>], [\<r\>], [\<ds\>],
-    [C], [\<s\>], [\<x\>], [\<z\>],
-    [C], [\<v\>], [], [],
-    [C], [\<z\>], [], [],
-    [C], [∅], [\<k\>], [\<g\>],
-    [C], [∅], [\<n\>], [any],
-    [F], [\<f\>], [\<p\>], [\<b\>],
-    [F], [\<þ\>], [\<t\>], [\<d\>],
-    [F], [\<x\>], [\<s\>], [\<z\>],
-    [F], [\<ł\>], [\<d\>], [\<ð\>],
+    table.cell(rowspan: 16)[C], [\<m\>], [\<m\>], [\<v\>],
+      [\<n\>], [\<n\>], [\<ð\>],
+      [\<p\>], [\<p\>], [\<b\>],
+      [\<t\>], [\<t\>], [\<d\>],
+      [\<k\>], [\<k\>], [\<g\>],
+      [\<b\>], [\<v\>], [\<v\>],
+      [\<d\>], [\<ð\>], [\<ð\>],
+      [\<g\>], [\<w\>], [\<n\>],
+      [\<q\>], [\<q\>], [\<d\>],
+      [\<ǧ\>], [\<z\>], [\<þ\>],
+      [\<s\>], [\<r\>], [\<ds\>],
+      [\<s\>], [\<x\>], [\<z\>],
+      [\<v\>], [], [],
+      [\<z\>], [], [],
+      [∅], [\<k\>], [\<g\>],
+      [∅], [\<n\>], [any],
+    table.cell(rowspan: 4)[F], [\<f\>], [\<p\>], [\<b\>],
+      [\<þ\>], [\<t\>], [\<d\>],
+      [\<x\>], [\<s\>], [\<z\>],
+      [\<ł\>], [\<d\>], [\<ð\>],
   )
 ] <asp-cons>
 
@@ -507,12 +507,12 @@ The *adversative* voice, demonstrated in @advs-ex:d, is a valency-reducing opera
     table.header([*person*], [*gender*], [*SG.ABS*], [*SG.DAT*], [*SG.ERG*], [*PL.ABS*], [*PL.DAT*], [*PL.ERG*]),
     [*1.EXCL*], [], [_-te_], [_-ta_], [_-ti_], [_-tel_], [_-tal_], [_-til_], 
     [*1.INCL*], [], [], [], [], [_-(f)ot_], [_-(f)at_], [_-(f)ux_], 
-    [*2*], [*N*], [_-(f)o_], [_-(f)a_], [_-(f)u_], [_-(f)ol_], [_-(f)al_], [_-(f)ul_], 
-    [*2*], [*F*], [_-(f)aus_], [_-(f)aur_], [_-(f)aux_], [_-(f)osyl_], [_-(f)oryl_], [_-(f)oxyl_], 
-    [*2*], [*M*], [_-xò_], [_-xà_], [_-xù_], [_-xòl_], [_-xàl_], [_-xùl_], 
-    [*3*], [*N*], [_-mòu_], [_-mòn_], [_-mùn_], [_-łou_], [_-łon_], [_-łun_], 
-    [*3*], [*F*], [_-fàs_], [_-fàr_], [_-fèx_], [_-fàl_], [_-fàrỳl_], [_fèl_], 
-    [*3*], [*M*], [_-xòu_], [_-xòn_], [_-xùn_], [_-xòl_], [_-xònỳl_], [_-xùnỳl_], 
+    table.cell(rowspan: 3)[*2*], [*N*], [_-(f)o_], [_-(f)a_], [_-(f)u_], [_-(f)ol_], [_-(f)al_], [_-(f)ul_], 
+      [*F*], [_-(f)aus_], [_-(f)aur_], [_-(f)aux_], [_-(f)osyl_], [_-(f)oryl_], [_-(f)oxyl_], 
+      [*M*], [_-xò_], [_-xà_], [_-xù_], [_-xòl_], [_-xàl_], [_-xùl_], 
+    table.cell(rowspan: 3)[*3*], [*N*], [_-mòu_], [_-mòn_], [_-mùn_], [_-łou_], [_-łon_], [_-łun_], 
+      [*F*], [_-fàs_], [_-fàr_], [_-fèx_], [_-fàl_], [_-fàrỳl_], [_fèl_], 
+      [*M*], [_-xòu_], [_-xòn_], [_-xùn_], [_-xòl_], [_-xònỳl_], [_-xùnỳl_], 
   )
 ]
 
@@ -544,19 +544,19 @@ Gerunds are nonfinite verbs that nominalize actions or events. They are formed b
   #table(
     columns: 3,
     table.header([*class*], [*PFV endings*], [*GER ending*]),
-    [*1*], [_-eþ, -ixi_], [_-ei_], 
-    [*1*], [_-oþ, -uxi_], [_-oi_], 
+    table.cell(rowspan: 2)[*1*], [_-eþ, -ixi_], [_-ei_], 
+      [_-oþ, -uxi_], [_-oi_], 
     [*2*], [_-aþ, -exi_], [_-ai_], 
-    [*3*], [_-er, -yr, -ix_], [_-erè_], 
-    [*3*], [_-or, -yr, -ux_], [_-orè_], 
-    [*4*], [_-e, -i_], [_-efè_], 
-    [*4*], [_-o, -u_], [_-ofè_], 
+    table.cell(rowspan: 2)[*3*], [_-er, -yr, -ix_], [_-erè_], 
+      [_-or, -yr, -ux_], [_-orè_], 
+    table.cell(rowspan: 2)[*4*], [_-e, -i_], [_-efè_], 
+      [_-o, -u_], [_-ofè_], 
     [*5*], [_-a, -e_], [_-afè_], 
     [*6*], [_-eqi_], [_-ai_], 
-    [*7*], [_-qux_], [_-qurè_], 
-    [*7*], [_-xux_], [_-xurè_], 
-    [*8*], [_-xi_], [_-sfè_], 
-    [*8*], [_-qi_], [_-cfè_], 
+    table.cell(rowspan: 2)[*7*], [_-qux_], [_-qurè_], 
+      [_-xux_], [_-xurè_], 
+    table.cell(rowspan: 2)[*8*], [_-xi_], [_-sfè_], 
+      [_-qi_], [_-cfè_], 
   )
 ]
 
@@ -618,25 +618,26 @@ Converbs are a special type of participle formed by attaching a converb prefix i
   #table(
     columns: 5,
     table.header([], [*prefix*], [*order*], [*example*], [*meaning*]),
-    [*imperative (IMP)*], [_a-_], [], [_Anàpīx._], ["Leave."], 
-    [*prohibitive (PROH)*], [_àpèi-, àpèm-_], [], [_Àpèinàpīx._], ["Don't leave."], 
-    [*abilitive (ABIL)*], [_þòm(à)-_], [4], [_Þòmàkēqīti._], ["I can sing."], 
-    [*permissive (PERM)*], [_tôu(x)-_], [4], [_Tôukēqīti?_], ["May I sing?"], 
+    [*imperative (IMP)*], [_a-_], table.cell(rowspan: 2)[∅], [_Anàpīx._], ["Leave."], 
+    [*prohibitive (PROH)*], [_àpèi-, àpèm-_], [_Àpèinàpīx._], ["Don't leave."], 
+    [*abilitive (ABIL)*], [_þòm(à)-_], table.cell(rowspan: 2)[4], [_Þòmàkēqīti._], ["I can sing."], 
+    [*permissive (PERM)*], [_tôu(x)-_], [_Tôukēqīti?_], ["May I sing?"], 
     [*necessitative (NEC)*], [_qâx-_], [3], [_Qáxnàpīxti._], ["I need to leave."], 
     [*jussive (JUS)*], [_māf-_], [2], [_Māfnàpīxti._], ["I should leave."], 
-    [*dubitative (DUB)*], [_łúx(t)-_], [1], [_Łúxnàpīxfex._], ["Perhaps she left."], 
-    [*inferential (INFR)*], [_þúx(t)-_], [1], [_Þúxnàpīxfex._], ["She must have left."],
-    [*potential (POT)*], [_séq(í)-_], [1], [_Séqínàpīxfex._], ["I think she'll leave."],
-    [*reportative (RPT)*], [_têx-_], [0], [_Téxnàpīxfex._], ["They say she left."],
-    [*visual (VIS)*], [_qyn(ne)-_], [0], [_Qynnàpīxfex._], ["I saw her leave."],
-    [*auditory (AUD)*], [_ôu-, ôn-_], [0], [_Óunàpīxfex._], ["I heard her leave."],
+    [*dubitative (DUB)*], [_łúx(t)-_], table.cell(rowspan: 3)[1], [_Łúxnàpīxfex._], ["Perhaps she left."], 
+    [*inferential (INFR)*], [_þúx(t)-_], [_Þúxnàpīxfex._], ["She must have left."],
+    [*potential (POT)*], [_séq(í)-_], [_Séqínàpīxfex._], ["I think she'll leave."],
+    [*reportative (RPT)*], [_têx-_], table.cell(rowspan: 3)[0], [_Téxnàpīxfex._], ["They say she left."],
+    [*visual (VIS)*], [_qyn(ne)-_], [_Qynnàpīxfex._], ["I saw her leave."],
+    [*auditory (AUD)*], [_ôu-, ôn-_], [_Óunàpīxfex._], ["I heard her leave."],
   )
 ]
 
 Festival Nomai can express a variety of modalities and evidentialities using verbal prefixes. All prefixes except the imperative and prohibitive can be used with both finite and nonfinite verbs.
 
-The order of a modal/evidential prefix determines which other modal/evidential prefixes it can combine with and the order in which they combine. Prefixes with a higher order must follow prefixes with a lower order, and prefixes with the same order cannot combine with one another. Additionally, the imperative and prohibitive prefixes cannot combine with any other prefixes.
+The order of a modal/evidential prefix determines which other modal/evidential prefixes it can combine with and the order in which they combine. Prefixes with a higher order must follow prefixes with a lower order, and prefixes of the same order cannot combine with one another. Additionally, the imperative and prohibitive prefixes cannot combine with any other prefixes.
 
+#pagebreak()
 = Syntax
 
 == NP coordination
