@@ -31,13 +31,13 @@ The verb template contains the following slots:
 = Aspect <asp>
 A verb's aspect indicates how an event conceptually unfolds in time#footnote[This is distinct from tense, which refers to _when_ an event happens relative to the present.]. Nomai distinguishes three aspects:
 
-- *perfective*: a complete, singular action/event
-- *imperfective*: the state of an ongoing, prospective, or habitual action/event
-- *retrospective*: the state of an action/event having been completed
+- *perfective*: a complete, singular action/event ("I went home.")
+- *imperfective*: the state of an ongoing, prospective, or habitual action/event ("I was going home.")
+- *retrospective*: the state of an action/event having been completed I had gone home.")
 
 All verbs have separate stems for each aspect, with the perfective stem being the most basic. The imperfective and retrospective stems are formed from the perfective stem by reduplication, prefixing, and/or infixing.
 
-#figure(caption: [Formation of aspect stems.\ See @asp-cons for possible values of _D_ given onset _C_ or _F_.\ See @asp-vwl for possible values of _AA_ given mora _V_. \ _L_ = _l, r_. _X_ = any non-sibilant consonant.])[
+#figure(caption: [Formation of aspect stems.\ See @asp-cons for possible values of _D_ given onset _C_ or _F_.\ See @asp-vwl for possible values of _AA_ given vowel _V_. \ _L_ = _l, r_. _X_ = any non-sibilant consonant.])[
   #table(
     columns: 3,
     table.header([*PFV form*], [*NPFV form*], [*RET form*]),
@@ -90,6 +90,16 @@ All verbs have separate stems for each aspect, with the perfective stem being th
     [\<y\>], [\<aa\>],
   )
 ] <asp-vwl>
+
+#figure(caption: "Example verbs and their aspect stems.")[
+  #table(
+    columns: 7,
+    table.header([], [*"say"*], [*"learn"*], [*"happen"*], [*"burn"*], [*"hear"*], [*"help"*]),
+    [*PFV*], [_téixì_], [_nòmā_], [_łeké_], [_skatéþ_], [_óuþò_], [_ásqi_],
+    [*NPFV*], [_tétéixì_], [_nònòmā_], [_tēłēké_], [_saskátéþ_], [_ókóuþò_], [_ánásqi_],
+    [*RET*], [_táatèixì_], [_nāaþòmà_], [_łáaþèkè_], [_skáakàtèþ_], [_óuþò_], [_éitàsqì_],
+  )
+]
 
 = Valency
 A verb's valency encapsulates how many arguments it accepts and which cases they take. Nomai verbs have six possible valencies:
@@ -196,7 +206,7 @@ Verbs with absolutive and/or dative arguments can incorporate one of them, causi
 Incorporation is a valency-reducing operation: ditransitive verbs become intentional, intentional and locomotive verbs become agentive, and experiential verbs become intransitive. Incorporating an absolutive argument promotes an existing dative argument to the absolutive. Incorporation can also combine with a #link(<voice>)[voice prefix] and is applied last.
 
 = Gerunds <ger>
-Gerunds#footnote[Equivalent to English gerunds such as "the *whistling* of the wind".] are nonfinite verbs that nominalize actions or events. They are formed by replacing a perfective verb's #link(<class>)[class ending] with the corresponding gerund ending.
+Gerunds#footnote[Equivalent to English gerunds such as "the wind's *whistling*" or "the leaves' *yellowing*".] are nonfinite verbs that nominalize actions or events. They are formed by replacing a perfective verb's #link(<class>)[class ending] with the corresponding gerund ending.
 
 #figure(caption: "Gerund endings for each verb class.")[
   #table(
@@ -221,7 +231,7 @@ Gerunds#footnote[Equivalent to English gerunds such as "the *whistling* of the w
 Gerunds lack any nominal or verbal inflections, except for polarity. Like nouns, gerunds can act as arguments of verbs or objects of prepositions, but they cannot modify or be modified by other nouns. Like verbs, gerunds can take arguments and adjuncts and incorporate objects. Additionally, gerunds can express their absolutive arguments as possessors. If the verb does not take an absolutive argument, the gerund's possessor corresponds to the ergative argument.
 
 = Participles <ptcp>
-Participles#footnote[Similar to English participles such as "the *whistling* wind" or "the *fallen* leaves".] are nonfinite verbs that relativize verbal core arguments. They are often used in situations where English would use a relative clause#footnote[For example, "the bird *that ate my lunch*".]. Participles are formed by replacing a verb's #link(<class>)[class ending] with the corresponding participle ending.
+Participles#footnote[Similar to English participles such as "the *whistling* wind" or "the *yellowed* leaves".] are nonfinite verbs that relativize verbal core arguments. They are often used in situations where English would use a relative clause#footnote[For example, "the bird *that ate my lunch*".]. Participles are formed by replacing a verb's #link(<class>)[class ending] with the corresponding participle ending.
 
 #figure(caption: "Participle endings for each verb class.")[
   #table(
