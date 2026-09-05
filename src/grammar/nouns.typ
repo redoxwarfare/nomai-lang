@@ -28,7 +28,7 @@ A noun's case indicates its role in a sentence. Nomai distinguishes three cases:
 
 - *absolutive*: undergoers of change, unintentional causes of events, instruments, possessors, most prepositional objects
 - *dative*: destinations; receivers; experiencers of sensations, feelings, and thoughts
-- *ergative*: intentional initiators of events
+- *ergative*: intentional initiators/agents of events
 
 Additionally, vocatives#footnote[Nouns used to directly address a listener.] are marked by the prefix _a-_, which attaches to nouns in the absolutive case.
 

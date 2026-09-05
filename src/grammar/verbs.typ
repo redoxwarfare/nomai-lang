@@ -111,7 +111,7 @@ A verb's valency encapsulates how many arguments it accepts and which cases they
 - *locomotive* (LCM): ergative, dative
 - *ditransitive* (DITR): ergative, dative, absolutive
 
-The majority of verbs are intransitive, experiential, intentional, or ditransitive. Intransitive and intentional verbs generally assign the absolutive case to the patient, whereas experiential and ditransitive verbs generally assign the dative case to the patient/experiencer and the absolutive case to the instrument/theme.
+The majority of verbs are intransitive, experiential, intentional, or ditransitive. Intransitive and intentional verbs generally assign the absolutive case to the patient#footnote[A verbal argument that is acted on or undergoes a change.], whereas experiential and ditransitive verbs generally assign the dative case to the patient/experiencer#footnote[A verbal argument that experiences a sensation, feeling, or thought.] and the absolutive case to the instrument#footnote[A verbal argument that is used to carry out an action.]/theme#footnote[A verbal argument that is essential to an action but is not changed.].
 
 Locomotive verbs are a relatively small class, albeit including common verbs such as _qúr_ "go" and _mīiqùx_ "come". Agentive verbs are not a true lexical class and can only be formed by #link(<incorp>)[noun incorporation].
 
@@ -120,7 +120,7 @@ All finite verbs must be used with at least one non-dative argument; there are n
 = Class <class>
 Every verb belongs to one of eight classes, which loosely indicate how a verb's meaning is related to its root. All classes except 6-8 are closed#footnote[A closed class of words cannot derive or coin any new member words, whereas an open class can.].
 
-Verbs from classes 1-5 have anticausative and causative forms, which map the same semantic roles to their absolutive and dative arguments. The causative form takes an ergative argument, whereas the anticausative form does not. For some class 1-5 verbs, one of the two forms is defective and is never used. Verbs from classes 6-8 are exclusively causative.
+Verbs from classes 1-5 have anticausative and causative forms, which map the same semantic roles to their absolutive and dative arguments. The causative form takes an ergative argument, whereas the anticausative form does not. Some class 1-5 verbs are defective and never use one of their two forms. Verbs from classes 6-8 are exclusively causative.
 
 #figure(caption: "Class endings and example verbs.")[
   #table(
@@ -201,7 +201,7 @@ Verbal agreement refers to verbal inflections that correspond to properties of a
 ]
 
 = Incorporation <incorp>
-Verbs with absolutive and/or dative arguments can incorporate one of them, causing the argument to appear inside the verb template. Incorporated objects must be root or compound nouns in the indefinite collective form; pronouns, NPs, and nonfinite verbs cannot be incorporated. Additionally, most verbs that map their dative argument to the experiencer semantic role (e.g. experiential verbs and verbs in adversative voice) cannot incorporate it.
+Verbs with absolutive and/or dative arguments can incorporate one of them, causing the argument to appear inside the verb template. Incorporated objects must be root or compound nouns in the indefinite collective form; pronouns, NPs, and nonfinite verbs cannot be incorporated. Additionally, most verbs that map their dative argument to the semantic role of experiencer (e.g. experiential verbs and verbs in adversative voice) cannot incorporate it.
 
 Incorporation is a valency-reducing operation: ditransitive verbs become intentional, intentional and locomotive verbs become agentive, and experiential verbs become intransitive. Incorporating an absolutive argument promotes an existing dative argument to the absolutive. Incorporation can also combine with a #link(<voice>)[voice prefix] and is applied last.
 
