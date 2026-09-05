@@ -18,7 +18,7 @@ content-dir = "."
 include = ["assets/**"]
 
 [pages]
-include = ["*.typ", "grammar/*.typ", "dict/*.typ", "corpus/*.typ"]
+include = ["*.typ", "grammar/*.typ", "corpus/*.typ"]
 exclude = ["abbrevs.typ"]
 
 [footer]
@@ -57,12 +57,12 @@ title = "Documentation"
 [[sidebar.section]]
 title = "Dictionary"
   
-  # [[sidebar.section.item]]
-  # glob = "dict/*.typ"
+  [[sidebar.section.item]]
+  glob = "dict/*.typ"
 
 [[sidebar.section]]
 title = "Translations"
 
-  # [[sidebar.section.item]]
-  # glob = "corpus/*.typ"
+  [[sidebar.section.item]]
+  glob = "corpus/*.typ"
 
