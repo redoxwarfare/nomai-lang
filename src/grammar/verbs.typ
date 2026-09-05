@@ -13,6 +13,8 @@
 //   fenced-chunks: true,
 // )
 
+#title()
+
 Nomai verbs are the most complex words in the language. They are highly agglutinative#footnote[Agglutination is the process of forming words by directly joining multiple parts, each of which contributes a distinct meaning.], marking polarity#footnote[The truth or falsity of an event.], #link(<mod>)[modality], #link(<mod>)[evidentiality], #link(<voice>)[voice], #link(<asp>)[aspect], and #link(<agree>)[agreement]. Verbs also exhibit #link(<incorp>)[noun incorporation] and have three nonfinite#footnote[For the purposes of Nomai, nonfinite verbs are verb forms that act as other parts of speech.] forms: #link(<ger>)[gerunds], #link(<ptcp>)[participles], and #link(<cvb>)[converbs].
 
 The verb template contains the following slots:

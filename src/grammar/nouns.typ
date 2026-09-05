@@ -13,6 +13,8 @@
 //   fenced-chunks: true,
 // )
 
+#title()
+
 Nomai nouns are an open class and include words that might be considered adjectives in other languages. They inflect for case, article, and number. Any series of consecutive nouns with the same case, article, and number acts as a single NP in which the first noun is the head (also called a "substantive noun") and the other nouns are modifiers (also called "attributive nouns").
 
 #example[

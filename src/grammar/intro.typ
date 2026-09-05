@@ -12,6 +12,8 @@
 //   fenced-chunks: true,
 // )
 
+#title()
+
 = The speakers
 *Nomai* was a family of languages spoken by the Nomai, a nation of highly curious spacefaring mammalian herbivores. Throughout their recorded history, the Nomai species organized themselves into clans, communities of families committed to living alongside and supporting each other. The Nomai's ancestors were a group of nomadic clans who rejected the social hierarchy and regimented lifestyle of their sedentary kin and left the Nomai homeworld to explore the universe. Each Nomai clan traveled on a Vessel, an advanced spacecraft capable of warping across interstellar distances. Every 10 years, all the clans would send envoys to the Nomai homeworld to share their findings with each other; these gatherings were known as Festivals.
 

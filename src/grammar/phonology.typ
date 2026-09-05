@@ -12,6 +12,8 @@
 //   fenced-chunks: true,
 // )
 
+#title()
+
 = Pronunciation guide
 #calepin.elements.callout(kind: "tip", title: "Tip")[
   If you're familiar with basic concepts from phonology and reading IPA, you can skip this section.

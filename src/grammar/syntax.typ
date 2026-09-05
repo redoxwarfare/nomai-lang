@@ -13,6 +13,8 @@
 //   fenced-chunks: true,
 // )
 
+#title()
+
 = Independent clauses
 As both a topic-prominent and strongly head-initial language, Festival Nomai primarily employs V2 word order in independent clauses. The order of verbal arguments defaults to #erg > #dat > #abs > adjuncts, with arguments to the left typically appearing before arguments to the right. However, this order is highly flexible and readily changes to both reflect information structure and avoid syntactical ambiguity.
 
