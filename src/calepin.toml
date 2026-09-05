@@ -34,10 +34,6 @@ label = "Made with Calepin."
 fold = false
 
 [[sidebar.section]]
-  [[sidebar.section.item]]
-  target = "index.typ"
-
-[[sidebar.section]]
 title = "Documentation"
 
   [[sidebar.section.item]]
