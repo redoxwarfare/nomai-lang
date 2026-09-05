@@ -1,0 +1,72 @@
+title = "Nomai: an Outer Wilds fan language"
+description = "A constructed language based on Outer Wilds."
+base-url = "https://redoxwarfare.github.io/nomai-lang"
+theme = "calepin"
+
+pdf = false
+typ = false
+output-dir = "../site"
+default-language = "en"
+search = "pagefind"
+llms = false
+
+[languages.en]
+label = "English"
+content-dir = "."
+
+[static]
+include = ["assets/**"]
+
+[pages]
+include = ["*.typ", "grammar/*.typ", "dict/*.typ", "corpus/*.typ"]
+exclude = ["abbrevs.typ"]
+
+[footer]
+
+[[footer.item]]
+label = "Not affiliated with Mobius Digital or Annapurna Interactive."
+
+[[footer.item]]
+target = "https://vincentarelbundock.github.io/calepin"
+label = "Made with Calepin."
+
+[sidebar]
+fold = false
+
+[[sidebar.section]]
+  [[sidebar.section.item]]
+  target = "index.typ"
+
+[[sidebar.section]]
+title = "Documentation"
+
+  [[sidebar.section.item]]
+  target = "grammar/intro.typ"
+
+  [[sidebar.section.item]]
+  target = "grammar/phonology.typ"
+
+  [[sidebar.section.item]]
+  target = "grammar/nouns.typ"
+
+  [[sidebar.section.item]]
+  target = "grammar/verbs.typ"
+
+  [[sidebar.section.item]]
+  target = "grammar/syntax.typ"
+
+  # [[sidebar.section.item]]
+  # target = "grammar/misc.typ"
+
+[[sidebar.section]]
+title = "Dictionary"
+  
+  # [[sidebar.section.item]]
+  # glob = "dict/*.typ"
+
+[[sidebar.section]]
+title = "Translations"
+
+  # [[sidebar.section.item]]
+  # glob = "corpus/*.typ"
+
