@@ -24,7 +24,7 @@ The topic of an independent clause corresponds to the argument at the front of t
     - woman\\#erg\-#def.#sg #npfv\~cook food\\#abs for child\\#dat\-#def.#sg
     "The woman is cooking food for the child."
   + Topicalized absolutive argument
-    - _níalìi-cè_ _núfèx-ke_ _en\~emēxī_  _sté_ _mēf-àk_
+    - _níalìi-cè_ _en\~emēxī_ _núfèx-ke_ _sté_ _mēf-àk_
     - food\\#abs\-#prox.#sg #npfv\~cook woman\\#erg\-#def.#sg for child\\#dat\-#def.#sg
     "This food is being cooked by the woman for the child."
   + Topicalized adjunct
