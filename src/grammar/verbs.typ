@@ -260,7 +260,7 @@ Participles#footnote[Similar to English participles such as "the *whistling* win
   )
 ]
 
-A bare participle relativizes the absolutive argument. Attaching one of the orientation prefixes _er-_ or _ix-_ instead relativizes the dative or ergative argument, respectively. (These prefixes will be glossed as #dor and #eor.) Participles of verbs that do not take absolutive arguments must still use the orientation prefixes.
+A bare participle relativizes the absolutive argument. Attaching one of the orientation prefixes _er-_ or _ix-_ instead relativizes the dative or ergative argument, respectively. Participles of verbs that do not take absolutive arguments must still use the orientation prefixes.
 
 In addition to retaining most verbal morphology, participles are morphosyntactically equivalent to nouns and can be used both attributively and substantively. For example, substantive perfective participles are often used as agent and patient nouns, similar to English nouns formed with the suffixes "-er" and "-ee". Unlike nouns, participles can take arguments and adjuncts and can incorporate objects. 
 

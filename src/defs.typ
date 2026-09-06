@@ -1,6 +1,7 @@
 #import "/.calepin/calepin.typ" as calepin
 #import "@preview/eggs:0.9.0": *
-#import abbreviations: abbreviation, abs, dat, erg, def, prox, sg, pl, p1, p2, p3, n, m, f, appl, ptcp, comp, quot, rel, q
+#import abbreviations: abbreviation, abs, dat, erg, voc, def, prox, sg, pl, p1, p2, p3, incl, excl, n, m, f, non, appl, ptcp, rel, imp, comp, quot, rel, q
+
 #let ndef = abbreviation("ndef", "indefinite article")
 #let sgv = abbreviation("sgv", "singulative number")
 #let col = abbreviation("col", "collective number")
@@ -12,8 +13,18 @@
 #let ntl = abbreviation("ntl", "intentional verb")
 #let ditr = abbreviation("ditr", "ditransitive verb")
 #let advs = abbreviation("advs", "adversative voice")
-#let dor = abbreviation("dor", "dative-orienting")
-#let eor = abbreviation("eor", "ergative-orienting")
+#let ger = abbreviation("ger", "gerund")
+#let proh = abbreviation("proh", "prohibitive")
+#let abil = abbreviation("abil", "abilitive")
+#let perm = abbreviation("perm", "permissive")
+#let nec = abbreviation("nec", "necessitative")
+#let jus = abbreviation("jus", "jussive")
+#let dub = abbreviation("dub", "dubitative")
+#let infr = abbreviation("infr", "inferential")
+#let pot = abbreviation("pot", "potential")
+#let rpt = abbreviation("rpt", "reportative")
+#let vis = abbreviation("vis", "visual")
+#let aud = abbreviation("aud", "auditory")
 
 #let transcript(..entries) = {
   let format_entry(entry) = {
