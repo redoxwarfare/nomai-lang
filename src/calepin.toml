@@ -18,8 +18,8 @@ content-dir = "."
 include = ["assets/**"]
 
 [pages]
-include = ["*.typ", "grammar/*.typ", "corpus/*.typ"]
-exclude = ["abbrevs.typ"]
+include = ["*.typ", "grammar/*.typ", "dict/dict.typ", "corpus/*.typ"]
+exclude = ["defs.typ"]
 
 [footer]
 
@@ -31,7 +31,6 @@ target = "https://vincentarelbundock.github.io/calepin"
 label = "Made with Calepin."
 
 [sidebar]
-fold = false
 
 [[sidebar.section]]
 title = "Documentation"
@@ -54,11 +53,8 @@ title = "Documentation"
   # [[sidebar.section.item]]
   # target = "grammar/misc.typ"
 
-[[sidebar.section]]
-title = "Dictionary"
-  
   [[sidebar.section.item]]
-  glob = "dict/*.typ"
+  target = "dict/dict.typ"
 
 [[sidebar.section]]
 title = "Translations"

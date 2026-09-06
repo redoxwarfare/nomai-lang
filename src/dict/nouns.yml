@@ -1,0 +1,40 @@
+- prinparts:
+    abs: [ácat, H]
+    dat: [acât, HL]
+    erg: [acêq, HL]
+  meanings: [ash, soot, smoke]
+  meanings-long:
+    - (indefinite collective) ash, soot, smoke
+- prinparts:
+    abs: [fáa, H]
+    dat: [fâm, HL]
+    erg: [fêm, HL]
+  meanings: [light, bright]
+  meanings-long:
+    - (indefinite collective) light
+    - (singular/singulative) light source
+    - (attributive) bright
+- prinparts:
+    abs: [físk, H]
+    dat: [fésk, H]
+    erg: [físq, H]
+  meanings: [fern, frond, feather]
+  meanings-long:
+    - fern
+    - frond, frond-shaped
+    - feather
+- prinparts:
+    abs: [ixóskáp, HL]
+    dat: [ixoskáf, HL]
+    erg: [ixoskéf, HL]
+  meanings: [dancer]
+  meanings-long:
+    - dancer
+- prinparts:
+    abs: [kēk, M]
+    dat: [kèk, ML]
+    erg: [kìq, ML]
+  meanings: [signal, call, song]
+  meanings-long:
+    - signal, call
+    - song
