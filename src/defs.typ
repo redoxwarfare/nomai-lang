@@ -293,8 +293,9 @@
       if (non-back-vowels.contains(stem-last-vowel)) {"e"}
       else {"o"}
     ).at(get-tone(stem-last-vowel))
-    ending.replace(regex("[yýȳỳ]"), E)
-  } else {ending}
+    ending = ending.replace(regex("[yýȳỳ]"), E)
+  }
+  caus-endings.at(ending)
 }
 #let ret-ending(ending) = {
   ending
