@@ -6,6 +6,10 @@
 )
 #metadata((title: "Dictionary")) <website-metadata>
 
+#calepin.elements.callout(kind: "warning")[
+  Tone is not yet implemented correctly for verbs. Some entries may be inaccurate!
+]
+
 #{
   let entries = (
     yaml("nouns.yml").map(n => (n.stems.abs.at(0), noun(..n)))
