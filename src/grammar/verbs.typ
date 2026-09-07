@@ -35,7 +35,7 @@ A verb's aspect indicates how an event conceptually unfolds in time#footnote[Thi
 
 - *perfective*: a complete, singular action/event ("I went home.")
 - *imperfective*: the state of an ongoing, prospective, or habitual action/event ("I was going home.")
-- *retrospective*: the state of an action/event having been completed I had gone home.")
+- *retrospective*: the state of an action/event having been completed ("I had gone home.")
 
 All verbs have separate stems for each aspect, with the perfective stem being the most basic. The imperfective and retrospective stems are formed from the perfective stem by reduplication, prefixing, and/or infixing.
 
@@ -49,7 +49,7 @@ All verbs have separate stems for each aspect, with the perfective stem being th
     [_FLV_], [_*DV*\~FLV_], [_F\<*AAD*\>LV_],
     table.cell(rowspan: 2)[_řV_], [_*kV*\~řV_], [_*AAkr*__V_],
       [_*sV*\~řV_], [_*sAA*-řV_],
-    [_sXV_], [_*sV*\~sXV_], [_*sAA*-sXV_],
+    [_sCV_], [_*sV*\~sCV_], [_sC\<*AAD*\>V_],
   )
 ]
 
@@ -99,19 +99,19 @@ All verbs have separate stems for each aspect, with the perfective stem being th
     table.header([], [*"say"*], [*"learn"*], [*"happen"*], [*"burn"*], [*"hear"*], [*"help"*]),
     [*PFV*], [_téixì_], [_nòmā_], [_łeké_], [_skatéþ_], [_óuþò_], [_ásqi_],
     [*NPFV*], [_tétéixì_], [_nònòmā_], [_tēłēké_], [_saskátéþ_], [_ókóuþò_], [_ánásqi_],
-    [*RET*], [_táatèixì_], [_nāaþòmà_], [_łáaþèkè_], [_skáakàtèþ_], [_óuþò_], [_éitàsqì_],
+    [*RET*], [_táatèixì_], [_nāaþòmà_], [_łáaþèkè_], [_skéikàtèþ_], [_óuþò_], [_éitàsqì_],
   )
 ]
 
 = Valency
 A verb's valency encapsulates how many arguments it accepts and which cases they take. Nomai verbs have six possible valencies:
 
-- *intransitive* (NTR): absolutive
-- *agentive* (AGN): ergative
-- *experiential* (EXP): dative, absolutive
-- *intentional* (NTL): ergative, absolutive
-- *locomotive* (LCM): ergative, dative
-- *ditransitive* (DITR): ergative, dative, absolutive
+- *intransitive* (#intr): absolutive
+- *agentive* (#agtv): ergative
+- *experiential* (#exp): dative, absolutive
+- *intentional* (#intl): ergative, absolutive
+- *locomotive* (#lcm): ergative, dative
+- *ditransitive* (#ditr): ergative, dative, absolutive
 
 The majority of verbs are intransitive, experiential, intentional, or ditransitive. Intransitive and intentional verbs generally assign the absolutive case to the patient#footnote[A verbal argument that is acted on or undergoes a change.], whereas experiential and ditransitive verbs generally assign the dative case to the patient/experiencer#footnote[A verbal argument that experiences a sensation, feeling, or thought.] and the absolutive case to the instrument#footnote[A verbal argument that is used to carry out an action.]/theme#footnote[A verbal argument that is essential to an action but is not changed.].
 
