@@ -6,13 +6,6 @@
 )
 #metadata((title: "Dictionary")) <website-metadata>
 
-// #calepin.setup(
-//   echo: true,
-//   eval: true,
-//   results: "verbatim",
-//   fenced-chunks: true,
-// )
-
 #yaml("nouns.yml").map(
   n => [
     == #n.prinparts.abs.at(0)

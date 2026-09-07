@@ -6,13 +6,6 @@
 )
 #metadata((title: "Attlerock")) <website-metadata>
 
-// #calepin.setup(
-//   echo: true,
-//   eval: true,
-//   results: "verbatim",
-//   fenced-chunks: true,
-// )
-
 = Faulty locator
 #translation(
   transcript(
@@ -29,21 +22,21 @@
     )
   ),
   transcript(
-    ("<Coleus>", [Ixkekłamaipfùkè qáakè sóusfùtì mux kolym, þòmóuxímùn þòmàřúxmùn kek na skáfàs nò Koinkù Fis nò Ískòilùkè Sóppíolke.]),
+    ("<Coleus>", [Ixkekłamaipfùkè qáakè sóusfùtì mux kolym, þòmóuxímùn þòmàřúxmùn kek na skáfàs nò Koikù Fis nò Ískòilùkè Sóppíolke.]),
     ("<Coleus>", [Minù, sîipóucèptì ìxmáifàp kekřórèfùkè qáakè séstá łés sístýr-sístýr pàqùnor séfàm kélùkè.]),
     transcript(
       ("<Thatch>", [Łécépsè póucèpsè. Qánàk łúxxóneiþàpìx kecfè.]),
     ),
     transcript(
       ("Físk", [Qéitànètà! Ixmaipè þúxqùnuxti ku píou. Tír nò Féipìolìk èrnòmefikti qùxùnexi sósfú pílù.]),
-      ("Físk", [Neltes řé łécé qouþùnùx þélùkè ímù.]),
+      ("Físk", [Neltes řé łés qouþùnùx þélùkè ímù.]),
       ("Xeicàast", [Anuxoufùtè tlósé súata, kà stèkolmaipèfàt qáakù þélsþyl séqíqàxþéxifux séisþàstỳm qú séstáp.]),
       ("<Thatch>", [Síflèkè þáþéxifux. A-Xeicàast àpèiqáafríx. Łòmiifòtỳl miiqùx sêm stèmaípfùx qáakè. Pànànàpixux sú misk!]),
     )
   ),
   [
     #example[
-      - _ix-kēk-ła-māip-∅_ _=fùkè_ _qáa-kè_ _s\<óus\>fù-ti_ _mūx_ _kōl-ym_ _þòm-óuxi-mùn_ _þòmà-řúx-mùn_ _kēk_ _nā_ _skáfàs_ _nò_ _kōin-k=ù_ _fīs_ _nò_ _ískòil=ùkè_ _sóppíol-ke_
+      - _ix-kēk-ła-māip-∅_ _=fùkè_ _qáa-kè_ _s\<óus\>fù-ti_ _mūx_ _kōl-ym_ _þòm-óuxi-mùn_ _þòmà-řúx-mùn_ _kēk_ _nā_ _skáfàs_ _nò_ _kōi-k=ù_ _fīs_ _nò_ _ískòil=ùkè_ _sóppíol-ke_
       - #rel.#erg\-signal-#appl\-search\\#ptcp.#abs\-#def.#sg =#pert.#p3.#def.#sg eye\\#abs\-#def.#sg \<#ret\>test-#p1.#sg.#erg above floor\\#abs\-#ndef.#sgv #abil\-listen-#p3.#sg.#erg #abil\-follow-#p3.#sg.#erg signal\\#abs from sun\\#abs and giant\\#abs\-#def.#sg=#pert.#p3 storm\\#abs and house\\#abs=#pert.#p3.#def.#sg black_hole\\#abs\-#def.#sg
       - the~signal-locator of the~Eye tested~by~me up a~floor it~can~listen~to it~can~follow signals from the~sun and the~giant~of storms and house~of the~black~hole
     ]
