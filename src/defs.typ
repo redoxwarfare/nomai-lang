@@ -26,6 +26,11 @@
 #let vis = abbreviation("vis", "visual")
 #let aud = abbreviation("aud", "auditory")
 
+#let alphabet = "aáāàâceéēèêfiíīìîjklłmnoóōòôpqrřstþuúūùûwxyýȳỳŷ"
+#let alphabet-key(word) = {
+  lower(word).clusters().map(char => alphabet.position(char))
+}
+
 #let transcript(..entries) = {
   let format_entry(entry) = {
     if type(entry) == array {
@@ -33,7 +38,7 @@
       strong[#upper(speaker):] + " " + words + parbreak()
     } else {entry}    
   }
-  calepin.elements.card(entries.pos().map(format_entry).fold([], (acc, x) => acc + x))
+  calepin.elements.card(entries.pos().map(format_entry).join())
 }
 
 #let translation(english, nomai, gloss) = calepin.elements.tabs[
@@ -45,7 +50,7 @@
 #let back-vowels = "oóōòôuúūùû"
 #let non-back-vowels = "aáāàâeéēèêiíīìî"
 #let vowels = "[" + non-back-vowels + back-vowels +  "]"
-#let nucleus = "[" + non-back-vowels + back-vowels + "]+|yýȳỳŷ"
+#let nucleus = "[" + non-back-vowels + back-vowels + "]+|[yýȳỳŷ]"
 #let tones = (
   "a": ("∅": "a", "H": "á", "M": "ā", "L": "à"),
   "e": ("∅": "e", "H": "é", "M": "ē", "L": "è"),
@@ -83,7 +88,7 @@
     "L"
   } else if "âêîôûŷ".contains(char) {
     "HL"
-  }
+  } else {none}
 }
 
 #let abs-endings = (
@@ -131,16 +136,23 @@
   "$": ("m", "r", "řyl", "Cè", "Cỳl"),
 )
 #let spread-L(ending) = {
-  ending.clusters().fold("", (acc, x) => {
+  ending.clusters().reduce((acc, x) => {
     if nucleus.contains(x) and get-tone(x) == "∅" {
       acc + tones.at(x).at("L")
     } else {acc + x}
   })
 }
 #let spread-M(ending) = {
-  ending.clusters().fold("", (acc, x) => {
+  ending.clusters().reduce((acc, x) => {
     if nucleus.contains(x) and get-tone(x) == "L" {
-      acc + tones.at(get-letter(x)).at("M")
+      acc + tones.at(get-vowel(x)).at("M")
+    } else {acc + x}
+  })
+}
+#let spread-H(ending) = {
+  ending.clusters().reduce((acc, x) => {
+    if nucleus.contains(x) and get-tone(x) == "∅" {
+      acc + tones.at(get-vowel(x)).at("H")
     } else {acc + x}
   })
 }
@@ -194,11 +206,11 @@
   })
 }
 
-#let noun(prinparts: (:), meanings: (), meanings-long: ()) = [
-  #let (stem-a, mel-a) = prinparts.abs
-  #let (stem-d, mel-d) = prinparts.dat
-  #let (stem-e, mel-e) = prinparts.erg
-  *noun*
+#let noun(stems: (:), meanings: (), meanings-long: ()) = [
+  #let (stem-a, mel-a) = stems.abs
+  #let (stem-d, mel-d) = stems.dat
+  #let (stem-e, mel-e) = stems.erg
+  === noun
   #enum(..meanings-long)
   #parbreak()
   #table(
@@ -207,5 +219,170 @@
     [*absolutive*], [#mel-a], stem-a, ..decline-stem(stem-a, mel-a, "abs"),
     [*dative*], [#mel-d], stem-d, ..decline-stem(stem-d, mel-d, "dat"),
     [*ergative*], [#mel-e], stem-e, ..decline-stem(stem-e, mel-e, "erg"),
+  )
+]
+
+#let valencies = (
+  "intr": "intransitive",
+  "exp": "experiential",
+  "intl": "intentional",
+  "lcm": "locomotive",
+  "ditr": "ditransitive",
+)
+#let caus-endings = (
+  "eþ": "ixi", "éþ": "íxi", "ēþ": "īxī", "èþ": "ìxì",
+  "oþ": "uxi", "óþ": "úxi", "ōþ": "ūxī", "òþ": "ùxì",
+  "aþ": "exi", "áþ": "éxi", "āþ": "ēxī", "àþ": "èxì",
+  "er": "ix", "ér": "íx", "ēr": "īx", "èr": "ìx",
+  "or": "ux", "ór": "úx", "ōr": "ūx", "òr": "ùx",
+  "e": "i", "é": "í", "ē": "ī", "è": "ì",
+  "o": "u", "ó": "ú", "ō": "ū", "ò": "ù",
+  "a": "e", "á": "é", "ā": "ē", "à": "è",
+)
+#let ptcp-endings = (
+  "s[aáāà]t$": (
+    abs: ("sat", "satym", "sase", "sasyl", "sate", "satyl"),  
+    dat: ("saa", "saam", "saar", "saařyl", "saatè", "saatỳl"),  
+    erg: ("seq", "seqim", "seqir", "seqryl", "seqit", "seqtyl"),  
+  ), "s[eéēè]p$": (
+    abs: ("sep", "sepỳm", "sepsè", "sepsỳl", "sepè", "sepỳl"),   
+    dat: ("sfà", "sfàm", "sfàr", "sfrỳl", "sfàp", "sfàpỳl"),   
+    erg: ("sfì", "sfìm", "sfìr", "sfrỳl", "sfìp", "sfìpỳl"),   
+  ), "c[eéēè]p$": (
+    abs: ("cep", "cepỳm", "cepsè", "cepsỳl", "cepè", "cepỳl"),   
+    dat: ("cfà", "cfàm", "cfàr", "cfrỳl", "cfàp", "cfàpỳl"),   
+    erg: ("cfì", "cfìm", "cfìr", "cfrỳl", "cfìp", "cfìpỳl"),   
+  ), "[eéēè]t$": (
+    abs: ("et", "etỳm", "esè", "esỳl", "etè", "etỳl"),  
+    dat: ("eþ", "eþàm", "eþàr", "eþrỳl", "eþàt", "eþàtỳl"),  
+    erg: ("ix", "ixìm", "ixìr", "ixrỳl", "ixìt", "ixìtỳl"),  
+  ), "[oóōò]t$": (
+    abs: ("ot", "otỳm", "osè", "osỳl", "otè", "otỳl"),  
+    dat: ("oþ", "oþàm", "oþàr", "oþrỳl", "oþàt", "oþàtỳl"),  
+    erg: ("ux", "uxìm", "uxìr", "uxrỳl", "uxìt", "uxìtỳl"),  
+  ), "[aáāà]t$": (
+    abs: ("ot", "otỳm", "osè", "osỳl", "otè", "otỳl"),  
+    dat: ("oþ", "oþàm", "oþàr", "oþrỳl", "oþàt", "oþàtỳl"),  
+    erg: ("ux", "uxìm", "uxìr", "uxrỳl", "uxìt", "uxìtỳl"),  
+  ), "[eéēè]s$": (
+    abs: ("es", "esym", "ese", "esyl", "eske", "eskyl"),  
+    dat: ("er", "eràm", "etàr", "erỳl", "erkè", "erkỳl"),  
+    erg: ("ix", "ixim", "ixir", "ixryl", "ixke", "ixkyl"),  
+  ), "[oóōò]s$": (
+    abs: ("os", "osym", "oso", "osyl", "osko", "oskyl"),  
+    dat: ("or", "oràm", "otàr", "orỳl", "orkè", "orkỳl"),  
+    erg: ("ux", "uxim", "uxir", "uxryl", "uxke", "uxkyl"),  
+  ), "[eéēè]p$": (
+    abs: ("ep", "epỳm", "epsè", "epsỳl", "epè", "epỳl"),  
+    dat: ("ef", "efàm", "efàr", "efrỳl", "efàp", "efàpỳl"),  
+    erg: ("if", "ifìm", "ifìr", "ifrỳl", "ifìp", "ifìpỳl"),  
+  ), "[oóōò]p$": (
+    abs: ("op", "opỳm", "opsè", "opsỳl", "opè", "opỳl"),  
+    dat: ("of", "ofàm", "ofàr", "ofrỳl", "ofàp", "ofàpỳl"),  
+    erg: ("uf", "ufìm", "ufìr", "ufrỳl", "ufìp", "ufìpỳl"),  
+  ), "[aáāà]p$": (
+    abs: ("ap", "apỳm", "apsè", "apsỳl", "apè", "apỳl"),  
+    dat: ("af", "afàm", "afàr", "afrỳl", "afàp", "afàpỳl"),  
+    erg: ("ef", "efìm", "efìr", "efrỳl", "efìp", "efìpỳl"),  
+  ),
+)
+#let get-caus-ending(ending, pfv-stem) = {
+  if ending.contains(regex("[yýȳỳ]")) {
+    let stem-last-vowel = stem.clusters().filter(char => vowels.contains(char)).last()
+    let E = tones.at(
+      if (non-back-vowels.contains(stem-last-vowel)) {"e"}
+      else {"o"}
+    ).at(get-tone(stem-last-vowel))
+    ending.replace(regex("[yýȳỳ]"), E)
+  } else {ending}
+}
+#let ret-ending(ending) = {
+  ending
+  .replace(regex("[aáā]"), "à")
+  .replace(regex("[eéē]"), "è")
+  .replace(regex("[iíī]"), "ì")
+  .replace(regex("[oóō]"), "ò")
+  .replace(regex("[uúū]"), "ù")
+  .replace(regex("[yýȳ]"), "ỳ")
+}
+#let verb-table(pfv, npfv, ret, verb-ending, ger-ending, antic, caus) = {
+  if antic != "none" and caus != "none" {
+    let caus-ending = get-caus-ending(verb-ending, pfv)
+    (
+      [*anticausative verb*], [#{pfv + verb-ending}], [#{npfv + verb-ending}], [#{ret + ret-ending(verb-ending)}], table.cell(rowspan: 2)[#{pfv + ger-ending}], 
+      [*causative verb*], [#{pfv + caus-ending}], [#{npfv + caus-ending}], [#{ret + ret-ending(caus-ending)}]
+    )
+  } else {
+    (
+      [*verb*], [#{pfv + verb-ending}], [#{npfv + verb-ending}], [#{ret + ret-ending(verb-ending)}], [#{pfv + ger-ending}], 
+    )
+  }
+}
+#let kinetic-melodies = (
+  "∅H": "H",
+  "∅M": "HL",
+  "MH": "M",
+  "LM": "ML",
+)
+#let decline-ptcp(stem, abs-ending, melody, kinetic) = {
+  let (pattern, endings-dict) = ptcp-endings.pairs().find(((pattern, _)) => abs-ending.contains(regex(pattern)))
+  if pattern == none {panic((stem, abs-ending, melody))}
+  let combine-stem-ending(ending, case) = {
+    let (modified-stem, modified-melody) = (stem, melody)
+    if kinetic and case == "abs" {
+      modified-melody = kinetic-melodies.at(melody)
+      modified-stem = stem.replace(regex(nucleus), match => {
+        let vowels = match.text.clusters()
+        if get-tone(vowels.first()) == melody.first() {
+          vowels.first() = tones.at(get-vowel(vowels.first())).at(modified-melody.first())
+        }
+        vowels.join()
+      })
+      if modified-stem == stem {panic(stem, abs-ending, melody, modified-melody, kinetic)}
+    }
+    let ending-contains-tones = ending.clusters().any(x => nucleus.contains(x) and get-tone(x) != "∅")
+    if modified-melody.last() == "H" and ending-contains-tones {
+      modified-stem = spread-H(stem)
+    }
+
+    ending = abs-ending.replace(regex(pattern), ending)
+    ending = if modified-melody.last() == "L" {
+      spread-L(ending)
+    } else if modified-melody == "LM" {
+      spread-M(ending)
+    } else if modified-melody.last() == "H" and ending-contains-tones {
+      spread-H(ending)
+    } else {ending}
+
+    [#{modified-stem + ending}]
+  }
+  for (case, endings) in endings-dict {
+    endings-dict.at(case) = endings.map(ending => combine-stem-ending(ending, case))
+  }
+  ([*absolutive*], ..endings-dict.abs, [*dative*], ..endings-dict.dat, [*ergative*], ..endings-dict.erg)
+}
+
+#let verb(stems: (:), endings: (:), class: none, antic: none, caus: none, kinetic: false, meanings: (), meanings-long: ()) = [
+  #let class-desc = if type(class) == int [class #class] else [#class]
+  #let valency-desc = (antic, caus).filter(x => x in valencies).map(x => valencies.at(x)).join("/")
+  === verb
+  #class-desc, #valency-desc
+  #enum(..meanings-long)
+  #parbreak()
+  #let (pfv-stem, pfv-mel) = stems.pfv
+  #let (npfv-stem, npfv-mel) = stems.npfv
+  #let (ret-stem, ret-mel) = stems.ret
+  #table(
+    columns: 5,
+    table.header([], [*perfective*], [*imperfective*], [*retrospective*], [*gerund*]),
+    ..verb-table(pfv-stem, npfv-stem, ret-stem, endings.verb, endings.ger, antic, caus)
+  )
+  #parbreak()
+  #table(
+    columns: 8,
+    table.cell(rowspan: 2)[*aspect*], table.cell(rowspan: 2)[*participle case*], table.cell(colspan: 2)[*indefinite*], table.cell(colspan: 2)[*proximal*], table.cell(colspan: 2)[*definite*], [*col.*], [*sgv.*], [*sg.*], [*pl.*], [*sg.*], [*pl.*], 
+    table.cell(rowspan: 3)[*perfective*], ..decline-ptcp(pfv-stem, endings.ptcp, pfv-mel, kinetic),
+    table.cell(rowspan: 3)[*imperfective*], ..decline-ptcp(npfv-stem, endings.ptcp, npfv-mel, kinetic),
+    table.cell(rowspan: 3)[*retrospective*], ..decline-ptcp(ret-stem, ret-ending(endings.ptcp), ret-mel, false),
   )
 ]

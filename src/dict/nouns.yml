@@ -1,11 +1,11 @@
-- prinparts:
+- stems:
     abs: [ácat, H]
     dat: [acât, HL]
     erg: [acêq, HL]
   meanings: [ash, soot, smoke]
   meanings-long:
     - (indefinite collective) ash, soot, smoke
-- prinparts:
+- stems:
     abs: [fáa, H]
     dat: [fâm, HL]
     erg: [fêm, HL]
@@ -14,7 +14,7 @@
     - (indefinite collective) light
     - (singular/singulative) light source
     - (attributive) bright
-- prinparts:
+- stems:
     abs: [físk, H]
     dat: [fésk, H]
     erg: [físq, H]
@@ -23,14 +23,14 @@
     - fern
     - frond, frond-shaped
     - feather
-- prinparts:
+- stems:
     abs: [ixóskáp, HL]
     dat: [ixoskáf, HL]
     erg: [ixoskéf, HL]
   meanings: [dancer]
   meanings-long:
     - dancer
-- prinparts:
+- stems:
     abs: [kēk, M]
     dat: [kèk, ML]
     erg: [kìq, ML]

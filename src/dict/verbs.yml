@@ -1,0 +1,111 @@
+- stems:
+    pfv: [kylþ, ∅H]
+    npfv: [kokylþ, ∅H]
+    ret: [káakỳlþ, HL]
+  endings:
+    verb: óþ
+    ger: ói
+    ptcp: ot
+  class: 1
+  antic: exp
+  caus: ditr
+  kinetic: true
+  meanings: [injure]
+  meanings-long:
+    - (anticausative) D is injured by A
+    - (causative) E injures D with A
+- stems:
+    pfv: [em, ∅M]
+    npfv: [enem, ∅M]
+    ret: [éifèm, HL]
+  endings:
+    verb: āþ
+    ger: āi
+    ptcp: at
+  class: 2
+  antic: intr
+  caus: intl
+  kinetic: true
+  meanings: [prepare, cook, ripen]
+  meanings-long:
+    - (causative) E prepares, cooks A
+    - (anticausative) A ripens
+- stems:
+    pfv: [łon, ∅M]
+    npfv: [tòłòn, LM]
+    ret: [łáaþòn, HL]
+  endings:
+    verb: ōr
+    ger: ōrè
+    ptcp: os
+  class: 3
+  antic: intr
+  caus: intl
+  kinetic: true
+  meanings: [cluster, gather]
+  meanings-long:
+    - (anticausative) A clumps, clusters 
+    - (causative) E gathers A together
+    - (causative) E=A flocks, congregates
+- stems:
+    pfv: [nàp, LM]
+    npfv: [nàǹap, LM]
+    ret: [nēiþàp, LM]
+  endings:
+    verb: ē
+    ger: ēfè
+    ptcp: ep
+  class: 4
+  antic: exp
+  caus: ditr
+  kinetic: true
+  meanings: [differ, diverge, alter]
+  meanings-long:
+    - (anticausative) D becomes different, diverges from A
+    - (causative) E alters D from A
+- stems:
+    pfv: [nòm, LM]
+    npfv: [nònòm, LM]
+    ret: [nāaþòm, LM]
+  endings:
+    verb: ā
+    ger: āfè
+    ptcp: ap
+  class: 5
+  antic: exp
+  caus: ditr
+  kinetic: true
+  meanings: [learn, comprehend, teach]
+  meanings-long:
+    - (anticausative) D learns, comprehends A
+    - (causative) E teaches A to D
+- stems:
+    pfv: [mīi, ML]
+    npfv: [mīmīi, ML]
+    ret: [mēifìi, ML]
+  endings:
+    verb: qùx
+    ger: qùrè
+    ptcp: qos
+  class: 7
+  antic: none
+  caus: lcm
+  kinetic: false
+  meanings: [come]
+  meanings-long:
+    - E comes to, arrives at D
+- stems:
+    pfv: [óu, HL]
+    npfv: [ókóu, HL]
+    ret: [áakòu, HL]
+  endings:
+    verb: xì
+    ger: sfè
+    ptcp: sep
+  class: 8
+  antic: none
+  caus: intl
+  kinetic: false
+  meanings: [listen]
+  meanings-long:
+    - E listens to A
