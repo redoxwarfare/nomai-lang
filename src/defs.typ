@@ -92,6 +92,10 @@
     "HL"
   } else {none}
 }
+#let get-vowel-and-tone(s) = {
+  s = s.match(regex(nucleus)).text.first()
+  (get-vowel(s), get-tone(s))
+}
 
 #let abs-endings = (
   "sp$": ("spym", "spEs", "spEsyl", "spe", "spyl"),
@@ -242,50 +246,92 @@
   "a": "e", "á": "é", "ā": "ē", "à": "è",
 )
 #let ptcp-endings = (
-  "s[aáāà]t$": (
-    abs: ("sat", "satym", "sase", "sasyl", "sate", "satyl"),  
-    dat: ("saa", "saam", "saar", "saařyl", "saatè", "saatỳl"),  
-    erg: ("seq", "seqim", "seqir", "seqryl", "seqit", "seqtyl"),  
-  ), "s[eéēè]p$": (
-    abs: ("sep", "sepỳm", "sepsè", "sepsỳl", "sepè", "sepỳl"),   
-    dat: ("sfà", "sfàm", "sfàr", "sfrỳl", "sfàp", "sfàpỳl"),   
-    erg: ("sfì", "sfìm", "sfìr", "sfrỳl", "sfìp", "sfìpỳl"),   
-  ), "c[eéēè]p$": (
-    abs: ("cep", "cepỳm", "cepsè", "cepsỳl", "cepè", "cepỳl"),   
-    dat: ("cfà", "cfàm", "cfàr", "cfrỳl", "cfàp", "cfàpỳl"),   
-    erg: ("cfì", "cfìm", "cfìr", "cfrỳl", "cfìp", "cfìpỳl"),   
-  ), "[eéēè]t$": (
-    abs: ("et", "etỳm", "esè", "esỳl", "etè", "etỳl"),  
-    dat: ("eþ", "eþàm", "eþàr", "eþrỳl", "eþàt", "eþàtỳl"),  
-    erg: ("ix", "ixìm", "ixìr", "ixrỳl", "ixìt", "ixìtỳl"),  
-  ), "[oóōò]t$": (
-    abs: ("ot", "otỳm", "osè", "osỳl", "otè", "otỳl"),  
-    dat: ("oþ", "oþàm", "oþàr", "oþrỳl", "oþàt", "oþàtỳl"),  
-    erg: ("ux", "uxìm", "uxìr", "uxrỳl", "uxìt", "uxìtỳl"),  
-  ), "[aáāà]t$": (
-    abs: ("ot", "otỳm", "osè", "osỳl", "otè", "otỳl"),  
-    dat: ("oþ", "oþàm", "oþàr", "oþrỳl", "oþàt", "oþàtỳl"),  
-    erg: ("ux", "uxìm", "uxìr", "uxrỳl", "uxìt", "uxìtỳl"),  
-  ), "[eéēè]s$": (
-    abs: ("es", "esym", "ese", "esyl", "eske", "eskyl"),  
-    dat: ("er", "eràm", "etàr", "erỳl", "erkè", "erkỳl"),  
-    erg: ("ix", "ixim", "ixir", "ixryl", "ixke", "ixkyl"),  
-  ), "[oóōò]s$": (
-    abs: ("os", "osym", "oso", "osyl", "osko", "oskyl"),  
-    dat: ("or", "oràm", "otàr", "orỳl", "orkè", "orkỳl"),  
-    erg: ("ux", "uxim", "uxir", "uxryl", "uxke", "uxkyl"),  
-  ), "[eéēè]p$": (
-    abs: ("ep", "epỳm", "epsè", "epsỳl", "epè", "epỳl"),  
-    dat: ("ef", "efàm", "efàr", "efrỳl", "efàp", "efàpỳl"),  
-    erg: ("if", "ifìm", "ifìr", "ifrỳl", "ifìp", "ifìpỳl"),  
-  ), "[oóōò]p$": (
-    abs: ("op", "opỳm", "opsè", "opsỳl", "opè", "opỳl"),  
-    dat: ("of", "ofàm", "ofàr", "ofrỳl", "ofàp", "ofàpỳl"),  
-    erg: ("uf", "ufìm", "ufìr", "ufrỳl", "ufìp", "ufìpỳl"),  
-  ), "[aáāà]p$": (
-    abs: ("ap", "apỳm", "apsè", "apsỳl", "apè", "apỳl"),  
-    dat: ("af", "afàm", "afàr", "afrỳl", "afàp", "afàpỳl"),  
-    erg: ("ef", "efìm", "efìr", "efrỳl", "efìp", "efìpỳl"),  
+  "sat": ("sat", "saa", "seq"),
+  "sát": ("sát", "sáa", "séq"),
+  "sāt": ("sāt", "sāa", "sēq"),
+  "sàt": ("sàt", "sàa", "sèq"),
+  "qos": ("qos", "qor", "qux"),
+  "qós": ("qós", "qór", "qúx"),
+  "qōs": ("qōs", "qōr", "qūx"),
+  "qòs": ("qòs", "qòr", "qùx"),
+  "xos": ("xos", "xor", "xux"),
+  "xós": ("xós", "xór", "xúx"),
+  "xōs": ("xōs", "xōr", "xūx"),
+  "xòs": ("xòs", "xòr", "xùx"),
+  "sep": ("sep", "sfà", "xfì"),
+  "sép": ("sép", "sfà", "xfì"),
+  "sēp": ("sēp", "sfà", "xfì"),
+  "sèp": ("sèp", "sfà", "xfì"),
+  "cep": ("cep", "cfà", "qfì"),
+  "cép": ("cép", "cfà", "qfì"),
+  "cēp": ("cēp", "cfà", "qfì"),
+  "cèp": ("cèp", "cfà", "qfì"),
+  "et": ("et", "eþ", "ix"),
+  "ét": ("ét", "éþ", "íx"),
+  "ēt": ("ēt", "ēþ", "īx"),
+  "èt": ("èt", "èþ", "ìx"),
+  "ot": ("ot", "oþ", "ux"),
+  "ót": ("ót", "óþ", "úx"),
+  "ōt": ("ōt", "ōþ", "ūx"),
+  "òt": ("òt", "òþ", "ùx"),
+  "at": ("at", "aþ", "ex"),
+  "át": ("át", "áþ", "éx"),
+  "āt": ("āt", "āþ", "ēx"),
+  "àt": ("àt", "àþ", "èx"),
+  "es": ("es", "er", "ix"),
+  "és": ("és", "ér", "íx"),
+  "ēs": ("ēs", "ēr", "īx"),
+  "ès": ("ès", "èr", "ìx"),
+  "os": ("os", "or", "ux"),
+  "ós": ("ós", "ór", "úx"),
+  "ōs": ("ōs", "ōr", "ūx"),
+  "òs": ("òs", "òr", "ùx"),
+  "ep": ("ep", "ef", "if"),
+  "ép": ("ép", "éf", "íf"),
+  "ēp": ("ēp", "ēf", "īf"),
+  "èp": ("èp", "èf", "ìf"),
+  "op": ("op", "of", "uf"),
+  "óp": ("óp", "óf", "úf"),
+  "ōp": ("ōp", "ōf", "ūf"),
+  "òp": ("òp", "òf", "ùf"),
+  "ap": ("ap", "af", "ef"),
+  "áp": ("áp", "áf", "éf"),
+  "āp": ("āp", "āf", "ēf"),
+  "àp": ("àp", "àf", "èf"),
+)
+#let ptcp-full-declensions = (
+  "6": (
+    abs: ("t", "tym", "se", "syl", "te", "tyl"),
+    dat: ("a", "am", "ar", "ařyl", "at", "atyl"),
+    erg: ("q", "qim", "qir", "qryl", "qit", "qtyl"),
+  ), "7": (
+    abs: ("s", "sym", "se", "syl", "ske", "skyl"),
+    dat: ("r", "ràm", "tàr", "rỳl", "rkè", "rkỳl"),
+    erg: ("x", "xim", "xir", "xryl", "xke", "xkyl"),
+  ), "8": (
+    abs: ("p", "pỳm", "psè", "psỳl", "pè", "pỳl"),
+    dat: ("à", "àm", "àr", "rỳl", "àp", "àpỳl"),
+    erg: ("ì", "ìm", "ìr", "rỳl", "ìp", "ìpỳl"),
+  ), "1": (
+    abs: ("t", "tỳm", "sè", "sỳl", "tè", "tỳl"),
+    dat: ("þ", "þàm", "þàr", "þrỳl", "þàt", "þàtỳl"),
+    erg: ("x", "xìm", "xìr", "xrỳl", "xìt", "xìtỳl"),
+  ), "2": (
+    abs: ("t", "tỳm", "sè", "sỳl", "tè", "tỳl"),
+    dat: ("þ", "þàm", "þàr", "þrỳl", "þàt", "þàtỳl"),
+    erg: ("x", "xìm", "xìr", "xrỳl", "xìt", "xìtỳl"),
+  ), "3": (
+    abs: ("s", "sym", "se", "syl", "ske", "skyl"),
+    dat: ("r", "ràm", "tàr", "rỳl", "rkè", "rkỳl"),
+    erg: ("x", "xim", "xir", "xryl", "xke", "xkyl"),
+  ), "4": (
+    abs: ("p", "pỳm", "psè", "psỳl", "pè", "pỳl"),
+    dat: ("f", "fàm", "fàr", "frỳl", "fàp", "fàpỳl"),
+    erg: ("f", "fìm", "fìr", "frỳl", "fìp", "fìpỳl"),
+  ), "5": (
+    abs: ("p", "pỳm", "psè", "psỳl", "pè", "pỳl"),
+    dat: ("f", "fàm", "fàr", "frỳl", "fàp", "fàpỳl"),
+    erg: ("f", "fìm", "fìr", "frỳl", "fìp", "fìpỳl"),
   ),
 )
 #let get-caus-ending(ending, pfv-stem) = {
@@ -299,7 +345,34 @@
   }
   caus-endings.at(ending)
 }
-#let ret-ending(ending) = {
+#let get-0-ending(ending) = {
+  ending
+  .replace(regex("[áāà]"), "a")
+  .replace(regex("[éēè]"), "e")
+  .replace(regex("[íīì]"), "i")
+  .replace(regex("[óōò]"), "o")
+  .replace(regex("[úūù]"), "u")
+  .replace(regex("[ýȳỳ]"), "y")
+}
+#let get-H-ending(ending) = {
+  ending
+  .replace(regex("[aāà]"), "á")
+  .replace(regex("[eēè]"), "é")
+  .replace(regex("[iīì]"), "í")
+  .replace(regex("[oōò]"), "ó")
+  .replace(regex("[uūù]"), "ú")
+  .replace(regex("[yȳỳ]"), "ý")
+}
+#let get-M-ending(ending) = {
+  ending
+  .replace(regex("[aáà]"), "ā")
+  .replace(regex("[eéè]"), "ē")
+  .replace(regex("[iíì]"), "ī")
+  .replace(regex("[oóò]"), "ō")
+  .replace(regex("[uúù]"), "ū")
+  .replace(regex("[yýỳ]"), "ȳ")
+}
+#let get-L-ending(ending) = {
   ending
   .replace(regex("[aáā]"), "à")
   .replace(regex("[eéē]"), "è")
@@ -312,80 +385,65 @@
   if antic != "none" and caus != "none" {
     let caus-ending = get-caus-ending(verb-ending, pfv)
     (
-      [*anticausative verb*], [#{pfv + verb-ending}], [#{npfv + verb-ending}], [#{ret + ret-ending(verb-ending)}], table.cell(rowspan: 2)[#{pfv + ger-ending}], 
-      [*causative verb*], [#{pfv + caus-ending}], [#{npfv + caus-ending}], [#{ret + ret-ending(caus-ending)}]
+      [*anticausative verb*], [#{pfv + verb-ending}], [#{npfv + verb-ending}], [#{ret + get-L-ending(verb-ending)}], table.cell(rowspan: 2)[#{pfv + ger-ending}], 
+      [*causative verb*], [#{pfv + caus-ending}], [#{npfv + caus-ending}], [#{ret + get-L-ending(caus-ending)}]
     )
   } else {
     (
-      [*verb*], [#{pfv + verb-ending}], [#{npfv + verb-ending}], [#{ret + ret-ending(verb-ending)}], [#{pfv + ger-ending}], 
+      [*verb*], [#{pfv + verb-ending}], [#{npfv + verb-ending}], [#{ret + get-L-ending(verb-ending)}], [#{pfv + ger-ending}], 
     )
   }
 }
-#let kinetic-melodies = (
-  "∅H": "H",
-  "∅M": "HL",
-  "MH": "M",
-  "LM": "ML",
-)
-#let decline-ptcp(stem, abs-ending, melody, kinetic) = {
-  let (pattern, endings-dict) = ptcp-endings.pairs().find(((pattern, _)) => abs-ending.contains(regex(pattern)))
-  if pattern == none {panic((stem, abs-ending, melody))}
-  let combine-stem-ending(ending, case) = {
-    let (modified-stem, modified-melody) = (stem, melody)
-    if kinetic and case == "abs" {
-      modified-melody = kinetic-melodies.at(melody)
-      modified-stem = stem.replace(regex(nucleus), match => {
-        let vowels = match.text.clusters()
-        if get-tone(vowels.first()) == melody.first() {
-          vowels.first() = tones.at(get-vowel(vowels.first())).at(modified-melody.first())
-        }
-        vowels.join()
-      })
-      if modified-stem == stem {panic(stem, abs-ending, melody, modified-melody, kinetic)}
-    }
-    let ending-contains-tones = ending.clusters().any(x => nucleus.contains(x) and get-tone(x) != "∅")
-    if modified-melody.last() == "H" and ending-contains-tones {
-      modified-stem = spread-H(stem)
-    }
-
-    ending = abs-ending.replace(regex(pattern), ending)
-    ending = if modified-melody.last() == "L" {
-      spread-L(ending)
-    } else if modified-melody == "LM" {
-      spread-M(ending)
-    } else if modified-melody.last() == "H" and ending-contains-tones {
-      spread-H(ending)
-    } else {ending}
-
-    [#{modified-stem + ending}]
+#let decline-ptcps(stems, endings, class) = {
+  let combine-stem-ending(stem, case) = {
+    ptcp-full-declensions
+    .at(class)
+    .at(case)
+    .map(e => [#{stem + endings.at(case).clusters().slice(0, -1).join() + e}])
   }
-  for (case, endings) in endings-dict {
-    endings-dict.at(case) = endings.map(ending => combine-stem-ending(ending, case))
-  }
-  ([*absolutive*], ..endings-dict.abs, [*dative*], ..endings-dict.dat, [*ergative*], ..endings-dict.erg)
+  (
+    table.cell(rowspan: 3)[*perfective*], 
+    [*absolutive*], ..combine-stem-ending(stems.pfv.at(1), "abs"),
+    [*dative*], ..combine-stem-ending(stems.pfv.at(0), "dat"),
+    [*ergative*], ..combine-stem-ending(stems.pfv.at(0), "erg"),
+    table.cell(rowspan: 3)[*imperfective*], 
+    [*absolutive*], ..combine-stem-ending(stems.npfv.at(1), "abs"),
+    [*dative*], ..combine-stem-ending(stems.npfv.at(0), "dat"),
+    [*ergative*], ..combine-stem-ending(stems.npfv.at(0), "erg"),
+    table.cell(rowspan: 3)[*retrospective*], 
+    [*absolutive*], ..combine-stem-ending(stems.ret.at(1), "abs"),
+    [*dative*], ..combine-stem-ending(stems.ret.at(0), "dat"),
+    [*ergative*], ..combine-stem-ending(stems.ret.at(0), "erg"),
+  )
 }
 
-#let verb(stems: (:), endings: (:), class: none, antic: none, caus: none, kinetic: false, meanings: (), meanings-long: ()) = [
-  #let class-desc = if type(class) == int [class #class] else [#class]
-  #let valency-desc = (antic, caus).filter(x => x in valencies).map(x => valencies.at(x)).join("/")
-  === verb
-  #class-desc, #valency-desc
-  #enum(..meanings-long)
-  #parbreak()
-  #let (pfv-stem, pfv-mel) = stems.pfv
-  #let (npfv-stem, npfv-mel) = stems.npfv
-  #let (ret-stem, ret-mel) = stems.ret
-  #table(
-    columns: 5,
-    table.header([], [*perfective*], [*imperfective*], [*retrospective*], [*gerund*]),
-    ..verb-table(pfv-stem, npfv-stem, ret-stem, endings.verb, endings.ger, antic, caus)
+#let verb(stems: (:), endings: (:), class: none, antic: none, caus: none, meanings: (), meanings-long: ()) = {
+  let class-desc = if type(class) == int [class #class] else [#class]
+  class = str(class)
+  let valency-desc = (antic, caus).filter(x => x in valencies).map(x => valencies.at(x)).join("/")
+  let (_, verb-ending-tone) = get-vowel-and-tone(endings.verb)
+  let (abs-ending, dat-ending, erg-ending) = ptcp-endings.at(endings.ptcp)
+  (dat-ending, erg-ending) = (dat-ending, erg-ending).map(
+    if verb-ending-tone == "∅" {get-0-ending}
+    else if verb-ending-tone == "H" {get-H-ending}
+    else if verb-ending-tone == "M" {get-M-ending}
+    else if verb-ending-tone == "L" {get-L-ending}
   )
-  #parbreak()
-  #table(
-    columns: 8,
-    table.cell(rowspan: 2)[*aspect*], table.cell(rowspan: 2)[*participle case*], table.cell(colspan: 2)[*indefinite*], table.cell(colspan: 2)[*proximal*], table.cell(colspan: 2)[*definite*], [*col.*], [*sgv.*], [*sg.*], [*pl.*], [*sg.*], [*pl.*], 
-    table.cell(rowspan: 3)[*perfective*], ..decline-ptcp(pfv-stem, endings.ptcp, pfv-mel, kinetic),
-    table.cell(rowspan: 3)[*imperfective*], ..decline-ptcp(npfv-stem, endings.ptcp, npfv-mel, kinetic),
-    table.cell(rowspan: 3)[*retrospective*], ..decline-ptcp(ret-stem, ret-ending(endings.ptcp), ret-mel, false),
-  )
-]
+  [
+    === verb
+    #class-desc, #valency-desc
+    #enum(..meanings-long)
+    #parbreak()
+    #table(
+      columns: 5,
+      table.header([], [*perfective*], [*imperfective*], [*retrospective*], [*gerund*]),
+      ..verb-table(stems.pfv.at(0), stems.npfv.at(0), stems.ret.at(0), endings.verb, endings.ger, antic, caus)
+    )
+    #parbreak()
+    #table(
+      columns: 8,
+      table.cell(rowspan: 2)[*aspect*], table.cell(rowspan: 2)[*participle case*], table.cell(colspan: 2)[*indefinite*], table.cell(colspan: 2)[*proximal*], table.cell(colspan: 2)[*definite*], [*col.*], [*sgv.*], [*sg.*], [*pl.*], [*sg.*], [*pl.*], 
+      ..decline-ptcps(stems, (abs: abs-ending, dat: dat-ending, erg: erg-ending), class)
+    )
+  ]
+}
