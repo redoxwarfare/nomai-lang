@@ -282,6 +282,7 @@
   "e": "i", "é": "í", "ē": "ī", "è": "ì",
   "o": "u", "ó": "ú", "ō": "ū", "ò": "ù",
   "a": "e", "á": "é", "ā": "ē", "à": "è",
+  "": "",
 )
 #let ptcp-endings = (
   "sat": ("sat", "saa", "seq"),
@@ -316,6 +317,7 @@
   "át": ("át", "áþ", "éx"),
   "āt": ("āt", "āþ", "ēx"),
   "àt": ("àt", "àþ", "èx"),
+  "t": ("t", "þ", "x"),
   "es": ("es", "er", "ix"),
   "és": ("és", "ér", "íx"),
   "ēs": ("ēs", "ēr", "īx"),
@@ -324,6 +326,7 @@
   "ós": ("ós", "ór", "úx"),
   "ōs": ("ōs", "ōr", "ūx"),
   "òs": ("òs", "òr", "ùx"),
+  "s": ("s", "r", "x"),
   "ep": ("ep", "ef", "if"),
   "ép": ("ép", "éf", "íf"),
   "ēp": ("ēp", "ēf", "īf"),
@@ -336,6 +339,7 @@
   "áp": ("áp", "áf", "éf"),
   "āp": ("āp", "āf", "ēf"),
   "àp": ("àp", "àf", "èf"),
+  "p": ("p", "f", "f"),
 )
 #let ptcp-full-declensions = (
   "6": (
@@ -373,51 +377,63 @@
   ),
 )
 #let get-caus-ending(ending, pfv-stem) = {
-  if ending.contains(y-regex.all) {
-    let stem-last-vowel = stem.clusters().filter(char => vowels.contains(char)).last()
-    let E = tones.at(
-      if (non-back-vowels.contains(stem-last-vowel)) {"e"}
-      else {"o"}
-    ).at(get-tone(stem-last-vowel))
-    ending = ending.replace(y-regex.all, E)
+  if ending == none {
+    ending
+  } else {
+    if ending.contains(y-regex.all) {
+      let stem-last-vowel = pfv-stem.clusters().filter(char => vowels.contains(char)).last()
+      let E = tones.at(
+        if (non-back-vowels.contains(stem-last-vowel)) {"e"}
+        else {"o"}
+      ).at(get-tone(stem-last-vowel))
+      ending = ending.replace(y-regex.all, E)
+    }
+    caus-endings.at(ending)
   }
-  caus-endings.at(ending)
 }
 #let get-0-ending(ending) = {
-  ending
-  .replace(a-regex.N, "a")
-  .replace(e-regex.N, "e")
-  .replace(i-regex.N, "i")
-  .replace(o-regex.N, "o")
-  .replace(u-regex.N, "u")
-  .replace(y-regex.N, "y")
+  if ending != none {
+    ending
+    .replace(a-regex.N, "a")
+    .replace(e-regex.N, "e")
+    .replace(i-regex.N, "i")
+    .replace(o-regex.N, "o")
+    .replace(u-regex.N, "u")
+    .replace(y-regex.N, "y")
+  } else {ending}
 }
 #let get-H-ending(ending) = {
-  ending
-  .replace(a-regex.H, "á")
-  .replace(e-regex.H, "é")
-  .replace(i-regex.H, "í")
-  .replace(o-regex.H, "ó")
-  .replace(u-regex.H, "ú")
-  .replace(y-regex.H, "ý")
+  if ending != none {
+    ending
+    .replace(a-regex.H, "á")
+    .replace(e-regex.H, "é")
+    .replace(i-regex.H, "í")
+    .replace(o-regex.H, "ó")
+    .replace(u-regex.H, "ú")
+    .replace(y-regex.H, "ý")
+  } else {ending}
 }
 #let get-M-ending(ending) = {
-  ending
-  .replace(a-regex.M, "ā")
-  .replace(e-regex.M, "ē")
-  .replace(i-regex.M, "ī")
-  .replace(o-regex.M, "ō")
-  .replace(u-regex.M, "ū")
-  .replace(y-regex.M, "ȳ")
+  if ending != none {
+    ending
+    .replace(a-regex.M, "ā")
+    .replace(e-regex.M, "ē")
+    .replace(i-regex.M, "ī")
+    .replace(o-regex.M, "ō")
+    .replace(u-regex.M, "ū")
+    .replace(y-regex.M, "ȳ")
+  } else {ending}
 }
 #let get-L-ending(ending) = {
-  ending
-  .replace(a-regex.L, "à")
-  .replace(e-regex.L, "è")
-  .replace(i-regex.L, "ì")
-  .replace(o-regex.L, "ò")
-  .replace(u-regex.L, "ù")
-  .replace(y-regex.L, "ỳ")
+  if ending != none {
+    ending
+    .replace(a-regex.L, "à")
+    .replace(e-regex.L, "è")
+    .replace(i-regex.L, "ì")
+    .replace(o-regex.L, "ò")
+    .replace(u-regex.L, "ù")
+    .replace(y-regex.L, "ỳ")
+  } else {ending}
 }
 #let spread-tones(word) = {
   let consonants = word.split(nucleus-regex)
@@ -488,15 +504,16 @@
   let class-desc = if type(class) == int [class #class] else [#class]
   class = str(class)
   let valency-desc = (antic, caus).filter(x => x in valencies).map(x => valencies.at(x)).join("/")
-  let (_, verb-ending-tone) = get-vowel-and-tone(endings.verb)
+  let (_, verb-ending-tone) = if endings.verb != none {get-vowel-and-tone(endings.verb)} else {(none, none)}
   let (abs-ending, dat-ending, erg-ending) = ptcp-endings.at(endings.ptcp)
   (dat-ending, erg-ending) = (dat-ending, erg-ending).map(
     if verb-ending-tone == "∅" {get-0-ending}
     else if verb-ending-tone == "H" {get-H-ending}
     else if verb-ending-tone == "M" {get-M-ending}
     else if verb-ending-tone == "L" {get-L-ending}
+    else {x => x}
   )
-  let (ret-dat-ending, ret-erg-ending) = (dat-ending, erg-ending).map(get-L-ending)
+  let (ret-abs-ending, ret-dat-ending, ret-erg-ending) = (abs-ending, dat-ending, erg-ending).map(get-L-ending)
   [
     === verb
     #class-desc, #valency-desc
@@ -524,7 +541,7 @@
       table.cell(rowspan: 3)[*imperfective participle*], 
       ..decline-ptcp(stems.npfv, (abs: abs-ending, dat: dat-ending, erg: erg-ending), class), 
       table.cell(rowspan: 3)[*retrospective participle*], 
-      ..decline-ptcp(stems.ret, (abs: abs-ending, dat: ret-dat-ending, erg: ret-erg-ending), class), 
+      ..decline-ptcp(stems.ret, (abs: ret-abs-ending, dat: ret-dat-ending, erg: ret-erg-ending), class), 
     )
   ]
 }

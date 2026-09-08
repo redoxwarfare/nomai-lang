@@ -29,6 +29,51 @@
     - (causative) E prepares, cooks A
     - (anticausative) A ripens
 - stems:
+    pfv: [qùn, qūn]
+    npfv: [qùxùn, qūqūn]
+    ret: [qōuþùn, qōuþùn]
+  endings:
+    verb: āþ
+    ger: āi
+    ptcp: àt
+  class: 2
+  antic: intr
+  caus: intl
+  meanings: [straighten, fix]
+  meanings-long:
+    - (anticausative) A straightens
+    - (causative) E straightens, fixes A
+- stems:
+    pfv: [þ, þ]
+    npfv: [táþ, táþ]
+    ret: [þéit, þéit]
+  endings:
+    verb: éxi
+    ger: āi
+    ptcp: át
+  class: 2
+  antic: none
+  caus: intl
+  meanings: [make, build]
+  meanings-long:
+    - E makes, builds A
+- stems:
+    pfv: [fr, fr]
+    npfv: [páfr, páfr]
+    ret: [féipr, féipr]
+  endings:
+    verb: ér
+    ger: érè
+    ptcp: és
+  class: 3
+  antic: exp
+  caus: ditr
+  meanings: [fall, drop]
+  meanings-long:
+    - (anticausative) A falls onto D
+    - (causative) E drops A onto D
+    - (causative) E lets go of A
+- stems:
     pfv: [łon, łón]
     npfv: [tòłòn, tōłōn]
     ret: [łáaþòn, łáaþòn]
@@ -49,6 +94,98 @@
     npfv: [nànàp, nānāp]
     ret: [nēiþàp, nēiþàp]
   endings:
+    verb: ēr
+    ger: ērè
+    ptcp: ès
+  class: 3
+  antic: intr
+  caus: intl
+  meanings: [leave, abandon]
+  meanings-long:
+    - (anticausative) A becomes lost
+    - (causative) E leaves, abandons A
+- stems:
+    pfv: [qùn, qūn]
+    npfv: [qùxùn, qūqūn]
+    ret: [qōuþùn, qōuþùn]
+  endings:
+    verb: ōr
+    ger: ōrè
+    ptcp: òs
+  class: 3
+  antic: exp
+  caus: ditr
+  meanings: [align, adjust]
+  meanings-long:
+    - (anticausative) A aligns with D
+    - (causative) E aligns A with D
+    - (causative) E adjusts A
+- stems:
+    pfv: [ř, ř]
+    npfv: [súř, súř]
+    ret: [sóuř, sóuř]
+  endings:
+    verb: úx
+    ger: órè
+    ptcp: ós
+  class: 3
+  antic: none
+  caus: intl
+  meanings: [follow, track]
+  meanings-long:
+    - E follows, tracks A
+- stems:
+    pfv: [síst, síst]
+    npfv: [síríst, síríst]
+    ret: [séicìst, séicìst]
+  endings:
+    verb: yr
+    ger: rè
+    ptcp: es
+  class: 3
+  antic: intr
+  caus: intl
+  meanings: [spin, roll, twist]
+  meanings-long:
+    - (anticausative) A spins, rolls, twists
+    - (causative) E spins, rolls, twists A
+- stems:
+    pfv: [tl, tl]
+    npfv: [tótl, tótl]
+    ret: [táatl, táatl]
+  endings:
+    verb: ór
+    ger: órè
+    ptcp: ós
+  class: 3
+  antic: exp
+  caus: ditr
+  meanings: [receive, put, give, suggest]
+  meanings-long:
+    - (anticausative) D receives A
+    - (causative) E puts A on D (inanimate)
+    - (causative) E gives A to D (animate)
+    - (causative) E suggests, proposes A
+- stems:
+    pfv: [mái, māi]
+    npfv: [māmái, māmāi]
+    ret: [mēifài, mēifài]
+  endings:
+    verb: 
+    ger: fè
+    ptcp: p
+  class: 4
+  antic: exp
+  caus: intl
+  meanings: [find, search]
+  meanings-long:
+    - (anticausative) D finds, encounters A
+    - (causative) E searches for A
+- stems:
+    pfv: [nàp, nāp]
+    npfv: [nànàp, nānāp]
+    ret: [nēiþàp, nēiþàp]
+  endings:
     verb: ē
     ger: ēfè
     ptcp: èp
@@ -59,6 +196,66 @@
   meanings-long:
     - (anticausative) D becomes different, diverges from A
     - (causative) E alters D from A
+- stems:
+    pfv: [qan, qán]
+    npfv: [qaqan, qáqán]
+    ret: [qéitàn, qéitàn]
+  endings:
+    verb: ē
+    ger: ēfè
+    ptcp: èp
+  class: 4
+  antic: exp
+  caus: ditr
+  meanings: [see, show]
+  meanings-long:
+    - (anticausative) D sees A
+    - (causative) E shows A to D
+- stems:
+    pfv: [ř, ř]
+    npfv: [kéř, kéř]
+    ret: [áakr, áakr]
+  endings:
+    verb: é
+    ger: éfè
+    ptcp: ép
+  class: 4
+  antic: exp
+  caus: ditr
+  meanings: [frustrate, disappoint]
+  meanings-long:
+    - (anticausative) D is frustrated, disappointed by A
+    - (causative) E frustrates D with A
+- stems:
+    pfv: [sf, sf]
+    npfv: [sósf, sósf]
+    ret: [sáasf, sáasf]
+  endings:
+    verb: ó
+    ger: ófè
+    ptcp: óp
+  class: 4
+  antic: exp
+  caus: intl
+  meanings: [try, test, taste]
+  meanings-long:
+    - (causative) E tries, tests A
+    - (anticausative) D tastes A
+- stems:
+    pfv: [súa, súa]
+    npfv: [súxúa, súxúa]
+    ret: [sóuxùa, sóuxùa]
+  endings:
+    verb: 
+    ger: fè
+    ptcp: p
+  class: 4
+  antic: exp
+  caus: ditr
+  meanings: [sadden]
+  meanings-long:
+    - (anticausative) A is saddened by D
+    - (causative) E saddens D with A
 - stems:
     pfv: [nòm, nōm]
     npfv: [nònòm, nōnōm]
@@ -75,6 +272,22 @@
     - (anticausative) D learns, comprehends A
     - (causative) E teaches A to D
 - stems:
+    pfv: [sést, sést]
+    npfv: [sérést, sérést]
+    ret: [sáacèst, sáacèst]
+  endings:
+    verb: á
+    ger: áfè
+    ptcp: áp
+  class: 5
+  antic: exp
+  caus: ditr
+  meanings: [confuse, complicate]
+  meanings-long:
+    - (anticausative) A confuses, disorients D
+    - (causative) E makes A complicated
+    - (causative) E confuses D with/about A
+- stems:
     pfv: [mīi, mīi]
     npfv: [mīmīi, mīmīi]
     ret: [mēifìi, mēifìi]
@@ -89,6 +302,21 @@
   meanings-long:
     - E comes to, arrives at D
 - stems:
+    pfv: [kē, kē]
+    npfv: [kēwè, kēwè]
+    ret: [kāanè, kāanè]
+  endings:
+    verb: qi
+    ger: cfè
+    ptcp: cep
+  class: 8
+  antic: none
+  caus: ditr
+  meanings: [call, sing]
+  meanings-long:
+    - E calls to D with A
+    - E sings A to D
+- stems:
     pfv: [óu, óu]
     npfv: [ókóu, ókóu]
     ret: [áakòu, áakòu]
@@ -102,3 +330,17 @@
   meanings: [listen]
   meanings-long:
     - E listens to A
+- stems:
+    pfv: [póu, póu]
+    npfv: [pópóu, pópóu]
+    ret: [páapòu, páapòu]
+  endings:
+    verb: xì
+    ger: cfè
+    ptcp: cèp
+  class: 8
+  antic: none
+  caus: ditr
+  meanings: [ask]
+  meanings-long:
+    - E asks D for A (an action or requested object)
