@@ -394,7 +394,7 @@
     )
   }
 }
-#let decline-ptcps(stems, endings, class) = {
+#let decline-ptcp(stems, endings, class) = {
   let combine-stem-ending(stem, case) = {
     ptcp-full-declensions
     .at(class)
@@ -402,18 +402,9 @@
     .map(e => [#{stem + endings.at(case).clusters().slice(0, -1).join() + e}])
   }
   (
-    table.cell(rowspan: 3)[*perfective*], 
-    [*absolutive*], ..combine-stem-ending(stems.pfv.at(1), "abs"),
-    [*dative*], ..combine-stem-ending(stems.pfv.at(0), "dat"),
-    [*ergative*], ..combine-stem-ending(stems.pfv.at(0), "erg"),
-    table.cell(rowspan: 3)[*imperfective*], 
-    [*absolutive*], ..combine-stem-ending(stems.npfv.at(1), "abs"),
-    [*dative*], ..combine-stem-ending(stems.npfv.at(0), "dat"),
-    [*ergative*], ..combine-stem-ending(stems.npfv.at(0), "erg"),
-    table.cell(rowspan: 3)[*retrospective*], 
-    [*absolutive*], ..combine-stem-ending(stems.ret.at(1), "abs"),
-    [*dative*], ..combine-stem-ending(stems.ret.at(0), "dat"),
-    [*ergative*], ..combine-stem-ending(stems.ret.at(0), "erg"),
+    [*absolutive*], ..combine-stem-ending(stems.at(1), "abs"),
+    [*dative*], ..combine-stem-ending(stems.at(0), "dat"),
+    [*ergative*], ..combine-stem-ending(stems.at(0), "erg"),
   )
 }
 
@@ -429,6 +420,7 @@
     else if verb-ending-tone == "M" {get-M-ending}
     else if verb-ending-tone == "L" {get-L-ending}
   )
+  let (ret-dat-ending, ret-erg-ending) = (dat-ending, erg-ending).map(get-L-ending)
   [
     === verb
     #class-desc, #valency-desc
@@ -442,8 +434,13 @@
     #parbreak()
     #table(
       columns: 8,
-      table.cell(rowspan: 2)[*aspect*], table.cell(rowspan: 2)[*participle case*], table.cell(colspan: 2)[*indefinite*], table.cell(colspan: 2)[*proximal*], table.cell(colspan: 2)[*definite*], [*col.*], [*sgv.*], [*sg.*], [*pl.*], [*sg.*], [*pl.*], 
-      ..decline-ptcps(stems, (abs: abs-ending, dat: dat-ending, erg: erg-ending), class)
+      table.cell(rowspan: 2)[*aspect*], table.cell(rowspan: 2)[*participle case*], table.cell(colspan: 2)[*indefinite*], table.cell(colspan: 2)[*proximal*], table.cell(colspan: 2)[*definite*], [*col.*], [*sgv.*], [*sg.*], [*pl.*], [*sg.*], [*pl.*],
+      table.cell(rowspan: 3)[*perfective*], 
+      ..decline-ptcp(stems.pfv, (abs: abs-ending, dat: dat-ending, erg: erg-ending), class), 
+      table.cell(rowspan: 3)[*imperfective*], 
+      ..decline-ptcp(stems.npfv, (abs: abs-ending, dat: dat-ending, erg: erg-ending), class), 
+      table.cell(rowspan: 3)[*retrospective*], 
+      ..decline-ptcp(stems.ret, (abs: abs-ending, dat: ret-dat-ending, erg: ret-erg-ending), class), 
     )
   ]
 }
