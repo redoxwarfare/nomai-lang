@@ -52,7 +52,7 @@
 #let back-vowels = "oóōòôuúūùû"
 #let non-back-vowels = "aáāàâeéēèêiíīìî"
 #let vowels = "[" + non-back-vowels + back-vowels +  "]"
-#let nucleus = "[" + non-back-vowels + back-vowels + "]+|[yýȳỳŷ]"
+#let nucleus = "[" + non-back-vowels + back-vowels + "]+|[yýȳỳŷ][mnlr]"
 #let tones = (
   "a": ("∅": "a", "H": "á", "M": "ā", "L": "à"),
   "e": ("∅": "e", "H": "é", "M": "ē", "L": "è"),
@@ -143,21 +143,21 @@
 )
 #let spread-L(ending) = {
   ending.clusters().reduce((acc, x) => {
-    if nucleus.contains(x) and get-tone(x) == "∅" {
+    if x.contains(regex(nucleus)) and get-tone(x) == "∅" {
       acc + tones.at(x).at("L")
     } else {acc + x}
   })
 }
 #let spread-M(ending) = {
   ending.clusters().reduce((acc, x) => {
-    if nucleus.contains(x) and get-tone(x) == "L" {
+    if x.contains(regex(nucleus)) and get-tone(x) == "L" {
       acc + tones.at(get-vowel(x)).at("M")
     } else {acc + x}
   })
 }
 #let spread-H(ending) = {
   ending.clusters().reduce((acc, x) => {
-    if nucleus.contains(x) and get-tone(x) == "∅" {
+    if x.contains(regex(nucleus)) and get-tone(x) == "∅" {
       acc + tones.at(get-vowel(x)).at("H")
     } else {acc + x}
   })
@@ -381,6 +381,43 @@
   .replace(regex("[uúū]"), "ù")
   .replace(regex("[yýȳ]"), "ỳ")
 }
+#let spread-tones(word) = {
+  let consonants = word.split(regex(nucleus))
+  let nuclei = word.matches(regex(nucleus)).map(match => match.text)
+  let melody = (
+    nuclei
+    .map(nucleus => get-tone(nucleus.first()))
+    .join()
+    .replace(regex("LM+L+"), match => {
+      let delinked-Ls = match.text.split(regex("M+")).last()
+      match.text.replace(regex(delinked-Ls + "$"), delinked-Ls.replace("L", "M"))
+    })
+    .replace(regex("H∅[LMH]"), match => "HH" + match.text.last())
+    .replace(regex("L∅+"), match => "L" + match.text.slice(1).replace("∅", "L"))
+    .replace(regex("M∅+"), match => "M" + match.text.slice(1).replace("∅", "M"))
+  )
+  for (i, tone) in melody.clusters().enumerate() {
+    let nucleus = nuclei.at(i)
+    if tone == "L" {
+      nuclei.at(i) = get-L-ending(nucleus.first()) + nucleus.clusters().slice(1).join()
+    } else if tone == "M" {
+      nuclei.at(i) = get-M-ending(nucleus.first()) + nucleus.clusters().slice(1).join()
+    } else if tone == "H" {
+      nuclei.at(i) = get-H-ending(nucleus.first()) + nucleus.clusters().slice(1).join()
+    }
+  }
+  word = ()
+  let (consonants, nuclei) = (consonants.rev(), nuclei.rev())
+  while consonants.len() > 0 or nuclei.len() > 0 {
+    if consonants.len() > 0 {
+      word.push(consonants.pop())
+    }
+    if nuclei.len() > 0 {
+      word.push(nuclei.pop())
+    }
+  }
+  word.join()
+}
 #let verb-table(pfv, npfv, ret, verb-ending, ger-ending, antic, caus) = {
   if antic != "none" and caus != "none" {
     let caus-ending = get-caus-ending(verb-ending, pfv)
@@ -399,7 +436,8 @@
     ptcp-full-declensions
     .at(class)
     .at(case)
-    .map(e => [#{stem + endings.at(case).clusters().slice(0, -1).join() + e}])
+    .map(e => stem + endings.at(case).clusters().slice(0, -1).join() + e)
+    .map(spread-tones)
   }
   (
     [*absolutive*], ..combine-stem-ending(stems.at(1), "abs"),
@@ -434,12 +472,20 @@
     #parbreak()
     #table(
       columns: 8,
-      table.cell(rowspan: 2)[*aspect*], table.cell(rowspan: 2)[*participle case*], table.cell(colspan: 2)[*indefinite*], table.cell(colspan: 2)[*proximal*], table.cell(colspan: 2)[*definite*], [*col.*], [*sgv.*], [*sg.*], [*pl.*], [*sg.*], [*pl.*],
-      table.cell(rowspan: 3)[*perfective*], 
+      table.header(
+        table.cell(rowspan: 2, colspan: 2)[],
+        table.cell(colspan: 2)[*indefinite*],
+        table.cell(colspan: 2)[*proximal*],
+        table.cell(colspan: 2)[*definite*],
+        [*col.*], [*sgv.*],
+        [*sg.*], [*pl.*],
+        [*sg.*], [*pl.*],
+      ),
+      table.cell(rowspan: 3)[*perfective participle*], 
       ..decline-ptcp(stems.pfv, (abs: abs-ending, dat: dat-ending, erg: erg-ending), class), 
-      table.cell(rowspan: 3)[*imperfective*], 
+      table.cell(rowspan: 3)[*imperfective participle*], 
       ..decline-ptcp(stems.npfv, (abs: abs-ending, dat: dat-ending, erg: erg-ending), class), 
-      table.cell(rowspan: 3)[*retrospective*], 
+      table.cell(rowspan: 3)[*retrospective participle*], 
       ..decline-ptcp(stems.ret, (abs: abs-ending, dat: ret-dat-ending, erg: ret-erg-ending), class), 
     )
   ]

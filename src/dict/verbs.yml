@@ -46,7 +46,7 @@
     - (causative) E=A flocks, congregates
 - stems:
     pfv: [nàp, nāp]
-    npfv: [nàǹap, nānāp]
+    npfv: [nànàp, nānāp]
     ret: [nēiþàp, nēiþàp]
   endings:
     verb: ē
@@ -94,8 +94,8 @@
     ret: [áakòu, áakòu]
   endings:
     verb: xì
-    ger: sfè
-    ptcp: sèp
+    ger: cfè
+    ptcp: cèp
   class: 8
   antic: none
   caus: intl
