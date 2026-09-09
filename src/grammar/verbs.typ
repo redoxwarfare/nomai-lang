@@ -147,7 +147,7 @@ The *applicative* voice is a valency-increasing operation that converts intransi
 The *adversative* voice is a valency-reducing operation that converts intentional and ditransitive verbs to experiential verbs, indicating that the event happens in spite of the experiencer's efforts or wishes. It demotes the ergative agent to a dative experiencer; the previous dative argument, if it exists, is demoted to an adjunct. The adversative voice is marked by the prefixes _xo-_ (if the next vowel is not _i_ or _u_) and _xu-_ (if the next vowel is _i_ or _u_).
 
 #example(label: <appl-ex>)[
-  + - _łán_ _mò\~mòrīx_
+  + - _łáa_ _mò\~mòrīx_
     - water\\#abs #npfv\~raise
     "Water is being lifted."
   + - _łân_ _ła-mò\~mòrīx_ _tūsk-es_
@@ -156,16 +156,16 @@ The *adversative* voice is a valency-reducing operation that converts intentiona
 ]
 
 #example(label: <advs-ex>)[
-  + - _łán-kè_ _frér_
+  + - _łáa-kè_ _frér_
     - water\\#abs\-#def.#sg fall
     "The water fell.""
-  + - _łán-kè_ _fríx_
+  + - _łáa-kè_ _fríx_
     - water\\#abs\-#def.#sg drop
     "The water was dropped \[on purpose\]."
-  + - _łán-kè_ _fríx-ti_
+  + - _łáa-kè_ _fríx-ti_
     - water\\#abs\-#def.#sg drop-#p1.#sg.#erg
     "I dropped the water \[on purpose\]."
-  + - _łán-kè_ _xu-fríx-ta_
+  + - _łáa-kè_ _xu-fríx-ta_
     - water\\#abs\-#def.#sg #advs\-drop-#p1.#sg.#dat
     "I spilled the water \[accidentally\]."
 ]

@@ -95,6 +95,21 @@
     - ground, floor
     - location or position of an object
 - stems:
+    abs: [łáa, H]
+    dat: [łân, HL]
+    erg: [łên, HL]
+  meanings: [water]
+  meanings-long:
+    - standing water (e.g. in a pond or container)
+- stems:
+    abs: [łáatàa, HL]
+    dat: [łāatān, M]
+    erg: [łāatēn, M]
+  meanings: [lake, sea]
+  meanings-long:
+    - lake, sea, large body of water
+    - reservoir
+- stems:
     abs: [łécép, HL]
     dat: [łécéf, HL]
     erg: [łécíf, HL]
@@ -131,6 +146,21 @@
   meanings-long:
     - speed, fast
     - ease, easy
+- stems:
+    abs: [mūl, M]
+    dat: [mòl, ML]
+    erg: [mùl, ML]
+  meanings: [water, stream]
+  meanings-long:
+    - running water (e.g. in a stream or pipe)
+    - flowing like water
+- stems:
+    abs: [mūupùl, ML]
+    dat: [mùupōl, LM]
+    erg: [mùupūl, LM]
+  meanings: [river]
+  meanings-long:
+    - river
 - stems:
     abs: [nēlt, M]
     dat: [nèlt, ML]
@@ -177,7 +207,7 @@
   meanings: [man, friend]
   meanings-long:
     - man, masculine
-    - (collective/plural) friend
+    - (collective/plural) friends
 - stems:
     abs: [píol, H]
     dat: [pîol, HL]
