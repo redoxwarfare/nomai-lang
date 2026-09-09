@@ -493,7 +493,7 @@
       let E = tones.at(
         if (non-back-vowels.contains(stem-last-vowel)) {"e"}
         else {"o"}
-      ).at(get-tone(stem-last-vowel))
+      ).at(get-vowel-and-tone(ending).at(1))
       ending = ending.replace(y-regex.all, E)
     }
     caus-endings.at(ending)
