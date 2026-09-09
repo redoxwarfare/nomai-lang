@@ -195,6 +195,20 @@
     - eye, eyes
     - (collective/plural) face of a person or animal
 - stems:
+    abs: [sácak, H]
+    dat: [sácaa, H]
+    erg: [sácii, H]
+  meanings: [heat, hot]
+  meanings-long:
+    - heat, hot (especially unpleasant)
+- stems:
+    abs: [sák, H]
+    dat: [sáa, H]
+    erg: [síi, H]
+  meanings: [warmth, warm]
+  meanings-long:
+    - warmth, warm
+- stems:
     abs: [séesþàst, HL]
     dat: [sēesþāsþ, M]
     erg: [sēesþēsq, M]

@@ -45,19 +45,21 @@
     - (causative) E straightens, fixes A
 - stems:
     pfv: [sá, sá]
-    npfv: [qùxùn, qūqūn]
-    ret: [qōoþùn, qōoþùn]
+    npfv: [sárà, sárà]
+    ret: [séecà, séecà]
   endings:
-    verb: āþ
-    ger: āi
-    ptcp: àt
+    verb: aþ
+    ger: ai
+    ptcp: at
   class: 2
   antic: intr
   caus: intl
-  meanings: [straighten, fix]
+  meanings: [heat, boil]
   meanings-long:
-    - (anticausative) A straightens
-    - (causative) E straightens, fixes A
+    - (anticausative) A heats up
+    - (anticausative) A boils
+    - (causative) E heats up A
+    - (causative) E boils A
 - stems:
     pfv: [þ, þ]
     npfv: [táþ, táþ]
