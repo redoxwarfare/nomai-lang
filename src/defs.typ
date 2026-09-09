@@ -287,8 +287,11 @@
   "lk$": ("lkym", "lkEs", "lkEsyl", "lkek", "lkekyl"),
   "rk$": ("rkym", "rkEs", "rkEsyl", "rkek", "rkekyl"),
   "p$": ("pym", "pse", "psyl", "pe", "pyl"),
+  "b$": ("pỳm", "psè", "psỳl", "pè", "pỳl"),
   "t$": ("tym", "se", "syl", "te", "tyl"),
+  "d$": ("tỳm", "sè", "sỳl", "tè", "tỳl"),
   "k$": ("kym", "ce", "cyl", "ke", "kyl"),
+  "g$": ("kỳm", "cè", "cỳl", "kè", "kỳl"),
   "s$": ("sym", "se", "syl", "ske", "skyl"),
   "l$": ("lym", "lse", "lsyl", "lke", "lkyl"),
   "yl$": ("lEm", "ylse", "ylsyl", "ylke", "ylkyl"),
@@ -299,7 +302,7 @@
   "r$": ("ràm", "tàr", "rỳl", "rkè", "rkỳl"), 
   "x$": ("xim", "xir", "xryl", "xke", "xkyl"), 
   "q$": ("qim", "qir", "qryl", "qit", "qtyl"), 
-  "g$": ("qìm", "qìr", "qrỳl", "qìC", "qCỳl"), 
+  "ǧ$": ("qìm", "qìr", "qrỳl", "qìC", "qCỳl"), 
   "la$": ("lam", "lar", "larỳl", "lakè", "lakỳl"), 
   "là$": ("làm", "làr", "làrỳl", "làkè", "làkỳl"), 
   "li$": ("lim", "lir", "lirỳl", "likè", "likỳl"), 
@@ -326,7 +329,16 @@
   let endings-dict = if case == "abs" {abs-endings} else {dat-erg-endings}
   let modified-stem = stem
   if melody.last() == "L" {
-    modified-stem = modified-stem.replace(ending-regexes.at("q$"), "g").replace(ending-regexes.at("x$"), "z")
+    if case == "abs" {
+      modified-stem = modified-stem
+      .replace(ending-regexes.at("p$"), "b")
+      .replace(ending-regexes.at("t$"), "d")
+      .replace(ending-regexes.at("k$"), "g")
+    } else {
+      modified-stem = modified-stem
+      .replace(ending-regexes.at("q$"), "ǧ")
+      .replace(ending-regexes.at("x$"), "z")
+    }
   }
   if stem.matches(nucleus-regex).len() == 1 and melody == "ML" {
     modified-stem = force-ML-tone(modified-stem)
