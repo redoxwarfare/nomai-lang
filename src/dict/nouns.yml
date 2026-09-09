@@ -15,9 +15,9 @@
     - (singular/singulative) light source
     - (attributive) bright
 - stems:
-    abs: [féipìol, HL]
-    dat: [fēipīol, M]
-    erg: [fēipīol, M]
+    abs: [féepìol, HL]
+    dat: [fēepīol, M]
+    erg: [fēepīol, M]
   meanings: [duality, dichotomy, privet]
   meanings-long:
     - duality, dichotomy
@@ -149,7 +149,7 @@
     - person
     - adult
 - stems:
-    abs: [nōu, M]
+    abs: [nōo, M]
     dat: [nòm, ML]
     erg: [nùm, ML]
   meanings: [understanding, skill, knowledge]
@@ -157,8 +157,8 @@
     - understanding, skill, knowledge
 - stems:
     abs: [nōmāip, M]
-    dat: [nōmáif, M]
-    erg: [nōmáif, M]
+    dat: [nōmáif, MH]
+    erg: [nōmáif, MH]
   meanings: [scholar, explorer, Nomai]
   meanings-long:
     - scholar, explorer
@@ -171,7 +171,7 @@
   meanings-long:
     - woman, feminine
 - stems:
-    abs: [nūxōu, M]
+    abs: [nūxōo, M]
     dat: [nūxón, MH]
     erg: [nūxún, MH]
   meanings: [man, friend]
@@ -195,9 +195,9 @@
     - eye, eyes
     - (collective/plural) face of a person or animal
 - stems:
-    abs: [séisþàst, HL]
-    dat: [sēisþāsþ, M]
-    erg: [sēisþēsq, M]
+    abs: [séesþàst, HL]
+    dat: [sēesþāsþ, M]
+    erg: [sēesþēsq, M]
   meanings: [machine, construct]
   meanings-long:
     - machine, construct
@@ -239,3 +239,18 @@
   meanings: [universe]
   meanings-long:
     - (indefinite collective) the universe
+- stems:
+    abs: [xēe, M]
+    dat: [xēn, M]
+    erg: [xīn, M]
+  meanings: [root, trust]
+  meanings-long:
+    - root, roots
+    - trust, belief
+- stems:
+    abs: [xēecàast, ML]
+    dat: [xēecāasþ, M]
+    erg: [xēecāisqī, M]
+  meanings: [cassava]
+  meanings-long:
+    - cassava (plant, given name)

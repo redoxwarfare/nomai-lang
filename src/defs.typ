@@ -52,7 +52,7 @@
 #let back-vowels = "oóōòôo̭uúūùûṷ"
 #let non-back-vowels = "aáāàâa̭eéēèêḙiíīìîi̭"
 #let vowels = "[" + non-back-vowels + back-vowels +  "]"
-#let nucleus = "[" + non-back-vowels + back-vowels + "]+|[yýȳỳŷ][mnlr]"
+#let nucleus = "[" + non-back-vowels + back-vowels + "]{1,2}|[yýȳỳŷ][mnlr]"
 #let nucleus-regex = regex(nucleus)
 #let a-regex = (
   N: regex("[áāàâ]"),
@@ -90,6 +90,32 @@
   M: regex("[yýỳŷ]"),
   L: regex("[yýȳŷ]"),
   all: regex("[yýȳỳŷ]"),
+)
+#let diphthongs = (
+  "ae": "ai", "ao": "au",
+  "áe": "ái", "áo": "áu",
+  "āe": "āi", "āo": "āu",
+  "àe": "ài", "ào": "àu",
+  "ea": "ia", "ei": "ii", "eo": "io", "eu": "au", 
+  "éa": "ía", "éi": "íi", "éo": "ío", "éu": "áu", 
+  "ēa": "īa", "ēi": "īi", "ēo": "īo", "ēu": "āu", 
+  "èa": "ìa", "èi": "ìi", "èo": "ìo", "èu": "àu", 
+  "ie": "ia", "iu": "io", 
+  "íe": "ía", "íu": "ío", 
+  "īe": "īa", "īu": "īo", 
+  "ìe": "ìa", "ìu": "ìo", 
+  "oa": "ua", "oe": "oi", "ou": "uu",
+  "óa": "úa", "óe": "ói", "óu": "úu",
+  "ōa": "ūa", "ōe": "ōi", "ōu": "ūu",
+  "òa": "ùa", "òe": "òi", "òu": "ùu",
+  "ue": "ua", "ui": "oi", "uo": "ua", 
+  "úe": "úa", "úi": "oi", "úo": "úa", 
+  "ūe": "ūa", "ūi": "oi", "ūo": "ūa", 
+  "ùe": "ùa", "ùi": "oi", "ùo": "ùa", 
+)
+#let long-e-o = (
+  "ee": "ei", "ée": "éi", "ēe": "ēi", "èe": "èi", "êe": "êi", 
+  "oo": "ou", "óo": "óu", "ōo": "ōu", "òo": "òu", "ôo": "ôu", 
 )
 #let tones = (
   "a": ("∅": "a", "H": "á", "M": "ā", "L": "à"),
@@ -198,7 +224,7 @@
 #let HN-regex = regex("H∅[LMH]")
 #let LN-regex = regex("L∅+")
 #let MN-regex = regex("M∅+")
-#let spread-tones(word) = {
+#let fix-nuclei(word) = {
   let consonants = word.split(nucleus-regex)
   let nuclei = word.matches(nucleus-regex).map(match => match.text)
   let melody = (
@@ -227,17 +253,28 @@
       nuclei.at(i) = force-H-tone(nucleus.first()) + nucleus.clusters().slice(1).join()
     }
   }
-  word = ()
-  let (consonants, nuclei) = (consonants.rev(), nuclei.rev())
+  let new-word = ()
+  (consonants, nuclei) = (consonants.rev(), nuclei.rev())
   while consonants.len() > 0 or nuclei.len() > 0 {
     if consonants.len() > 0 {
-      word.push(consonants.pop())
+      new-word.push(consonants.pop())
     }
     if nuclei.len() > 0 {
-      word.push(nuclei.pop())
+      let nucleus = nuclei.pop().clusters()
+      if nucleus.len() > 1 {
+        nucleus.at(1) = force-N-tone(nucleus.at(1))
+      }
+      nucleus = nucleus.join()
+      nucleus = diphthongs.at(nucleus, default: nucleus)
+      let EE = long-e-o.keys().find(k => nucleus == k)
+      if EE != none {
+        new-word.push(nucleus.replace(EE, long-e-o.at(EE)))
+      } else {
+        new-word.push(nucleus)
+      }
     }
   }
-  word.join()
+  new-word.join()
 }
 
 #let abs-endings = (
@@ -307,7 +344,7 @@
     modified-stem.replace(regex(declension), ending)
     .replace("A", A).replace("À", À).replace("C", C).replace("E", E)
   })
-  .map(spread-tones) 
+  .map(fix-nuclei)
 }
 
 #let noun(stems: (:), meanings: (), meanings-long: ()) = [
@@ -320,9 +357,9 @@
   #table(
     columns: 8,
     table.cell(rowspan: 2)[*case*], table.cell(rowspan: 2)[*stem melody*], table.cell(colspan: 2)[*indefinite*], table.cell(colspan: 2)[*proximal*], table.cell(colspan: 2)[*definite*], [*col.*], [*sgv.*], [*sg.*], [*pl.*], [*sg.*], [*pl.*], 
-    [*absolutive*], [#mel-a], stem-a, ..decline-stem(stem-a, mel-a, "abs"),
-    [*dative*], [#mel-d], stem-d, ..decline-stem(stem-d, mel-d, "dat"),
-    [*ergative*], [#mel-e], stem-e, ..decline-stem(stem-e, mel-e, "erg"),
+    [*absolutive*], [#mel-a], fix-nuclei(stem-a), ..decline-stem(stem-a, mel-a, "abs"),
+    [*dative*], [#mel-d], fix-nuclei(stem-d), ..decline-stem(stem-d, mel-d, "dat"),
+    [*ergative*], [#mel-e], fix-nuclei(stem-e), ..decline-stem(stem-e, mel-e, "erg"),
   )
 ]
 
@@ -452,15 +489,18 @@
   }
 }
 #let verb-table(pfv, npfv, ret, verb-ending, ger-ending, antic, caus) = {
+  let antic-verb = (pfv + verb-ending, npfv + verb-ending, ret + force-L-tone(verb-ending)).map(fix-nuclei).map(word => [#word])
   if antic != "none" and caus != "none" {
     let caus-ending = get-caus-ending(verb-ending, pfv)
+    let caus-verb = (pfv + caus-ending, npfv + caus-ending, ret + force-L-tone(caus-ending)).map(fix-nuclei).map(word => [#word])
     (
-      [*anticausative verb*], [#{pfv + verb-ending}], [#{npfv + verb-ending}], [#{ret + force-L-tone(verb-ending)}], table.cell(rowspan: 2)[#{pfv + ger-ending}], 
-      [*causative verb*], [#{pfv + caus-ending}], [#{npfv + caus-ending}], [#{ret + force-L-tone(caus-ending)}]
+      [*anticausative verb*], ..antic-verb,
+      table.cell(rowspan: 2)[#{fix-nuclei(pfv + ger-ending)}], 
+      [*causative verb*], ..caus-verb,
     )
   } else {
     (
-      [*verb*], [#{pfv + verb-ending}], [#{npfv + verb-ending}], [#{ret + force-L-tone(verb-ending)}], [#{pfv + ger-ending}], 
+      [*verb*], ..antic-verb, [#{fix-nuclei(pfv + ger-ending)}], 
     )
   }
 }
@@ -470,7 +510,7 @@
     .at(class)
     .at(case)
     .map(e => stem + endings.at(case).clusters().slice(0, -1).join() + e)
-    .map(spread-tones)
+    .map(fix-nuclei)
   }
   (
     [*absolutive*], ..combine-stem-ending(stems.at(1), "abs"),

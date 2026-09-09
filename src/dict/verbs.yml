@@ -16,7 +16,7 @@
 - stems:
     pfv: [em, ém]
     npfv: [enem, éném]
-    ret: [éifèm, éifèm]
+    ret: [éefèm, éefèm]
   endings:
     verb: āþ
     ger: āi
@@ -31,7 +31,22 @@
 - stems:
     pfv: [qùn, qūn]
     npfv: [qùxùn, qūqūn]
-    ret: [qōuþùn, qōuþùn]
+    ret: [qōoþùn, qōoþùn]
+  endings:
+    verb: āþ
+    ger: āi
+    ptcp: àt
+  class: 2
+  antic: intr
+  caus: intl
+  meanings: [straighten, fix]
+  meanings-long:
+    - (anticausative) A straightens
+    - (causative) E straightens, fixes A
+- stems:
+    pfv: [sá, sá]
+    npfv: [qùxùn, qūqūn]
+    ret: [qōoþùn, qōoþùn]
   endings:
     verb: āþ
     ger: āi
@@ -46,7 +61,7 @@
 - stems:
     pfv: [þ, þ]
     npfv: [táþ, táþ]
-    ret: [þéit, þéit]
+    ret: [þéet, þéet]
   endings:
     verb: éxi
     ger: āi
@@ -60,7 +75,7 @@
 - stems:
     pfv: [fr, fr]
     npfv: [páfr, páfr]
-    ret: [féipr, féipr]
+    ret: [féepr, féepr]
   endings:
     verb: ér
     ger: érè
@@ -92,7 +107,7 @@
 - stems:
     pfv: [nàp, nāp]
     npfv: [nànàp, nānāp]
-    ret: [nēiþàp, nēiþàp]
+    ret: [nēeþàp, nēeþàp]
   endings:
     verb: ēr
     ger: ērè
@@ -107,7 +122,7 @@
 - stems:
     pfv: [qùn, qūn]
     npfv: [qùxùn, qūqūn]
-    ret: [qōuþùn, qōuþùn]
+    ret: [qōoþùn, qōoþùn]
   endings:
     verb: ōr
     ger: ōrè
@@ -123,7 +138,7 @@
 - stems:
     pfv: [ř, ř]
     npfv: [súř, súř]
-    ret: [sóuř, sóuř]
+    ret: [sóoř, sóoř]
   endings:
     verb: úx
     ger: órè
@@ -137,7 +152,7 @@
 - stems:
     pfv: [síst, síst]
     npfv: [síríst, síríst]
-    ret: [séicìst, séicìst]
+    ret: [séecìst, séecìst]
   endings:
     verb: yr
     ger: rè
@@ -167,13 +182,13 @@
     - (causative) E gives A to D (animate)
     - (causative) E suggests, proposes A
 - stems:
-    pfv: [mái, māi]
-    npfv: [māmái, māmāi]
-    ret: [mēifài, mēifài]
+    pfv: [má, mā]
+    npfv: [māmá, māmā]
+    ret: [mēefà, mēefà]
   endings:
-    verb: 
-    ger: fè
-    ptcp: p
+    verb: e
+    ger: efè
+    ptcp: ep
   class: 4
   antic: exp
   caus: intl
@@ -184,7 +199,7 @@
 - stems:
     pfv: [nàp, nāp]
     npfv: [nànàp, nānāp]
-    ret: [nēiþàp, nēiþàp]
+    ret: [nēeþàp, nēeþàp]
   endings:
     verb: ē
     ger: ēfè
@@ -199,7 +214,7 @@
 - stems:
     pfv: [qan, qán]
     npfv: [qaqan, qáqán]
-    ret: [qéitàn, qéitàn]
+    ret: [qéetàn, qéetàn]
   endings:
     verb: ē
     ger: ēfè
@@ -242,13 +257,13 @@
     - (causative) E tries, tests A
     - (anticausative) D tastes A
 - stems:
-    pfv: [súa, súa]
-    npfv: [súxúa, súxúa]
-    ret: [sóuxùa, sóuxùa]
+    pfv: [sú, sú]
+    npfv: [súxú, súxú]
+    ret: [sóoxù, sóoxù]
   endings:
-    verb: 
-    ger: fè
-    ptcp: p
+    verb: o
+    ger: ofè
+    ptcp: op
   class: 4
   antic: exp
   caus: ditr
@@ -290,7 +305,7 @@
 - stems:
     pfv: [mīi, mīi]
     npfv: [mīmīi, mīmīi]
-    ret: [mēifìi, mēifìi]
+    ret: [mēefìi, mēefìi]
   endings:
     verb: qùx
     ger: qùrè
@@ -317,9 +332,9 @@
     - E calls to D with A
     - E sings A to D
 - stems:
-    pfv: [óu, óu]
-    npfv: [ókóu, ókóu]
-    ret: [áakòu, áakòu]
+    pfv: [óo, óo]
+    npfv: [ókóo, ókóo]
+    ret: [áakòo, áakòo]
   endings:
     verb: xì
     ger: cfè
@@ -331,9 +346,9 @@
   meanings-long:
     - E listens to A
 - stems:
-    pfv: [póu, póu]
-    npfv: [pópóu, pópóu]
-    ret: [páapòu, páapòu]
+    pfv: [póo, póo]
+    npfv: [pópóo, pópóo]
+    ret: [páapòo, páapòo]
   endings:
     verb: xì
     ger: cfè

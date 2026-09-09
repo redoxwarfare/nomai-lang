@@ -8,8 +8,8 @@
 
 #{
   let entries = (
-    yaml("nouns.yml").map(n => (n.stems.abs.at(0), noun(..n)))
-    + yaml("verbs.yml").map(v => (v.stems.pfv.at(0) + v.endings.verb, verb(..v)))
+    yaml("nouns.yml").map(n => (fix-nuclei(n.stems.abs.at(0)), noun(..n)))
+    + yaml("verbs.yml").map(v => (fix-nuclei(v.stems.pfv.at(0) + v.endings.verb), verb(..v)))
   ).sorted(key: ((lemma, _)) => alphabet-key(lemma))
   let lemmas = entries.map(((lemma, _)) => lemma).dedup().map(lemma => [
     = #lemma
