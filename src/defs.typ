@@ -49,40 +49,40 @@
   #calepin.elements.tab("Gloss", gloss)
 ]
 
-#let back-vowels = "oóōòôo̭uúūùûṷ"
-#let non-back-vowels = "aáāàâa̭eéēèêḙiíīìîi̭"
+#let back-vowels = "oóōòôǒuúūùûǔ"
+#let non-back-vowels = "aáāàâǎeéēèêěiíīìîǐ"
 #let vowels = "[" + non-back-vowels + back-vowels +  "]"
 #let nucleus = "[" + non-back-vowels + back-vowels + "]{1,2}|[yýȳỳŷ][mnlr]"
 #let nucleus-regex = regex(nucleus)
 #let a-regex = (
-  N: regex("[áāàâ]"),
-  H: regex("[aāàâ]"),
-  M: regex("[aáàâ]"),
-  L: regex("[aáāâ]"),
+  N: regex("[áāàâǎ]"),
+  H: regex("[aāàâǎ]"),
+  M: regex("[aáàâǎ]"),
+  L: regex("[aáāâǎ]"),
 )
 #let e-regex = (
-  N: regex("[éēèê]"),
-  H: regex("[eēèê]"),
-  M: regex("[eéèê]"),
-  L: regex("[eéēê]"),
+  N: regex("[éēèêě]"),
+  H: regex("[eēèêě]"),
+  M: regex("[eéèêě]"),
+  L: regex("[eéēêě]"),
 )
 #let i-regex = (
-  N: regex("[íīìî]"),
-  H: regex("[iīìî]"),
-  M: regex("[iíìî]"),
-  L: regex("[iíīî]"),
+  N: regex("[íīìîǐ]"),
+  H: regex("[iīìîǐ]"),
+  M: regex("[iíìîǐ]"),
+  L: regex("[iíīîǐ]"),
 )
 #let o-regex = (
-  N: regex("[óōòô]"), 
-  H: regex("[oōòô]"), 
-  M: regex("[oóòô]"), 
-  L: regex("[oóōô]"), 
+  N: regex("[óōòôǒ]"), 
+  H: regex("[oōòôǒ]"), 
+  M: regex("[oóòôǒ]"), 
+  L: regex("[oóōôǒ]"), 
 )
 #let u-regex = (
-  N: regex("[úūùû]"), 
-  H: regex("[uūùû]"), 
-  M: regex("[uúùû]"), 
-  L: regex("[uúūû]"), 
+  N: regex("[úūùûǔ]"), 
+  H: regex("[uūùûǔ]"), 
+  M: regex("[uúùûǔ]"), 
+  L: regex("[uúūûǔ]"), 
 )
 #let y-regex = (
   N: regex("[ýȳỳŷ]"),
@@ -152,9 +152,9 @@
     "M"
   } else if "àèìòùỳÀ".contains(char) {
     "L"
-  } else if "âêîôûŷ".contains(char) {
+  } else if "âêîôû".contains(char) {
     "F"
-  } else if "a̭ḙi̭o̭ṷy̭".contains(char) {
+  } else if "ǎěǐǒǔ".contains(char) {
     "f"
   } else {none}
 }
@@ -209,12 +209,11 @@
 #let force-ML-tone(segment) = {
   if segment != none {
     segment
-    .replace("à", "a̭")
-    .replace("è", "ḙ")
-    .replace("ì", "i̭")
-    .replace("ò", "o̭")
-    .replace("ù", "ṷ")
-    .replace("ỳ", "y̭")
+    .replace("à", "ǎ")
+    .replace("è", "ě")
+    .replace("ì", "ǐ")
+    .replace("ò", "ǒ")
+    .replace("ù", "ǔ")
   }
 }
 #let FN-regex = regex("F[∅L]")
@@ -327,10 +326,10 @@
   let endings-dict = if case == "abs" {abs-endings} else {dat-erg-endings}
   let modified-stem = stem
   if melody.last() == "L" {
-    stem = stem.replace(ending-regexes.at("q$"), "g").replace(ending-regexes.at("x$"), "z")
+    modified-stem = modified-stem.replace(ending-regexes.at("q$"), "g").replace(ending-regexes.at("x$"), "z")
   }
-  if stem.matches(nucleus-regex).len() == 1 and melody.ends-with("ML") {
-    stem = force-ML-tone(stem)
+  if stem.matches(nucleus-regex).len() == 1 and melody == "ML" {
+    modified-stem = force-ML-tone(modified-stem)
   }
   let declension = endings-dict.keys().find(d => modified-stem.ends-with(ending-regexes.at(d)))
   if declension == none {panic(stem, case)}
