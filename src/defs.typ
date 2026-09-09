@@ -49,46 +49,46 @@
   #calepin.elements.tab("Gloss", gloss)
 ]
 
-#let back-vowels = "oóōòôuúūùû"
-#let non-back-vowels = "aáāàâeéēèêiíīìî"
+#let back-vowels = "oóōòôo̭uúūùûṷ"
+#let non-back-vowels = "aáāàâa̭eéēèêḙiíīìîi̭"
 #let vowels = "[" + non-back-vowels + back-vowels +  "]"
 #let nucleus = "[" + non-back-vowels + back-vowels + "]+|[yýȳỳŷ][mnlr]"
 #let nucleus-regex = regex(nucleus)
 #let a-regex = (
-  N: regex("[áāà]"),
-  H: regex("[aāà]"),
-  M: regex("[aáà]"),
-  L: regex("[aáā]"),
+  N: regex("[áāàâ]"),
+  H: regex("[aāàâ]"),
+  M: regex("[aáàâ]"),
+  L: regex("[aáāâ]"),
 )
 #let e-regex = (
-  N: regex("[éēè]"),
-  H: regex("[eēè]"),
-  M: regex("[eéè]"),
-  L: regex("[eéē]"),
+  N: regex("[éēèê]"),
+  H: regex("[eēèê]"),
+  M: regex("[eéèê]"),
+  L: regex("[eéēê]"),
 )
 #let i-regex = (
-  N: regex("[íīì]"),
-  H: regex("[iīì]"),
-  M: regex("[iíì]"),
-  L: regex("[iíī]"),
+  N: regex("[íīìî]"),
+  H: regex("[iīìî]"),
+  M: regex("[iíìî]"),
+  L: regex("[iíīî]"),
 )
 #let o-regex = (
-  N: regex("[óōò]"), 
-  H: regex("[oōò]"), 
-  M: regex("[oóò]"), 
-  L: regex("[oóō]"), 
+  N: regex("[óōòô]"), 
+  H: regex("[oōòô]"), 
+  M: regex("[oóòô]"), 
+  L: regex("[oóōô]"), 
 )
 #let u-regex = (
-  N: regex("[úūù]"), 
-  H: regex("[uūù]"), 
-  M: regex("[uúù]"), 
-  L: regex("[uúū]"), 
+  N: regex("[úūùû]"), 
+  H: regex("[uūùû]"), 
+  M: regex("[uúùû]"), 
+  L: regex("[uúūû]"), 
 )
 #let y-regex = (
-  N: regex("[ýȳỳ]"),
-  H: regex("[yȳỳ]"),
-  M: regex("[yýỳ]"),
-  L: regex("[yýȳ]"),
+  N: regex("[ýȳỳŷ]"),
+  H: regex("[yȳỳŷ]"),
+  M: regex("[yýỳŷ]"),
+  L: regex("[yýȳŷ]"),
   all: regex("[yýȳỳŷ]"),
 )
 #let tones = (
@@ -127,12 +127,117 @@
   } else if "àèìòùỳÀ".contains(char) {
     "L"
   } else if "âêîôûŷ".contains(char) {
-    "HL"
+    "F"
+  } else if "a̭ḙi̭o̭ṷy̭".contains(char) {
+    "f"
   } else {none}
 }
 #let get-vowel-and-tone(s) = {
   s = s.match(nucleus-regex).text.first()
   (get-vowel(s), get-tone(s))
+}
+#let force-N-tone(segment) = {
+  if segment != none {
+    segment
+    .replace(a-regex.N, "a")
+    .replace(e-regex.N, "e")
+    .replace(i-regex.N, "i")
+    .replace(o-regex.N, "o")
+    .replace(u-regex.N, "u")
+    .replace(y-regex.N, "y")
+  } else {segment}
+}
+#let force-H-tone(segment) = {
+  if segment != none {
+    segment
+    .replace(a-regex.H, "á")
+    .replace(e-regex.H, "é")
+    .replace(i-regex.H, "í")
+    .replace(o-regex.H, "ó")
+    .replace(u-regex.H, "ú")
+    .replace(y-regex.H, "ý")
+  } else {segment}
+}
+#let force-M-tone(segment) = {
+  if segment != none {
+    segment
+    .replace(a-regex.M, "ā")
+    .replace(e-regex.M, "ē")
+    .replace(i-regex.M, "ī")
+    .replace(o-regex.M, "ō")
+    .replace(u-regex.M, "ū")
+    .replace(y-regex.M, "ȳ")
+  } else {segment}
+}
+#let force-L-tone(segment) = {
+  if segment != none {
+    segment
+    .replace(a-regex.L, "à")
+    .replace(e-regex.L, "è")
+    .replace(i-regex.L, "ì")
+    .replace(o-regex.L, "ò")
+    .replace(u-regex.L, "ù")
+    .replace(y-regex.L, "ỳ")
+  } else {segment}
+}
+#let force-ML-tone(segment) = {
+  if segment != none {
+    segment
+    .replace("à", "a̭")
+    .replace("è", "ḙ")
+    .replace("ì", "i̭")
+    .replace("ò", "o̭")
+    .replace("ù", "ṷ")
+    .replace("ỳ", "y̭")
+  }
+}
+#let FN-regex = regex("F[∅L]")
+#let fN-regex = regex("f[∅L]")
+#let LML-regex = regex("LM+L+")
+#let multi-M-regex = regex("M+")
+#let HN-regex = regex("H∅[LMH]")
+#let LN-regex = regex("L∅+")
+#let MN-regex = regex("M∅+")
+#let spread-tones(word) = {
+  let consonants = word.split(nucleus-regex)
+  let nuclei = word.matches(nucleus-regex).map(match => match.text)
+  let melody = (
+    nuclei
+    .map(nucleus => get-tone(nucleus.first())).join()
+    .replace(FN-regex, "HL")
+    .replace(fN-regex, "ML")
+    .replace("fH", "MH")
+    .replace("f", "L")
+    .replace(LML-regex, match => {
+      let delinked-Ls = match.text.split(multi-M-regex).last()
+      match.text.replace(regex(delinked-Ls + "$"), delinked-Ls.replace("L", "M"))
+    })
+    .replace(HN-regex, match => "HH" + match.text.last())
+    .replace(LN-regex, match => "L" + match.text.slice(1).replace("∅", "L"))
+    .replace(MN-regex, match => "M" + match.text.slice(1).replace("∅", "M"))
+  )
+  if melody.clusters().len() != nuclei.len() {panic(word, nuclei, melody)}
+  for (i, tone) in melody.clusters().enumerate() {
+    let nucleus = nuclei.at(i)
+    if tone == "L" {
+      nuclei.at(i) = force-L-tone(nucleus.first()) + nucleus.clusters().slice(1).join()
+    } else if tone == "M" {
+      nuclei.at(i) = force-M-tone(nucleus.first()) + nucleus.clusters().slice(1).join()
+    } else if tone == "H" {
+      nuclei.at(i) = force-H-tone(nucleus.first()) + nucleus.clusters().slice(1).join()
+    }
+  }
+  word = ()
+  let (consonants, nuclei) = (consonants.rev(), nuclei.rev())
+  while consonants.len() > 0 or nuclei.len() > 0 {
+    if consonants.len() > 0 {
+      word.push(consonants.pop())
+    }
+    if nuclei.len() > 0 {
+      word.push(nuclei.pop())
+    }
+  }
+  word.join()
 }
 
 #let abs-endings = (
@@ -179,75 +284,30 @@
   "l$": ("lÀm", "lÀr", "lÀrỳl", "lÀk", "lÀkỳl"), 
   "$": ("m", "r", "řyl", "Cè", "Cỳl"),
 )
-#let spread-L(ending) = {
-  ending.clusters().reduce((acc, x) => {
-    if x.contains(nucleus-regex) and get-tone(x) == "∅" {
-      acc + tones.at(x).at("L")
-    } else {acc + x}
-  })
-}
-#let spread-M(ending) = {
-  ending.clusters().reduce((acc, x) => {
-    if x.contains(nucleus-regex) and get-tone(x) == "L" {
-      acc + tones.at(get-vowel(x)).at("M")
-    } else {acc + x}
-  })
-}
-#let spread-H(ending) = {
-  ending.clusters().reduce((acc, x) => {
-    if x.contains(nucleus-regex) and get-tone(x) == "∅" {
-      acc + tones.at(get-vowel(x)).at("H")
-    } else {acc + x}
-  })
-}
+#let ending-regexes = (abs-endings.keys() + dat-erg-endings.keys()).dedup().map(k => (k, regex(k))).to-dict()
 
-#let decline-stem(stem, mel, case, C: "k") = {
+#let decline-stem(stem, melody, case, C: "k") = {
   let endings-dict = if case == "abs" {abs-endings} else {dat-erg-endings}
-  let modified-stem = {
-    if mel.last() == "L" {
-      let stem1 = stem
-        .replace(regex("q$"), "g")
-        .replace(regex("x$"), "z")
-      if mel == "HL" {
-        stem1
-        .replace("â", "á")
-        .replace("ê", "é")
-        .replace("î", "í")
-        .replace("ô", "ó")
-        .replace("û", "ú")
-        .replace("ŷ", "ý")
-      } else {
-        stem1
-        .replace("à", "ā")
-        .replace("è", "ē")
-        .replace("ì", "ī")
-        .replace("ò", "ō")
-        .replace("ù", "ū")
-        .replace("ỳ", "ȳ")
-      }
-    } else {stem}
+  let modified-stem = stem
+  if melody.last() == "L" {
+    stem = stem.replace(ending-regexes.at("q$"), "g").replace(ending-regexes.at("x$"), "z")
   }
-  let declension = endings-dict.keys().find(d => modified-stem.ends-with(regex(d)))
-  if declension == none {panic((stem, case))}
+  if stem.matches(nucleus-regex).len() == 1 and melody.ends-with("ML") {
+    stem = force-ML-tone(stem)
+  }
+  let declension = endings-dict.keys().find(d => modified-stem.ends-with(ending-regexes.at(d)))
+  if declension == none {panic(stem, case)}
   let stem-last-vowel = stem.clusters().filter(char => vowels.contains(char)).last()
-  let E = if (non-back-vowels.contains(stem-last-vowel)) {"e"} else {"o"}
-  let modify-ending(ending) = {
-    if ("L", "HL").contains(get-tone(stem-last-vowel)) or mel.last() == "L" {
-      spread-L(ending)
-    } else if mel == "LM" {
-      spread-M(ending)
-    } else {ending}
-  }
+  let E = if (back-vowels.contains(stem-last-vowel)) {"o"} else {"e"}
+  let A = if case == "dat" {"a"} else if case == "erg" {"i"} else {"A"}
+  let À = if case == "dat" {"à"} else if case == "erg" {"ì"} else {"À"}
 
   endings-dict.at(declension)
-  .map(e => {
-    modified-stem
-    .replace(regex(declension), modify-ending(e))
-    .replace("A", if case == "dat" {"a"} else if case == "erg" {"i"} else {"A"})
-    .replace("À", if case == "dat" {"à"} else if case == "erg" {"ì"} else {"À"})
-    .replace("C", C)
-    .replace("E", E)
+  .map(ending => {
+    modified-stem.replace(regex(declension), ending)
+    .replace("A", A).replace("À", À).replace("C", C).replace("E", E)
   })
+  .map(spread-tones) 
 }
 
 #let noun(stems: (:), meanings: (), meanings-long: ()) = [
@@ -391,97 +451,16 @@
     caus-endings.at(ending)
   }
 }
-#let get-0-ending(ending) = {
-  if ending != none {
-    ending
-    .replace(a-regex.N, "a")
-    .replace(e-regex.N, "e")
-    .replace(i-regex.N, "i")
-    .replace(o-regex.N, "o")
-    .replace(u-regex.N, "u")
-    .replace(y-regex.N, "y")
-  } else {ending}
-}
-#let get-H-ending(ending) = {
-  if ending != none {
-    ending
-    .replace(a-regex.H, "á")
-    .replace(e-regex.H, "é")
-    .replace(i-regex.H, "í")
-    .replace(o-regex.H, "ó")
-    .replace(u-regex.H, "ú")
-    .replace(y-regex.H, "ý")
-  } else {ending}
-}
-#let get-M-ending(ending) = {
-  if ending != none {
-    ending
-    .replace(a-regex.M, "ā")
-    .replace(e-regex.M, "ē")
-    .replace(i-regex.M, "ī")
-    .replace(o-regex.M, "ō")
-    .replace(u-regex.M, "ū")
-    .replace(y-regex.M, "ȳ")
-  } else {ending}
-}
-#let get-L-ending(ending) = {
-  if ending != none {
-    ending
-    .replace(a-regex.L, "à")
-    .replace(e-regex.L, "è")
-    .replace(i-regex.L, "ì")
-    .replace(o-regex.L, "ò")
-    .replace(u-regex.L, "ù")
-    .replace(y-regex.L, "ỳ")
-  } else {ending}
-}
-#let spread-tones(word) = {
-  let consonants = word.split(nucleus-regex)
-  let nuclei = word.matches(nucleus-regex).map(match => match.text)
-  let melody = (
-    nuclei
-    .map(nucleus => get-tone(nucleus.first()))
-    .join()
-    .replace(regex("LM+L+"), match => {
-      let delinked-Ls = match.text.split(regex("M+")).last()
-      match.text.replace(regex(delinked-Ls + "$"), delinked-Ls.replace("L", "M"))
-    })
-    .replace(regex("H∅[LMH]"), match => "HH" + match.text.last())
-    .replace(regex("L∅+"), match => "L" + match.text.slice(1).replace("∅", "L"))
-    .replace(regex("M∅+"), match => "M" + match.text.slice(1).replace("∅", "M"))
-  )
-  for (i, tone) in melody.clusters().enumerate() {
-    let nucleus = nuclei.at(i)
-    if tone == "L" {
-      nuclei.at(i) = get-L-ending(nucleus.first()) + nucleus.clusters().slice(1).join()
-    } else if tone == "M" {
-      nuclei.at(i) = get-M-ending(nucleus.first()) + nucleus.clusters().slice(1).join()
-    } else if tone == "H" {
-      nuclei.at(i) = get-H-ending(nucleus.first()) + nucleus.clusters().slice(1).join()
-    }
-  }
-  word = ()
-  let (consonants, nuclei) = (consonants.rev(), nuclei.rev())
-  while consonants.len() > 0 or nuclei.len() > 0 {
-    if consonants.len() > 0 {
-      word.push(consonants.pop())
-    }
-    if nuclei.len() > 0 {
-      word.push(nuclei.pop())
-    }
-  }
-  word.join()
-}
 #let verb-table(pfv, npfv, ret, verb-ending, ger-ending, antic, caus) = {
   if antic != "none" and caus != "none" {
     let caus-ending = get-caus-ending(verb-ending, pfv)
     (
-      [*anticausative verb*], [#{pfv + verb-ending}], [#{npfv + verb-ending}], [#{ret + get-L-ending(verb-ending)}], table.cell(rowspan: 2)[#{pfv + ger-ending}], 
-      [*causative verb*], [#{pfv + caus-ending}], [#{npfv + caus-ending}], [#{ret + get-L-ending(caus-ending)}]
+      [*anticausative verb*], [#{pfv + verb-ending}], [#{npfv + verb-ending}], [#{ret + force-L-tone(verb-ending)}], table.cell(rowspan: 2)[#{pfv + ger-ending}], 
+      [*causative verb*], [#{pfv + caus-ending}], [#{npfv + caus-ending}], [#{ret + force-L-tone(caus-ending)}]
     )
   } else {
     (
-      [*verb*], [#{pfv + verb-ending}], [#{npfv + verb-ending}], [#{ret + get-L-ending(verb-ending)}], [#{pfv + ger-ending}], 
+      [*verb*], [#{pfv + verb-ending}], [#{npfv + verb-ending}], [#{ret + force-L-tone(verb-ending)}], [#{pfv + ger-ending}], 
     )
   }
 }
@@ -507,13 +486,13 @@
   let (_, verb-ending-tone) = if endings.verb != none {get-vowel-and-tone(endings.verb)} else {(none, none)}
   let (abs-ending, dat-ending, erg-ending) = ptcp-endings.at(endings.ptcp)
   (dat-ending, erg-ending) = (dat-ending, erg-ending).map(
-    if verb-ending-tone == "∅" {get-0-ending}
-    else if verb-ending-tone == "H" {get-H-ending}
-    else if verb-ending-tone == "M" {get-M-ending}
-    else if verb-ending-tone == "L" {get-L-ending}
+    if verb-ending-tone == "∅" {force-N-tone}
+    else if verb-ending-tone == "H" {force-H-tone}
+    else if verb-ending-tone == "M" {force-M-tone}
+    else if verb-ending-tone == "L" {force-L-tone}
     else {x => x}
   )
-  let (ret-abs-ending, ret-dat-ending, ret-erg-ending) = (abs-ending, dat-ending, erg-ending).map(get-L-ending)
+  let (ret-abs-ending, ret-dat-ending, ret-erg-ending) = (abs-ending, dat-ending, erg-ending).map(force-L-tone)
   [
     === verb
     #class-desc, #valency-desc
