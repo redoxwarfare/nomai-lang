@@ -251,6 +251,20 @@
     - (causative) E suggests, proposes A
 #4
 - stems:
+    pfv: [im, ím]
+    npfv: [inim, íním]
+    ret: [éefìm, éefìm]
+  endings:
+    verb: ē
+    ger: ēfè
+    ptcp: èp
+  class: 4
+  antic: exp
+  caus: none
+  meanings: [please, enjoy]
+  meanings-long:
+    - D enjoys A; A pleases D
+- stems:
     pfv: [kòil, kōil]
     npfv: [kòwòil, kōwōil]
     ret: [kāanòil, kāanòil]
