@@ -49,10 +49,9 @@
   #calepin.elements.tab("Gloss", gloss)
 ]
 
-#let back-vowels = "oóōòôǒuúūùûǔ"
-#let non-back-vowels = "aáāàâǎeéēèêěiíīìîǐ"
-#let vowels = "[" + non-back-vowels + back-vowels +  "]"
-#let nucleus = "[" + non-back-vowels + back-vowels + "]{1,2}|[yýȳỳŷ][mnlr]"
+#let vowels = "[aáāàâǎeéēèêěiíīìîǐoóōòôǒuúūùûǔ]"
+#let vowels-regex = regex(vowels)
+#let nucleus = vowels + "{1,2}|[yýȳỳŷ][mnlr]"
 #let nucleus-regex = regex(nucleus)
 #let a-regex = (
   N: regex("[áāàâǎ]"),
@@ -118,12 +117,12 @@
   "oo": "ou", "óo": "óu", "ōo": "ōu", "òo": "òu", "ôo": "ôu", 
 )
 #let tones = (
-  "a": ("∅": "a", "H": "á", "M": "ā", "L": "à"),
-  "e": ("∅": "e", "H": "é", "M": "ē", "L": "è"),
-  "i": ("∅": "i", "H": "í", "M": "ī", "L": "ì"),
-  "o": ("∅": "o", "H": "ó", "M": "ō", "L": "ò"),
-  "u": ("∅": "u", "H": "ú", "M": "ū", "L": "ù"),
-  "y": ("∅": "y", "H": "ý", "M": "ȳ", "L": "ỳ"),
+  "a": ("∅": "a", "H": "á", "M": "ā", "L": "à", "F": "â", "f": "ǎ"),
+  "e": ("∅": "e", "H": "é", "M": "ē", "L": "è", "F": "ê", "f": "ě"),
+  "i": ("∅": "i", "H": "í", "M": "ī", "L": "ì", "F": "î", "f": "ǐ"),
+  "o": ("∅": "o", "H": "ó", "M": "ō", "L": "ò", "F": "ô", "f": "ǒ"),
+  "u": ("∅": "u", "H": "ú", "M": "ū", "L": "ù", "F": "û", "f": "ǔ"),
+  "y": ("∅": "y", "H": "ý", "M": "ȳ", "L": "ỳ", "F": "ŷ"),
   "A": ("∅": "A", "L": "À"),
 )
 #let get-vowel(char) = {
@@ -152,7 +151,7 @@
     "M"
   } else if "àèìòùỳÀ".contains(char) {
     "L"
-  } else if "âêîôû".contains(char) {
+  } else if "âêîôûŷ".contains(char) {
     "F"
   } else if "ǎěǐǒǔ".contains(char) {
     "f"
@@ -293,8 +292,15 @@
   "k$": ("kym", "ce", "cyl", "ke", "kyl"),
   "g$": ("kỳm", "cè", "cỳl", "kè", "kỳl"),
   "s$": ("sym", "se", "syl", "ske", "skyl"),
-  "l$": ("lym", "lse", "lsyl", "lke", "lkyl"),
+  "þyl$": ("łEm", "þylse", "þylsyl", "þylke", "þylkyl"),
+  "þýl$": ("łEm", "þýlse", "þýlsyl", "þýlke", "þýlkyl"),
+  "þȳl$": ("łEm", "þȳlsē", "þȳlsȳl", "þȳlkē", "þȳlkȳl"),
+  "þỳl$": ("łEm", "þỳlsè", "þỳlsỳl", "þỳlkè", "þỳlkỳl"),
   "yl$": ("lEm", "ylse", "ylsyl", "ylke", "ylkyl"),
+  "ýl$": ("lEm", "ýlse", "ýlsyl", "ýlke", "ýlkyl"),
+  "ȳl$": ("lEm", "ȳlsē", "ȳlsȳl", "ȳlkē", "ȳlkȳl"),
+  "ỳl$": ("lEm", "ỳlsè", "ỳlsỳl", "ỳlkè", "ỳlkỳl"),
+  "l$": ("lym", "lse", "lsyl", "lke", "lkyl"),
   "$": ("m", "cè", "cỳl", "kè", "kỳl"),
 )
 #let dat-erg-endings = (
@@ -345,8 +351,8 @@
   }
   let declension = endings-dict.keys().find(d => modified-stem.ends-with(ending-regexes.at(d)))
   if declension == none {panic(stem, case)}
-  let stem-last-vowel = stem.clusters().filter(char => vowels.contains(char)).last()
-  let E = if (back-vowels.contains(stem-last-vowel)) {"o"} else {"e"}
+  let stem-last-vowel = get-vowel(stem.clusters().filter(char => vowels.contains(char)).last())
+  let E = tones.at(if ("ou".contains(stem-last-vowel)) {"o"} else {"e"}).at(melody.last())
   let A = if case == "dat" {"a"} else if case == "erg" {"i"} else {"A"}
   let À = if case == "dat" {"à"} else if case == "erg" {"ì"} else {"À"}
 
@@ -489,9 +495,9 @@
     ending
   } else {
     if ending.contains(y-regex.all) {
-      let stem-last-vowel = pfv-stem.clusters().filter(char => vowels.contains(char)).last()
+      let stem-last-vowel = get-vowel(pfv-stem.matches(vowels-regex).last().text)
       let E = tones.at(
-        if (non-back-vowels.contains(stem-last-vowel)) {"e"}
+        if ("ou".contains(stem-last-vowel)) {"e"}
         else {"o"}
       ).at(get-vowel-and-tone(ending).at(1))
       ending = ending.replace(y-regex.all, E)
