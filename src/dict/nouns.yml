@@ -1,3 +1,4 @@
+#A
 - stems:
     abs: [ácat, H]
     dat: [acât, HL]
@@ -5,6 +6,16 @@
   meanings: [ash, soot, smoke]
   meanings-long:
     - (indefinite collective) ash, soot, smoke
+#C
+#E
+- stems:
+    abs: [éspàt, HL]
+    dat: [espāt, ML]
+    erg: [espēq, ML]
+  meanings: [space]
+  meanings-long:
+    - space, clearing
+#F
 - stems:
     abs: [fáa, H]
     dat: [fâm, HL]
@@ -40,6 +51,33 @@
     - storm
     - cataclysm
 - stems:
+    abs: [fōl, M]
+    dat: [fòl, ML]
+    erg: [fùl, ML]
+  meanings: [large, wide, thick]
+  meanings-long:
+    - large, wide, thick
+- stems:
+    abs: [fōs, M]
+    dat: [fòr, ML]
+    erg: [fùx, ML]
+  meanings: [time, moment]
+  meanings-long:
+    - (indefinite collective) time
+    - (plural) period of time
+    - (singulative/singular) moment, instant
+    - (proximal singular) now, present
+    - (definite singular) then
+#I
+- stems:
+    abs: [íi, H]
+    dat: [êm, HL]
+    erg: [îm, HL]
+  meanings: [good, sweet]
+  meanings-long:
+    - good, favorable, suitable
+    - sweet
+- stems:
     abs: [ískòil, HL]
     dat: [iskūal, M]
     erg: [iskōil, M]
@@ -53,6 +91,30 @@
   meanings: [dancer]
   meanings-long:
     - dancer
+#K
+- stems:
+    abs: [káp, HL]
+    dat: [káf, HL]
+    erg: [kéf, HL]
+  meanings: [captivating, beautiful]
+  meanings-long:
+    - captivating, fascinating
+    - beautiful
+- stems:
+    abs: [kānīi, M]
+    dat: [kānēm, M]
+    erg: [kānīm, M]
+  meanings: [ice, hail]
+  meanings-long:
+    - (indefinite collective) ice, hail
+    - (singulative/singular) hailstone
+- stems:
+    abs: [kānīimùl, ML]
+    dat: [kànīimōl, LM]
+    erg: [kànīimūl, LM]
+  meanings: [glacier]
+  meanings-long:
+    - glacier
 - stems:
     abs: [kél, H]
     dat: [kêl, HL]
@@ -60,7 +122,6 @@
   meanings: [mark, symbol]
   meanings-long:
     - mark, symbol
-    - indicator
 - stems:
     abs: [kēk, M]
     dat: [kèk, ML]
@@ -94,6 +155,7 @@
   meanings-long:
     - ground, floor
     - location or position of an object
+#L
 - stems:
     abs: [łáa, H]
     dat: [łân, HL]
@@ -131,6 +193,7 @@
   meanings: [clan]
   meanings-long:
     - clan, community of Nomai who travel together
+#M
 - stems:
     abs: [māk, M]
     dat: [māa, M]
@@ -138,6 +201,29 @@
   meanings: [journey, search]
   meanings-long:
     - journey, search
+- stems:
+    abs: [mīal, M]
+    dat: [mìal, ML]
+    erg: [mìal, ML]
+  meanings: [soft, loose]
+  meanings-long:
+    - soft
+    - loose, lax
+- stems:
+    abs: [mīp, ML]
+    dat: [mēf, ML]
+    erg: [mīf, ML]
+  meanings: [child, young]
+  meanings-long:
+    - child, young
+- stems:
+    abs: [mīpìoo, ML]
+    dat: [mìpīon, LM]
+    erg: [mìpīon, LM]
+  meanings: [younger sibling, younger friend]
+  meanings-long:
+    - younger sibling
+    - younger friend
 - stems:
     abs: [mīsk, M]
     dat: [mēsk, M]
@@ -161,6 +247,7 @@
   meanings: [river]
   meanings-long:
     - river
+#N
 - stems:
     abs: [nēlt, M]
     dat: [nèlt, ML]
@@ -208,6 +295,37 @@
   meanings-long:
     - man, masculine
     - (collective/plural) friends
+#O
+- stems:
+    abs: [ómàs, HL]
+    dat: [omār, M]
+    erg: [omēx, M]
+  meanings: [fruit, egg]
+  meanings-long:
+    - fruit
+    - egg
+- stems:
+    abs: [omāsmìal, ML]
+    dat: [omàsmīal, LM]
+    erg: [omàsmīal, LM]
+  meanings: [sweetsop]
+  meanings-long:
+    - sweetsop (plant, given name)
+#P
+- stems:
+    abs: [píjòo, HL]
+    dat: [píjòn, HL]
+    erg: [píjùn, HL]
+  meanings: [moon]
+  meanings-long:
+    - moon, natural satellite of a planet or other non-stellar celestial body
+- stems:
+    abs: [pélfàs, HL]
+    dat: [pélfàr, HL]
+    erg: [pélfèx, HL]
+  meanings: [planet]
+  meanings-long:
+    - planet, celestial body larger than an asteroid and smaller than a star
 - stems:
     abs: [píol, H]
     dat: [pîol, HL]
@@ -217,6 +335,23 @@
     - dark, black
     - shadow, shaded, dim
 - stems:
+    abs: [píoo, H]
+    dat: [pîom, HL]
+    erg: [pîol, HL]
+  meanings: [incorrect, unsuitable, premature]
+  meanings-long:
+    - incorrect, unsuitable
+    - premature, half-baked, unripe
+- stems:
+    abs: [pūlàp, ML]
+    dat: [pùlāf, LM]
+    erg: [pùlēf, LM]
+  meanings: [random, quantum]
+  meanings-long:
+    - random, unpredictable
+    - quantum, subject to quantum mechanics
+#Q
+- stems:
     abs: [qáa, H]
     dat: [qân, HL]
     erg: [qên, HL]
@@ -224,6 +359,22 @@
   meanings-long:
     - eye, eyes
     - (collective/plural) face of a person or animal
+- stems:
+    abs: [qās, M]
+    dat: [qār, M]
+    erg: [qēx, M]
+  meanings: [flower]
+  meanings-long:
+    - flower
+- stems:
+    abs: [qóskáp, HL]
+    dat: [qoskáf, HL]
+    erg: [qoskéf, HL]
+  meanings: [dance]
+  meanings-long:
+    - dance
+#R
+#S
 - stems:
     abs: [sácak, H]
     dat: [sácaa, H]
@@ -239,12 +390,34 @@
   meanings-long:
     - warmth, warm
 - stems:
+    abs: [sée, H]
+    dat: [sêm, HL]
+    erg: [sîm, HL]
+  meanings: [here]
+  meanings-long:
+    - here, this place
+- stems:
     abs: [séesþàst, HL]
     dat: [sēesþāsþ, M]
     erg: [sēesþēsq, M]
   meanings: [machine, construct]
   meanings-long:
     - machine, construct
+- stems:
+    abs: [sép, HL]
+    dat: [séf, HL]
+    erg: [síf, HL]
+  meanings: [front, direction]
+  meanings-long:
+    - front
+    - direction
+- stems:
+    abs: [séskáp, HL]
+    dat: [seskáf, HL]
+    erg: [seskéf, HL]
+  meanings: [north]
+  meanings-long:
+    - north, northern
 - stems:
     abs: [skáfàs, HL]
     dat: [skafār, M]
@@ -254,13 +427,12 @@
     - (indefinite collective) sun, the central star of a single-star system where the speaker is currently located
     - (proximal/definite) sun, a specific star in a multiple-star system where the speaker is currently located
 - stems:
-    abs: [sép, HL]
-    dat: [séf, HL]
-    erg: [síf, HL]
-  meanings: [front, direction]
+    abs: [sókỳl, HL]
+    dat: [sóklà, HL]
+    erg: [sóklì, HL]
+  meanings: [cave]
   meanings-long:
-    - front
-    - direction
+    - cave, cavernous
 - stems:
     abs: [sóp, H]
     dat: [súa, H]
@@ -276,6 +448,22 @@
   meanings: [black hole]
   meanings-long:
     - black hole
+#T
+- stems:
+    abs: [tātàk, ML]
+    dat: [tàtāk, LM]
+    erg: [tàtēǧ, LM]
+  meanings: [crash, collision]
+  meanings-long:
+    - crash, collision
+#Þ
+- stems:
+    abs: [þél, H]
+    dat: [þêl, HL]
+    erg: [þîl, HL]
+  meanings: [all, total]
+  meanings-long:
+    - all, total, whole
 - stems:
     abs: [þélsþȳl, HM]
     dat: [þélsłā, HM]
@@ -283,6 +471,29 @@
   meanings: [universe]
   meanings-long:
     - (indefinite collective) the universe
+- stems:
+    abs: [þúskáp, HL]
+    dat: [þuskáf, HL]
+    erg: [þuskéf, HL]
+  meanings: [south]
+  meanings-long:
+    - south, southern
+#U
+#X
+- stems:
+    abs: [xāsk, M]
+    dat: [xàsk, ML]
+    erg: [xèsq, ML]
+  meanings: [nose, snout]
+  meanings-long:
+    - nose, snout
+- stems:
+    abs: [xāskēpìi, ML]
+    dat: [xàskēpēm, LM]
+    erg: [xàskēpīm, ML]
+  meanings: [fragrance, aroma]
+  meanings-long:
+    - fragrance, fragrant (quality, given name)
 - stems:
     abs: [xēe, M]
     dat: [xēn, M]

@@ -27,6 +27,7 @@
 #let rpt = abbreviation("rpt", "reportative")
 #let vis = abbreviation("vis", "visual")
 #let aud = abbreviation("aud", "auditory")
+#let ep = abbreviation("∅", "epenthetic")
 
 #let alphabet = "aáāàâceéēèêfiíīìîjklłmnoóōòôpqrřstþuúūùûwxyýȳỳŷ"
 #let alphabet-key(word) = {
@@ -51,7 +52,7 @@
 
 #let vowels = "[aáāàâǎeéēèêěiíīìîǐoóōòôǒuúūùûǔ]"
 #let vowels-regex = regex(vowels)
-#let nucleus = vowels + "{1,2}|[yýȳỳŷ][mnlr]"
+#let nucleus = vowels + "{1,3}|[yýȳỳŷ][mnlr]"
 #let nucleus-regex = regex(nucleus)
 #let a-regex = (
   N: regex("[áāàâǎ]"),
@@ -116,6 +117,7 @@
   "ee": "ei", "ée": "éi", "ēe": "ēi", "èe": "èi", "êe": "êi", 
   "oo": "ou", "óo": "óu", "ōo": "ōu", "òo": "òu", "ôo": "ôu", 
 )
+#let long-e-o-regexes = long-e-o.keys().map(k => (k, regex(k))).to-dict()
 #let tones = (
   "a": ("∅": "a", "H": "á", "M": "ā", "L": "à", "F": "â", "f": "ǎ"),
   "e": ("∅": "e", "H": "é", "M": "ē", "L": "è", "F": "ê", "f": "ě"),
@@ -264,15 +266,14 @@
       }
       nucleus = nucleus.join()
       nucleus = diphthongs.at(nucleus, default: nucleus)
-      let EE = long-e-o.keys().find(k => nucleus == k)
-      if EE != none {
-        new-word.push(nucleus.replace(EE, long-e-o.at(EE)))
-      } else {
-        new-word.push(nucleus)
-      }
+      new-word.push(nucleus)
     }
   }
-  new-word.join()
+  new-word = new-word.join()
+  for (pattern, replacement) in long-e-o {
+    new-word = new-word.replace(long-e-o-regexes.at(pattern), replacement)
+  }
+  new-word
 }
 
 #let abs-endings = (

@@ -116,4 +116,4 @@ The interrogative adverbs are as follows:
 - _kúpūl_ "how" (manner, degree)
 - _kúpūlþó_ "how many"
 
-Polar questions are marked by V1 word order and rising intonation. The response to a polar question repeats the main verb of the original question with or without the negation prefix _pà-_. Alternatively, speakers may instead use the affirmative interjection _ú_ "yes", the verb _nàpē_ "differ", or one of the negative pro-verbs _pàłèké_ "does not happen", _pàsá_ "does not do", and _pàqúr_ "does not go".
+Polar questions are marked by V1 word order and rising intonation. The response to a polar question repeats the main verb of the original question with or without the negation prefix _pà-_. Alternatively, speakers may instead use the affirmative interjection _û_ "yes", the verb _nàpē_ "differ", or one of the negative pro-verbs _pàłèké_ "does not happen", _pàsá_ "does not do", and _pàqúr_ "does not go".

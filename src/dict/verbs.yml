@@ -1,3 +1,4 @@
+#1
 - stems:
     pfv: [kylþ, kýlþ]
     npfv: [kokylþ, kókýlþ]
@@ -14,6 +15,23 @@
     - (anticausative) D is injured by A
     - (causative) E injures D with A
 - stems:
+    pfv: [pīþ, pīþ]
+    npfv: [pīfīþ, pīfīþ]
+    ret: [pēefìþ, pēefìþ]
+  endings:
+    verb: éþ
+    ger: ée
+    ptcp: ēt
+  class: 1
+  antic: exp
+  caus: ditr
+  meanings: [begin, sow]
+  meanings-long:
+    - (causative) E begins, undertakes A
+    - (causative) E sows A (plants) in D
+    - (anticausative) D is seeded with A (plants)
+#2
+- stems:
     pfv: [em, ém]
     npfv: [enem, éném]
     ret: [éefèm, éefèm]
@@ -28,6 +46,22 @@
   meanings-long:
     - (causative) E prepares, cooks A
     - (anticausative) A ripens
+- stems:
+    pfv: [nȳlt, nȳlt]
+    npfv: [nēnȳlt, nēnȳlt]
+    ret: [nāaþỳlt, nāaþỳlt]
+  endings:
+    verb: áþ
+    ger: ái
+    ptcp: at
+  class: 2
+  antic: exp
+  caus: intl
+  meanings: [arise, be born, cultivate]
+  meanings-long:
+    - (anticausative) A arises, sprouts
+    - (anticausative) D brings forth A (offspring)
+    - (causative) E cultivates A
 - stems:
     pfv: [qùn, qūn]
     npfv: [qùxùn, qūqūn]
@@ -66,7 +100,7 @@
     ret: [þéet, þéet]
   endings:
     verb: éxi
-    ger: āi
+    ger: ái
     ptcp: át
   class: 2
   antic: none
@@ -74,6 +108,7 @@
   meanings: [make, build]
   meanings-long:
     - E makes, builds A
+#3
 - stems:
     pfv: [fr, fr]
     npfv: [páfr, páfr]
@@ -107,6 +142,22 @@
     - (causative) E gathers A together
     - (causative) E=A flocks, congregates
 - stems:
+    pfv: [mìn, mīn]
+    npfv: [mìmìn, mīmīn]
+    ret: [mēefìn, mēefìn]
+  endings:
+    verb: ēr
+    ger: ērè
+    ptcp: ès
+  class: 3
+  antic: exp
+  caus: ditr
+  meanings: [approach, bring]
+  meanings-long:
+    - (anticausative) A approaches D
+    - (causative) E brings A towards D
+    - (causative) E makes A more like D
+- stems:
     pfv: [nàp, nāp]
     npfv: [nànàp, nānāp]
     ret: [nēeþàp, nēeþàp]
@@ -121,6 +172,21 @@
   meanings-long:
     - (anticausative) A becomes lost
     - (causative) E leaves, abandons A
+- stems:
+    pfv: [qan, qán]
+    npfv: [qaqan, qáqán]
+    ret: [qéetàn, qéetàn]
+  endings:
+    verb: ēr
+    ger: ērè
+    ptcp: ès
+  class: 3
+  antic: exp
+  caus: ditr
+  meanings: [captivate, distract]
+  meanings-long:
+    - (anticausative) A captivates, distracts D
+    - (causative) E captivates, distracts D with A
 - stems:
     pfv: [qùn, qūn]
     npfv: [qùxùn, qūqūn]
@@ -183,6 +249,22 @@
     - (causative) E puts A on D (inanimate)
     - (causative) E gives A to D (animate)
     - (causative) E suggests, proposes A
+#4
+- stems:
+    pfv: [kòil, kōil]
+    npfv: [kòwòil, kōwōil]
+    ret: [kāanòil, kāanòil]
+  endings:
+    verb: ē
+    ger: ēfè
+    ptcp: èp
+  class: 4
+  antic: exp
+  caus: ditr
+  meanings: [shelter, house]
+  meanings-long:
+    - (anticausative) A shelters D
+    - (causative) E shelters D with A
 - stems:
     pfv: [má, mā]
     npfv: [māmá, māmā]
@@ -274,6 +356,36 @@
     - (anticausative) A is saddened by D
     - (causative) E saddens D with A
 - stems:
+    pfv: [xāsk, xāsk]
+    npfv: [xāxāsk, xāxāsk]
+    ret: [xēeqàsk, xēeqàsk]
+  endings:
+    verb: ē
+    ger: ēfè
+    ptcp: ēp
+  class: 4
+  antic: exp
+  caus: none
+  meanings: [smell]
+  meanings-long:
+    - D smells A
+#5
+- stems:
+    pfv: [kōop, kōop]
+    npfv: [kōwōop, kōwōop]
+    ret: [kāanòop, kāanòop]
+  endings:
+    verb: à
+    ger: àfè
+    ptcp: àp
+  class: 5
+  antic: exp
+  caus: ditr
+  meanings: [slow down, hinder]
+  meanings-long:
+    - (anticausative) A slows down, hinders D
+    - (causative) E slows down, hinders D with A
+- stems:
     pfv: [nòm, nōm]
     npfv: [nònòm, nōnōm]
     ret: [nāaþòm, nāaþòm]
@@ -304,6 +416,8 @@
     - (anticausative) A confuses, disorients D
     - (causative) E makes A complicated
     - (causative) E confuses D with/about A
+#6
+#7
 - stems:
     pfv: [mīi, mīi]
     npfv: [mīmīi, mīmīi]
@@ -318,6 +432,7 @@
   meanings: [come]
   meanings-long:
     - E comes to, arrives at D
+#8
 - stems:
     pfv: [kē, kē]
     npfv: [kēwè, kēwè]

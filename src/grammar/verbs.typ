@@ -69,8 +69,8 @@ All verbs have separate stems for each aspect, with the perfective stem being th
       [\<ǧ\>], [\<z\>], [\<þ\>],
       [\<s\>], [\<r\>], [\<ds\>],
       [\<s\>], [\<x\>], [\<z\>],
-      [\<v\>], [], [],
-      [\<z\>], [], [],
+      [\<v\>], [\<v\>], [\<v\>],
+      [\<z\>], [\<z\>], [\<ǧ\>],
       [∅], [\<k\>], [\<g\>],
       [∅], [\<n\>], [any],
     table.cell(rowspan: 4)[F], [\<f\>], [\<p\>], [\<b\>],
@@ -280,6 +280,7 @@ Converbs are a special type of participle formed by attaching a converb prefix i
     table.cell(rowspan: 2)[_tô(f)-_], [PFV], [result],
       [NPFV], [hypothetical],
     [_ku-, k-_], [any], [manner, degree],
+    [_mìi-_, _mìn-_], [any], [contrast],
   )
 ]
 
