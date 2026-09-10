@@ -77,8 +77,8 @@ There are three possibilities for coordinating two independent clauses:
 There are three clause-coordinating conjunctions:
 
 - *cumulative* (_kà_): joins simultaneous non-contrasting clauses
-- *alternative* (_łú_): joins mutually exclusive non-contrasting clauses
-- *contrastive* (_mínù_): joins contrasting clauses
+- *alternative* (_łu_): joins mutually exclusive non-contrasting clauses
+- *contrastive* (_mīnù_): joins contrasting clauses
 
 = Embedded clauses
 Embedded clauses act as arguments of an independent clause's main verb. As they are often longer than typical verbal arguments, they tend to be shifted rightwards if they are not topicalized or focused.
@@ -105,15 +105,15 @@ The interrogative pronouns are as follows:
 - _pūl_ (#q.#abs), _pòl_ (#q.#dat), _pùl_ (#q.#erg)
   - when standing alone, corresponds to "what, who"
   - when heading an NP, corresponds to "which X", where X is the modifier
-  - when heading a PP starting with _nāf_ "from", corresponds to "which out of X", where X is the object of _nāf_
+  - when heading a PP starting with _nā_ "from", corresponds to "which out of X", where X is the object of _nā_
   - when modifying an NP, corresponds to "what kind of X", where X is the modified NP
 - _pūlís_ "where", usually used with preposition
 - _pūlfō_ "when", usually used with preposition
 
 The interrogative adverbs are as follows:
-- _nāpūl_ "why" (cause)
-- _stépūl_ "why" (purpose)
-- _kúpūl_ "how" (manner, degree)
-- _kúpūlþó_ "how many"
+- _nàpūl_ "why" (cause)
+- _stepūl_ "why" (purpose)
+- _kupūl_ "how" (manner, degree)
+- _kupūlþó_ "how many"
 
 Polar questions are marked by V1 word order and rising intonation. The response to a polar question repeats the main verb of the original question with or without the negation prefix _pà-_. Alternatively, speakers may instead use the affirmative interjection _û_ "yes", the verb _nàpē_ "differ", or one of the negative pro-verbs _pàłèké_ "does not happen", _pàsá_ "does not do", and _pàqúr_ "does not go".

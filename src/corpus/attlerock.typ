@@ -31,7 +31,7 @@
       ("Físk", [Qéitànètà! Ixmaipè þúxqùnuxti ku píou. Tír nò Féipìolìk èrnòmefikti qùxùnexi sósfú pílù.]),
       ("Físk", [Neltes řé łés qouþùnùx þélùkè ímù.]),
       ("Xeicàast", [Anuxoufùtè tlósé súata, kà stèkolmaipèfàt qáakù þélsþyl séqíqàxþéxifux séisþàstỳm qú séstáp.]),
-      ("<Thatch>", [Síflèkè þáþéxifux. A-Xeicàast àpèiqáafríx. Łòmiifòtỳl miiqùx sêm stèmaípfùx qáakè. Pànànàpixux sú misk!]),
+      ("<Thatch>", [Síflèk þáþéxifux. A-Xeicàast àpèiqáafríx. Łòmiifòtỳl miiqùx sêm stèmaípfùx qáakè. Pànànàpixux sú misk!]),
     )
   ),
   [
@@ -66,7 +66,7 @@
       - my~friends this~suggestion saddens~me but for~us~to~find~the~location~of the~Eye~of the~universe I~believe~we~need~to~build a~device more sophisticated
     ]
     #example[
-      - _síflèkè_ _þ\<áþ\>éxi=fux._ _A-Xēicàast_ _àpèi-qáa-fríx._ _łomīi=fòtỳl_ _mīiqùx_ _sêm_ _ste-māíp-∅=fux_ _qáa-kè._ _pà-nà\~nàpīx=ux_ _su_ _mīsk!_
+      - _síflèk_ _þ\<áþ\>éxi=fux._ _A-Xēicàast_ _àpèi-qáa-fríx._ _łomīi=fòtỳl_ _mīiqùx_ _sêm_ _ste-māíp-∅=fux_ _qáa-kè._ _pà-nà\~nàpīx=ux_ _su_ _mīsk!_
       - therefore \<#npfv\>make=#p1.#incl.#erg #voc\-cassava\\#abs #proh\-eye-drop clan\\#erg=#pert.#p1.#incl come here\\#dat for-search\\#ptcp.#abs\-#def.#sg=#p1.#incl.#erg eye\\#abs\-#def.#sg #non\-#npfv\~abandon=#p1.#incl.#erg so fast\\#abs
       - then we~will~build. Cassava don't~lose~hope. our~clan came here for~us~to~search~for the~Eye. we~won't~give~up so easily!
     ]
@@ -87,10 +87,10 @@
   transcript(
     ("<Thatch>", [Ixmaipsè neltes qú séstáf mafþéxí sîm pulís? Łuxqáxfòlmìnixmou na ixkekłamaipè séikùkè qáakè.]),
     transcript(
-      ("<Coleus>", [Sîm ìxóskápfù sókỳl þéxítil ixmaipsèfùkè Píjòukè Pulàpè Òmàsmialik nò nàpixkyl kîm mínù þái koupà sácák skáfàs. Sîm pélfàskè pàséqímafþéxi.]),
+      ("<Coleus>", [Sîm ìxóskápfù sókỳl þéxítil ixmaipsèfùkè Píjòukè Pulàpè Òmàsmialik nò nàpixkyl kîm, mīnù þái koupà sácák skáfàs. Sîm pélfàskè pàséqímafþéxi.]),
       ("<Plume>", [Sîm Ískòilùkè Sóppíolke kàniimolak þúskáfàp éspàt fol. Stekoilèpsè ìxmáifàp tlóràk tóuþéxíti neltes.]),
       ("Físk", [Û, àþéxífux kîm! Xàskepemàk mìpionak séqímejime łéce.  Qéitànèr qàqànerxon qáakè mìinaaþyltase su fosyl sîf tatàkè.]),
-      ("<Plume>", [Síflèkè pifiþíxtí þái sîm þúskápmòsù Ískòilùkè Sóppíolke síifòsè!]),
+      ("<Plume>", [Síflèk pifiþíxtí þái sîm þúskápmòsù Ískòilùkè Sóppíolke síifòsè!]),
     )
   ),
   [
@@ -100,7 +100,7 @@
       - this~locator new more complicated should~be~built at where? it~may~need~to~be~made~larger than the~signal~locator here~of the~Eye
     ]
     #example[
-      - _sîm_ _ixóskáp-∅=fù_ _sókỳl_ _þéxi=til_ _ix-māip-sè_ _=fùkè_ _píjòu-kè_ _pūlàp-è_ _Omàsmīal-ìk_ _nò_ _nàpīx-kyl_ _kîm_ _mínù_ _þái_ _kōupà_ _sácak_ _skáfàs._ _sîm_ _pélfàs-ke_ _pà-séqí-māf-þéxi_
+      - _sîm_ _ixóskáp-∅=fù_ _sókỳl_ _þéxi=til_ _ix-māip-sè_ _=fùkè_ _píjòu-kè_ _pūlàp-è_ _Omàsmīal-ìk_ _nò_ _nàpīx-kyl_ _kîm_ _mīnù_ _þái_ _kōupà_ _sácak_ _skáfàs._ _sîm_ _pélfàs-ke_ _pà-séqí-māf-þéxi_
       - at dancer\\#abs\-#def.#sg=#pert.#p3 cave\\#abs build=#p1.#excl #rel.#erg\-search\\#ptcp.#abs\-#prox.#sg =#pert.#p3.#def.#sg moon\\#abs\-#def.#sg random\\#abs\-#def.#sg sweetsop\\#erg\-#def.#sg and lose\\#ptcp.#erg\-#def.#pl there but make\\#ger slow_down heat\\#abs sun\\#abs at planet\\#abs\-#def.#sg #non\-#pot\-#jus\-build
       - on the~dancer~of caves we~built a~locator of the~moon quantum Annona and those~stranded there but construction was~hindered~by heat solar. at that~planet I~don't~think~should~build
     ]
@@ -115,7 +115,7 @@
       - yes let's~build there! Conoy the~young~friend I~think~would~greatly~enjoy this. he~has~been~interested~in and~continues~to~be~interested~in the~Eye despite~having~been~born such a~long~time after the~crash
     ]
     #example[
-      - _síflèkè_ _p\<īf\>īþíx=ti_ _þái_ _sîm_ _þúskáp-mòs=ù_ _ískòil=ùkè_ _sóppíol-ke_ _síifòsè!_
+      - _síflèk_ _p\<īf\>īþíx=ti_ _þái_ _sîm_ _þúskáp-mòs=ù_ _ískòil=ùkè_ _sóppíol-ke_ _síifòsè!_
       - therefore \<#npfv\>begin=#p1.#sg.#erg make\\#ger at south-most\\#abs=#pert.#p3 house\\#abs=#pert.#p3.#def.#sg black_hole\\#abs\-#def.#sg now
       - then I~will~begin construction on the~south~pole~of house~of the~black~hole immediately!
     ]

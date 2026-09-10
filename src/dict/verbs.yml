@@ -1,3 +1,32 @@
+#irregular
+- stems:
+    pfv: [s, s]
+    npfv: [sř, sř]
+    ret: [séec, séec]
+  endings:
+    verb: á
+    ger: ái
+    ptcp: át
+  class: sá
+  antic: none
+  caus: intl
+  meanings: [do, act]
+  meanings-long:
+  - do, act
+- stems:
+    pfv: [q, q]
+    npfv: [qúq, qúq]
+    ret: [qóot, qóot]
+  endings:
+    verb: úr
+    ger: úrè
+    ptcp: ús
+  class: qúr
+  antic: none
+  caus: lcm
+  meanings: [go, move]
+  meanings-long:
+  - go, move
 #1
 - stems:
     pfv: [kylþ, kýlþ]

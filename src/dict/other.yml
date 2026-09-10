@@ -1,0 +1,172 @@
+- lemma: mùx
+  part: preposition
+  meanings: [over, above]
+  meanings-long:
+  - over, above
+- lemma: nà
+  part: adverb
+  meanings: [away]
+  meanings-long:
+  - away
+- lemma: nà
+  part: preposition
+  meanings: [from]
+  meanings-long:
+  - from
+  - than
+- lemma: nò
+  part: conjunction
+  meanings: [and]
+  meanings-long:
+  - and (with nouns only)
+- lemma: mīnù
+  part: conjunction
+  meanings: [but]
+  meanings-long:
+  - but, yet, however
+- lemma: mīnù
+  part: preposition
+  meanings: [beside, with]
+  meanings-long:
+  - beside, with (comitative, not instrumental)
+- lemma: mīnù
+  part: adverb
+  meanings: [sideways]
+  meanings-long:
+  - sideways
+- lemma: sîm
+  part: adverb
+  meanings: [here]
+  meanings-long:
+  - here
+- lemma: sîm
+  part: preposition
+  meanings: [at]
+  meanings-long:
+  - at
+- lemma: kîm
+  part: adverb
+  meanings: [there]
+  meanings-long:
+  - there
+- lemma: síifòsè
+  part: adverb
+  meanings: [now]
+  meanings-long:
+  - now, immediately
+- lemma: þúfòsè
+  part: adverb
+  meanings: [just now]
+  meanings-long:
+  - just now, recently
+- lemma: ste
+  part: preposition
+  meanings: [for]
+  meanings-long:
+  - (with dative object) for, in order to
+- lemma: ku
+  part: preposition
+  meanings: [like, as]
+  meanings-long:
+  - like, as
+- lemma: su
+  part: preposition
+  meanings: [such, so]
+  meanings-long:
+  - such, so
+- lemma: sîf
+  part: preposition
+  meanings: [in front of, after]
+  meanings-long:
+  - (spatial) in front of
+  - (temporal) after
+- lemma: sîf
+  part: adverb
+  meanings: [forwards]
+  meanings-long:
+  - forwards
+- lemma: þu
+  part: preposition
+  meanings: [behind, before]
+  meanings-long:
+  - (spatial) behind
+  - (temporal) before
+- lemma: þu
+  part: adverb
+  meanings: [backwards]
+  meanings-long:
+  - backwards
+- lemma: qu
+  part: preposition
+  meanings: [to, towards, more]
+  meanings-long:
+  - (with dative object) to, towards
+  - (with dative object) more
+- lemma: síflèk
+  part: conjunction
+  meanings: [then, therefore, next]
+  meanings-long:
+  - then, in that case, therefore
+  - next
+- lemma: pūl
+  part: pronoun
+  meanings: [what, who, which]
+  meanings-long:
+  - what, who, which
+- lemma: pūlís
+  part: pronoun
+  meanings: [where]
+  meanings-long:
+  - where
+- lemma: pūlfō
+  part: pronoun
+  meanings: [when]
+  meanings-long:
+  - when
+- lemma: nàpūl
+  part: adverb
+  meanings: [why]
+  meanings-long:
+  - why, for what cause
+- lemma: stepūl
+  part: adverb
+  meanings: [why]
+  meanings-long:
+  - why, for what purpose
+- lemma: kupūl
+  part: adverb
+  meanings: [how]
+  meanings-long:
+  - how, in what way, to what degree
+- lemma: kupūlþó
+  part: adverb
+  meanings: [how many]
+  meanings-long:
+  - how many, how many times
+- lemma: kà
+  part: conjunction
+  meanings: [and]
+  meanings-long:
+  - and (with clauses)
+- lemma: łu
+  part: conjunction
+  meanings: [or]
+  meanings-long:
+  - or (exclusive)
+- lemma: łés
+  part: complementizer
+  meanings: [that]
+  meanings-long:
+  - the fact that
+  tables:
+  - header:
+      - absolutive
+      - dative
+    cells:
+      - łés
+      - łékỳr
+- lemma: łés
+  part: relativizer
+  meanings: [that]
+  meanings-long:
+  - that, for which

@@ -456,6 +456,10 @@
   "àp": ("àp", "àf", "èf"),
   "p": ("p", "f", "f"),
 )
+#let ptcp-irregular-endings = (
+  "ús": ("ús", "ór", "úx"),
+  "át": ("át", "áa", "éq"),
+)
 #let ptcp-full-declensions = (
   "6": (
     abs: ("t", "tym", "se", "syl", "te", "tyl"),
@@ -489,6 +493,14 @@
     abs: ("p", "pỳm", "psè", "psỳl", "pè", "pỳl"),
     dat: ("f", "fàm", "fàr", "frỳl", "fàp", "fàpỳl"),
     erg: ("f", "fìm", "fìr", "frỳl", "fìp", "fìpỳl"),
+  ), "sá": (
+    abs: ("t", "tym", "se", "syl", "te", "tyl"),
+    dat: ("a", "am", "ar", "ařyl", "atè", "atỳl"),
+    erg: ("q", "qim", "qir", "qryl", "qit", "qtyl"),
+  ), "qúr": (
+    abs: ("s", "sym", "se", "syl", "ske", "skyl"),
+    dat: ("r", "ràm", "tàr", "rỳl", "rkè", "rkỳl"),
+    erg: ("x", "xim", "xir", "xryl", "xke", "xkyl"),
   ),
 )
 #let get-caus-ending(ending, pfv-stem) = {
@@ -538,11 +550,14 @@
 }
 
 #let verb(stems: (:), endings: (:), class: none, antic: none, caus: none, meanings: (), meanings-long: ()) = {
-  let class-desc = if type(class) == int [class #class] else [#class]
-  class = str(class)
+  let class-desc = if type(class) == int [class #class] else [irregular]
   let valency-desc = (antic, caus).filter(x => x in valencies).map(x => valencies.at(x)).join("/")
   let (_, verb-ending-tone) = if endings.verb != none {get-vowel-and-tone(endings.verb)} else {(none, none)}
-  let (abs-ending, dat-ending, erg-ending) = ptcp-endings.at(endings.ptcp)
+  let (abs-ending, dat-ending, erg-ending) = if type(class) == int {
+    ptcp-endings.at(endings.ptcp)
+  } else {
+    ptcp-irregular-endings.at(endings.ptcp)
+  }
   (dat-ending, erg-ending) = (dat-ending, erg-ending).map(
     if verb-ending-tone == "∅" {force-N-tone}
     else if verb-ending-tone == "H" {force-H-tone}
@@ -551,6 +566,7 @@
     else {x => x}
   )
   let (ret-abs-ending, ret-dat-ending, ret-erg-ending) = (abs-ending, dat-ending, erg-ending).map(force-L-tone)
+  class = str(class)
   [
     === verb
     #class-desc, #valency-desc
@@ -582,3 +598,18 @@
     )
   ]
 }
+
+#let other-word(lemma: none, part: none, meanings: (), meanings-long: (), tables: ()) = [
+  === #part
+  #enum(..meanings-long)
+  #if tables.len() > 0 [
+    #parbreak()
+    #tables.map(t => {
+      table(
+        columns: t.header.len(),
+        table.header(..t.header.map(x => [*#x*])),
+        ..t.cells.map(x => [#x])
+      )
+    }).join()
+  ]
+]
